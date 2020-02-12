@@ -6,12 +6,33 @@ package br.com.sulamerica.gto.enumerations;
 
 public class Teste implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Teste() {
-    }
+	private java.lang.String campo1;
+	private java.lang.String campo2;
 
+	public Teste() {
+	}
 
+	public java.lang.String getCampo1() {
+		return this.campo1;
+	}
 
+	public void setCampo1(java.lang.String campo1) {
+		this.campo1 = campo1;
+	}
+
+	public java.lang.String getCampo2() {
+		return this.campo2;
+	}
+
+	public void setCampo2(java.lang.String campo2) {
+		this.campo2 = campo2;
+	}
+
+	public Teste(java.lang.String campo1, java.lang.String campo2) {
+		this.campo1 = campo1;
+		this.campo2 = campo2;
+	}
 
 }
