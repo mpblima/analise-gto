@@ -6,12 +6,35 @@ package br.com.sulamerica.gto.model;
 
 public class Dentista implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Dentista() {
-    }
+	@org.kie.api.definition.type.Label(value = "Nome do dentista")
+	private java.lang.String nome;
+	@org.kie.api.definition.type.Label(value = "Especialidade do dentista")
+	private java.lang.String especialidade;
 
+	public Dentista() {
+	}
 
+	public java.lang.String getNome() {
+		return this.nome;
+	}
 
+	public void setNome(java.lang.String nome) {
+		this.nome = nome;
+	}
+
+	public java.lang.String getEspecialidade() {
+		return this.especialidade;
+	}
+
+	public void setEspecialidade(java.lang.String especialidade) {
+		this.especialidade = especialidade;
+	}
+
+	public Dentista(java.lang.String nome, java.lang.String especialidade) {
+		this.nome = nome;
+		this.especialidade = especialidade;
+	}
 
 }
