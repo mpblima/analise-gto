@@ -6,12 +6,115 @@ package br.com.sulamerica.gto.model;
 
 public class Segurado implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Segurado() {
-    }
+	@org.kie.api.definition.type.Label(value = "Codigo da carteirinha")
+	private java.lang.String codCarteirinha;
+	@org.kie.api.definition.type.Label(value = "Data de nascimento")
+	private java.time.LocalDate dataNascimento;
+	private java.lang.String plano;
+	@org.kie.api.definition.type.Label(value = "Data de inicio de vigencia")
+	private java.time.LocalDate dataInicioVigencia;
+	@org.kie.api.definition.type.Label(value = "Data de exclusão")
+	private java.time.LocalDate dataExclusao;
+	@org.kie.api.definition.type.Label(value = "Data de final de vigência")
+	private java.time.LocalDate dataFimVigencia;
+	@org.kie.api.definition.type.Label(value = "Segurado suspenso")
+	private boolean suspenso;
+	private boolean reInclusao;
+	@org.kie.api.definition.type.Label(value = "UF endereço cadastral")
+	private java.lang.String ufCadastro;
 
+	public Segurado() {
+	}
 
+	public java.lang.String getCodCarteirinha() {
+		return this.codCarteirinha;
+	}
 
+	public void setCodCarteirinha(java.lang.String codCarteirinha) {
+		this.codCarteirinha = codCarteirinha;
+	}
+
+	public java.time.LocalDate getDataNascimento() {
+		return this.dataNascimento;
+	}
+
+	public void setDataNascimento(java.time.LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public java.lang.String getPlano() {
+		return this.plano;
+	}
+
+	public void setPlano(java.lang.String plano) {
+		this.plano = plano;
+	}
+
+	public java.time.LocalDate getDataInicioVigencia() {
+		return this.dataInicioVigencia;
+	}
+
+	public void setDataInicioVigencia(java.time.LocalDate dataInicioVigencia) {
+		this.dataInicioVigencia = dataInicioVigencia;
+	}
+
+	public java.time.LocalDate getDataExclusao() {
+		return this.dataExclusao;
+	}
+
+	public void setDataExclusao(java.time.LocalDate dataExclusao) {
+		this.dataExclusao = dataExclusao;
+	}
+
+	public java.time.LocalDate getDataFimVigencia() {
+		return this.dataFimVigencia;
+	}
+
+	public void setDataFimVigencia(java.time.LocalDate dataFimVigencia) {
+		this.dataFimVigencia = dataFimVigencia;
+	}
+
+	public boolean isSuspenso() {
+		return this.suspenso;
+	}
+
+	public void setSuspenso(boolean suspenso) {
+		this.suspenso = suspenso;
+	}
+
+	public boolean isReInclusao() {
+		return this.reInclusao;
+	}
+
+	public void setReInclusao(boolean reInclusao) {
+		this.reInclusao = reInclusao;
+	}
+
+	public java.lang.String getUfCadastro() {
+		return this.ufCadastro;
+	}
+
+	public void setUfCadastro(java.lang.String ufCadastro) {
+		this.ufCadastro = ufCadastro;
+	}
+
+	public Segurado(java.lang.String codCarteirinha,
+			java.time.LocalDate dataNascimento, java.lang.String plano,
+			java.time.LocalDate dataInicioVigencia,
+			java.time.LocalDate dataExclusao,
+			java.time.LocalDate dataFimVigencia, boolean suspenso,
+			boolean reInclusao, java.lang.String ufCadastro) {
+		this.codCarteirinha = codCarteirinha;
+		this.dataNascimento = dataNascimento;
+		this.plano = plano;
+		this.dataInicioVigencia = dataInicioVigencia;
+		this.dataExclusao = dataExclusao;
+		this.dataFimVigencia = dataFimVigencia;
+		this.suspenso = suspenso;
+		this.reInclusao = reInclusao;
+		this.ufCadastro = ufCadastro;
+	}
 
 }
