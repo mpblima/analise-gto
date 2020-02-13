@@ -6,12 +6,47 @@ package br.com.sulamerica.gto.model;
 
 public class AnaliseEletronica implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public AnaliseEletronica() {
-    }
+	@org.kie.api.definition.type.Label(value = "Mensagens mais amigáveis da análise eletrônica")
+	private java.util.List<java.lang.String> mensagem;
+	@org.kie.api.definition.type.Label(value = "Status do pagamento")
+	private java.lang.String statusPagamento;
+	@org.kie.api.definition.type.Label(value = "Código do motivo")
+	private int motivo;
 
+	public AnaliseEletronica() {
+	}
 
+	public java.util.List<java.lang.String> getMensagem() {
+		return this.mensagem;
+	}
 
+	public void setMensagem(java.util.List<java.lang.String> mensagem) {
+		this.mensagem = mensagem;
+	}
+
+	public java.lang.String getStatusPagamento() {
+		return this.statusPagamento;
+	}
+
+	public void setStatusPagamento(java.lang.String statusPagamento) {
+		this.statusPagamento = statusPagamento;
+	}
+
+	public int getMotivo() {
+		return this.motivo;
+	}
+
+	public void setMotivo(int motivo) {
+		this.motivo = motivo;
+	}
+
+	public AnaliseEletronica(java.util.List<java.lang.String> mensagem,
+			java.lang.String statusPagamento, int motivo) {
+		this.mensagem = mensagem;
+		this.statusPagamento = statusPagamento;
+		this.motivo = motivo;
+	}
 
 }
