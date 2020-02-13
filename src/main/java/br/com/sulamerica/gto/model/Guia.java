@@ -6,12 +6,176 @@ package br.com.sulamerica.gto.model;
 
 public class Guia implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Guia() {
-    }
+	@org.kie.api.definition.type.Label(value = "Dente ou região")
+	private java.lang.String regiao;
+	@org.kie.api.definition.type.Label(value = "Face do tratamento")
+	private java.lang.String face;
+	@org.kie.api.definition.type.Label(value = "Valor USO")
+	private double valorUso;
+	@org.kie.api.definition.type.Label(value = "Valor em reais")
+	private double valor;
+	@org.kie.api.definition.type.Label(value = "Data em que ocorreu a auditoria eletrônica")
+	private java.time.LocalDate dataAuditoriaEletronica;
+	@org.kie.api.definition.type.Label(value = "Data até quando a gui estará válida")
+	private java.time.LocalDate dataValidade;
+	@org.kie.api.definition.type.Label(value = "Data de término / realização")
+	private java.time.LocalDate dataRealizacao;
+	@org.kie.api.definition.type.Label(value = "Código da carteirnha")
+	private java.lang.String codigoCarteirinha;
+	@org.kie.api.definition.type.Label(value = "Código do prestador")
+	private java.lang.String codigoPrestador;
+	@org.kie.api.definition.type.Label(value = "Flag habilitando ou não o pagamento")
+	private boolean pagamento;
+	@org.kie.api.definition.type.Label(value = "Motivo no pagamento ou não")
+	private java.lang.String motivo;
+	@org.kie.api.definition.type.Label(value = "Campo contendo imagens")
+	private double imagem;
+	@org.kie.api.definition.type.Label(value = "Observação ou justificativa")
+	private java.lang.String observacao;
+	@org.kie.api.definition.type.Label(value = "Canal de entrada")
+	private java.lang.String canal;
 
+	public Guia() {
+	}
 
+	public java.lang.String getRegiao() {
+		return this.regiao;
+	}
 
+	public void setRegiao(java.lang.String regiao) {
+		this.regiao = regiao;
+	}
+
+	public java.lang.String getFace() {
+		return this.face;
+	}
+
+	public void setFace(java.lang.String face) {
+		this.face = face;
+	}
+
+	public double getValorUso() {
+		return this.valorUso;
+	}
+
+	public void setValorUso(double valorUso) {
+		this.valorUso = valorUso;
+	}
+
+	public double getValor() {
+		return this.valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public java.time.LocalDate getDataAuditoriaEletronica() {
+		return this.dataAuditoriaEletronica;
+	}
+
+	public void setDataAuditoriaEletronica(
+			java.time.LocalDate dataAuditoriaEletronica) {
+		this.dataAuditoriaEletronica = dataAuditoriaEletronica;
+	}
+
+	public java.time.LocalDate getDataValidade() {
+		return this.dataValidade;
+	}
+
+	public void setDataValidade(java.time.LocalDate dataValidade) {
+		this.dataValidade = dataValidade;
+	}
+
+	public java.time.LocalDate getDataRealizacao() {
+		return this.dataRealizacao;
+	}
+
+	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
+		this.dataRealizacao = dataRealizacao;
+	}
+
+	public java.lang.String getCodigoCarteirinha() {
+		return this.codigoCarteirinha;
+	}
+
+	public void setCodigoCarteirinha(java.lang.String codigoCarteirinha) {
+		this.codigoCarteirinha = codigoCarteirinha;
+	}
+
+	public java.lang.String getCodigoPrestador() {
+		return this.codigoPrestador;
+	}
+
+	public void setCodigoPrestador(java.lang.String codigoPrestador) {
+		this.codigoPrestador = codigoPrestador;
+	}
+
+	public boolean isPagamento() {
+		return this.pagamento;
+	}
+
+	public void setPagamento(boolean pagamento) {
+		this.pagamento = pagamento;
+	}
+
+	public java.lang.String getMotivo() {
+		return this.motivo;
+	}
+
+	public void setMotivo(java.lang.String motivo) {
+		this.motivo = motivo;
+	}
+
+	public double getImagem() {
+		return this.imagem;
+	}
+
+	public void setImagem(double imagem) {
+		this.imagem = imagem;
+	}
+
+	public java.lang.String getObservacao() {
+		return this.observacao;
+	}
+
+	public void setObservacao(java.lang.String observacao) {
+		this.observacao = observacao;
+	}
+
+	public java.lang.String getCanal() {
+		return this.canal;
+	}
+
+	public void setCanal(java.lang.String canal) {
+		this.canal = canal;
+	}
+
+	public Guia(java.lang.String regiao, java.lang.String face,
+			double valorUso, double valor,
+			java.time.LocalDate dataAuditoriaEletronica,
+			java.time.LocalDate dataValidade,
+			java.time.LocalDate dataRealizacao,
+			java.lang.String codigoCarteirinha,
+			java.lang.String codigoPrestador, boolean pagamento,
+			java.lang.String motivo, double imagem,
+			java.lang.String observacao, java.lang.String canal) {
+		this.regiao = regiao;
+		this.face = face;
+		this.valorUso = valorUso;
+		this.valor = valor;
+		this.dataAuditoriaEletronica = dataAuditoriaEletronica;
+		this.dataValidade = dataValidade;
+		this.dataRealizacao = dataRealizacao;
+		this.codigoCarteirinha = codigoCarteirinha;
+		this.codigoPrestador = codigoPrestador;
+		this.pagamento = pagamento;
+		this.motivo = motivo;
+		this.imagem = imagem;
+		this.observacao = observacao;
+		this.canal = canal;
+	}
 
 }
