@@ -6,12 +6,183 @@ package br.com.sulamerica.gto.model;
 
 public class Historico implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Historico() {
-    }
+	private boolean liberacao;
+	private java.lang.String denteRegiao;
+	private java.lang.String face;
+	private br.com.sulamerica.gto.model.Procedimento procedimento;
+	private double valorUso;
+	private double valorReal;
+	private double coParticipacao;
+	private boolean reconhecimento;
+	private java.time.LocalDate dataRealizacao;
+	private java.time.LocalDate dataAuditoria;
+	private java.time.LocalDate dataPagamento;
+	private java.time.LocalDate ultimaAlteracao;
+	private br.com.sulamerica.gto.model.Prestador prestador;
+	private boolean pagamento;
+	private int motivo;
+	private java.lang.String hitorico;
 
+	public Historico() {
+	}
 
+	public boolean isLiberacao() {
+		return this.liberacao;
+	}
 
+	public void setLiberacao(boolean liberacao) {
+		this.liberacao = liberacao;
+	}
+
+	public java.lang.String getDenteRegiao() {
+		return this.denteRegiao;
+	}
+
+	public void setDenteRegiao(java.lang.String denteRegiao) {
+		this.denteRegiao = denteRegiao;
+	}
+
+	public java.lang.String getFace() {
+		return this.face;
+	}
+
+	public void setFace(java.lang.String face) {
+		this.face = face;
+	}
+
+	public br.com.sulamerica.gto.model.Procedimento getProcedimento() {
+		return this.procedimento;
+	}
+
+	public void setProcedimento(
+			br.com.sulamerica.gto.model.Procedimento procedimento) {
+		this.procedimento = procedimento;
+	}
+
+	public double getValorUso() {
+		return this.valorUso;
+	}
+
+	public void setValorUso(double valorUso) {
+		this.valorUso = valorUso;
+	}
+
+	public double getValorReal() {
+		return this.valorReal;
+	}
+
+	public void setValorReal(double valorReal) {
+		this.valorReal = valorReal;
+	}
+
+	public double getCoParticipacao() {
+		return this.coParticipacao;
+	}
+
+	public void setCoParticipacao(double coParticipacao) {
+		this.coParticipacao = coParticipacao;
+	}
+
+	public boolean isReconhecimento() {
+		return this.reconhecimento;
+	}
+
+	public void setReconhecimento(boolean reconhecimento) {
+		this.reconhecimento = reconhecimento;
+	}
+
+	public java.time.LocalDate getDataRealizacao() {
+		return this.dataRealizacao;
+	}
+
+	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
+		this.dataRealizacao = dataRealizacao;
+	}
+
+	public java.time.LocalDate getDataAuditoria() {
+		return this.dataAuditoria;
+	}
+
+	public void setDataAuditoria(java.time.LocalDate dataAuditoria) {
+		this.dataAuditoria = dataAuditoria;
+	}
+
+	public java.time.LocalDate getDataPagamento() {
+		return this.dataPagamento;
+	}
+
+	public void setDataPagamento(java.time.LocalDate dataPagamento) {
+		this.dataPagamento = dataPagamento;
+	}
+
+	public java.time.LocalDate getUltimaAlteracao() {
+		return this.ultimaAlteracao;
+	}
+
+	public void setUltimaAlteracao(java.time.LocalDate ultimaAlteracao) {
+		this.ultimaAlteracao = ultimaAlteracao;
+	}
+
+	public br.com.sulamerica.gto.model.Prestador getPrestador() {
+		return this.prestador;
+	}
+
+	public void setPrestador(br.com.sulamerica.gto.model.Prestador prestador) {
+		this.prestador = prestador;
+	}
+
+	public boolean isPagamento() {
+		return this.pagamento;
+	}
+
+	public void setPagamento(boolean pagamento) {
+		this.pagamento = pagamento;
+	}
+
+	public int getMotivo() {
+		return this.motivo;
+	}
+
+	public void setMotivo(int motivo) {
+		this.motivo = motivo;
+	}
+
+	public java.lang.String getHitorico() {
+		return this.hitorico;
+	}
+
+	public void setHitorico(java.lang.String hitorico) {
+		this.hitorico = hitorico;
+	}
+
+	public Historico(boolean liberacao, java.lang.String denteRegiao,
+			java.lang.String face,
+			br.com.sulamerica.gto.model.Procedimento procedimento,
+			double valorUso, double valorReal, double coParticipacao,
+			boolean reconhecimento, java.time.LocalDate dataRealizacao,
+			java.time.LocalDate dataAuditoria,
+			java.time.LocalDate dataPagamento,
+			java.time.LocalDate ultimaAlteracao,
+			br.com.sulamerica.gto.model.Prestador prestador, boolean pagamento,
+			int motivo, java.lang.String hitorico) {
+		this.liberacao = liberacao;
+		this.denteRegiao = denteRegiao;
+		this.face = face;
+		this.procedimento = procedimento;
+		this.valorUso = valorUso;
+		this.valorReal = valorReal;
+		this.coParticipacao = coParticipacao;
+		this.reconhecimento = reconhecimento;
+		this.dataRealizacao = dataRealizacao;
+		this.dataAuditoria = dataAuditoria;
+		this.dataPagamento = dataPagamento;
+		this.ultimaAlteracao = ultimaAlteracao;
+		this.prestador = prestador;
+		this.pagamento = pagamento;
+		this.motivo = motivo;
+		this.hitorico = hitorico;
+	}
 
 }
