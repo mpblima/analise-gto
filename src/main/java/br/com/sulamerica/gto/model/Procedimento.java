@@ -49,9 +49,6 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Quanditade máxima face")
 	private int qtdMaximaFace;
 
-	@org.kie.api.definition.type.Label(value = "Status do pagamento")
-	private java.lang.String statusPagamento;
-
 	public Procedimento() {
 	}
 
@@ -215,14 +212,6 @@ public class Procedimento implements java.io.Serializable {
 		this.qtdMaximaFace = qtdMaximaFace;
 	}
 
-	public java.lang.String getStatusPagamento() {
-		return this.statusPagamento;
-	}
-
-	public void setStatusPagamento(java.lang.String statusPagamento) {
-		this.statusPagamento = statusPagamento;
-	}
-
 	public Procedimento(java.lang.String codigoProcedimento,
 			java.lang.String especialidade, double valor,
 			java.lang.String pacote, int prazoRepeticao, int idadeMinima,
@@ -231,8 +220,7 @@ public class Procedimento implements java.io.Serializable {
 			boolean auditoriaClinica, boolean necessitaLaudo,
 			boolean denteObrigatorio, boolean faceObrigatoria,
 			boolean dentePermanente, boolean denteReciduo,
-			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace,
-			java.lang.String statusPagamento) {
+			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
@@ -253,7 +241,6 @@ public class Procedimento implements java.io.Serializable {
 		this.regiao = regiao;
 		this.qtdMinimaFace = qtdMinimaFace;
 		this.qtdMaximaFace = qtdMaximaFace;
-		this.statusPagamento = statusPagamento;
 	}
 
 }
