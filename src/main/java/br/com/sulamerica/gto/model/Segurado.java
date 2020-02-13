@@ -8,22 +8,24 @@ public class Segurado implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Codigo da carteirinha")
+	@org.kie.api.definition.type.Label("Codigo da carteirinha")
 	private java.lang.String codCarteirinha;
-	@org.kie.api.definition.type.Label(value = "Data de nascimento")
+	@org.kie.api.definition.type.Label("Data de nascimento")
 	private java.time.LocalDate dataNascimento;
 	private java.lang.String plano;
-	@org.kie.api.definition.type.Label(value = "Data de inicio de vigencia")
+	@org.kie.api.definition.type.Label("Data de inicio de vigencia")
 	private java.time.LocalDate dataInicioVigencia;
-	@org.kie.api.definition.type.Label(value = "Data de exclusão")
+	@org.kie.api.definition.type.Label("Data de exclusão")
 	private java.time.LocalDate dataExclusao;
-	@org.kie.api.definition.type.Label(value = "Data de final de vigência")
+	@org.kie.api.definition.type.Label("Data de final de vigência")
 	private java.time.LocalDate dataFimVigencia;
-	@org.kie.api.definition.type.Label(value = "Segurado suspenso")
+	@org.kie.api.definition.type.Label("Segurado suspenso")
 	private boolean suspenso;
 	private boolean reInclusao;
-	@org.kie.api.definition.type.Label(value = "UF endereço cadastral")
+	@org.kie.api.definition.type.Label("UF endereço cadastral")
 	private java.lang.String ufCadastro;
+
+	private java.util.List<br.com.sulamerica.gto.model.Historico> historico;
 
 	public Segurado() {
 	}
@@ -100,12 +102,22 @@ public class Segurado implements java.io.Serializable {
 		this.ufCadastro = ufCadastro;
 	}
 
+	public java.util.List<br.com.sulamerica.gto.model.Historico> getHistorico() {
+		return this.historico;
+	}
+
+	public void setHistorico(
+			java.util.List<br.com.sulamerica.gto.model.Historico> historico) {
+		this.historico = historico;
+	}
+
 	public Segurado(java.lang.String codCarteirinha,
 			java.time.LocalDate dataNascimento, java.lang.String plano,
 			java.time.LocalDate dataInicioVigencia,
 			java.time.LocalDate dataExclusao,
 			java.time.LocalDate dataFimVigencia, boolean suspenso,
-			boolean reInclusao, java.lang.String ufCadastro) {
+			boolean reInclusao, java.lang.String ufCadastro,
+			java.util.List<br.com.sulamerica.gto.model.Historico> historico) {
 		this.codCarteirinha = codCarteirinha;
 		this.dataNascimento = dataNascimento;
 		this.plano = plano;
@@ -115,6 +127,7 @@ public class Segurado implements java.io.Serializable {
 		this.suspenso = suspenso;
 		this.reInclusao = reInclusao;
 		this.ufCadastro = ufCadastro;
+		this.historico = historico;
 	}
 
 }
