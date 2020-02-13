@@ -6,12 +6,47 @@ package br.com.sulamerica.gto.model;
 
 public class Empresa implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Empresa() {
-    }
+	@org.kie.api.definition.type.Label(value = "Contrato da empresa")
+	private java.lang.String contrato;
+	@org.kie.api.definition.type.Label(value = "Produto constante no contrato")
+	private java.lang.String produto;
+	@org.kie.api.definition.type.Label(value = "Codigo do grupo")
+	private java.lang.String codGrupo;
 
+	public Empresa() {
+	}
 
+	public java.lang.String getContrato() {
+		return this.contrato;
+	}
 
+	public void setContrato(java.lang.String contrato) {
+		this.contrato = contrato;
+	}
+
+	public java.lang.String getProduto() {
+		return this.produto;
+	}
+
+	public void setProduto(java.lang.String produto) {
+		this.produto = produto;
+	}
+
+	public java.lang.String getCodGrupo() {
+		return this.codGrupo;
+	}
+
+	public void setCodGrupo(java.lang.String codGrupo) {
+		this.codGrupo = codGrupo;
+	}
+
+	public Empresa(java.lang.String contrato, java.lang.String produto,
+			java.lang.String codGrupo) {
+		this.contrato = contrato;
+		this.produto = produto;
+		this.codGrupo = codGrupo;
+	}
 
 }
