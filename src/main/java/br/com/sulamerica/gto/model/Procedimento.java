@@ -49,6 +49,9 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Quanditade máxima face")
 	private int qtdMaximaFace;
 
+	@org.kie.api.definition.type.Label(value = "Marca se o procedimento foi analisado eletronicamente ou não")
+	private boolean analisadoEletronicamente;
+
 	public Procedimento() {
 	}
 
@@ -212,6 +215,14 @@ public class Procedimento implements java.io.Serializable {
 		this.qtdMaximaFace = qtdMaximaFace;
 	}
 
+	public boolean isAnalisadoEletronicamente() {
+		return this.analisadoEletronicamente;
+	}
+
+	public void setAnalisadoEletronicamente(boolean analisadoEletronicamente) {
+		this.analisadoEletronicamente = analisadoEletronicamente;
+	}
+
 	public Procedimento(java.lang.String codigoProcedimento,
 			java.lang.String especialidade, double valor,
 			java.lang.String pacote, int prazoRepeticao, int idadeMinima,
@@ -220,7 +231,8 @@ public class Procedimento implements java.io.Serializable {
 			boolean auditoriaClinica, boolean necessitaLaudo,
 			boolean denteObrigatorio, boolean faceObrigatoria,
 			boolean dentePermanente, boolean denteReciduo,
-			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace) {
+			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace,
+			boolean analisadoEletronicamente) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
@@ -241,6 +253,7 @@ public class Procedimento implements java.io.Serializable {
 		this.regiao = regiao;
 		this.qtdMinimaFace = qtdMinimaFace;
 		this.qtdMaximaFace = qtdMaximaFace;
+		this.analisadoEletronicamente = analisadoEletronicamente;
 	}
 
 }
