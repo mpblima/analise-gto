@@ -6,12 +6,83 @@ package br.com.sulamerica.gto.model;
 
 public class Prestador implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Prestador() {
-    }
+	@org.kie.api.definition.type.Label(value = "Codigo do prestador")
+	private java.lang.String codigoPrestador;
+	@org.kie.api.definition.type.Label(value = "UF do prestador")
+	private java.lang.String uf;
+	private java.util.List<java.lang.String> especialidades;
+	@org.kie.api.definition.type.Label(value = "Titulos de especialidade")
+	private java.util.List<java.lang.String> tituloEspecialidade;
+	@org.kie.api.definition.type.Label(value = "Categoria do prestador")
+	private java.lang.String categoria;
+	@org.kie.api.definition.type.Label(value = "Prestador PJ ou PF")
+	private boolean pj;
 
+	public Prestador() {
+	}
 
+	public java.lang.String getCodigoPrestador() {
+		return this.codigoPrestador;
+	}
 
+	public void setCodigoPrestador(java.lang.String codigoPrestador) {
+		this.codigoPrestador = codigoPrestador;
+	}
+
+	public java.lang.String getUf() {
+		return this.uf;
+	}
+
+	public void setUf(java.lang.String uf) {
+		this.uf = uf;
+	}
+
+	public java.util.List<java.lang.String> getEspecialidades() {
+		return this.especialidades;
+	}
+
+	public void setEspecialidades(
+			java.util.List<java.lang.String> especialidades) {
+		this.especialidades = especialidades;
+	}
+
+	public java.util.List<java.lang.String> getTituloEspecialidade() {
+		return this.tituloEspecialidade;
+	}
+
+	public void setTituloEspecialidade(
+			java.util.List<java.lang.String> tituloEspecialidade) {
+		this.tituloEspecialidade = tituloEspecialidade;
+	}
+
+	public java.lang.String getCategoria() {
+		return this.categoria;
+	}
+
+	public void setCategoria(java.lang.String categoria) {
+		this.categoria = categoria;
+	}
+
+	public boolean isPj() {
+		return this.pj;
+	}
+
+	public void setPj(boolean pj) {
+		this.pj = pj;
+	}
+
+	public Prestador(java.lang.String codigoPrestador, java.lang.String uf,
+			java.util.List<java.lang.String> especialidades,
+			java.util.List<java.lang.String> tituloEspecialidade,
+			java.lang.String categoria, boolean pj) {
+		this.codigoPrestador = codigoPrestador;
+		this.uf = uf;
+		this.especialidades = especialidades;
+		this.tituloEspecialidade = tituloEspecialidade;
+		this.categoria = categoria;
+		this.pj = pj;
+	}
 
 }
