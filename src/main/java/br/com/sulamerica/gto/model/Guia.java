@@ -40,8 +40,10 @@ public class Guia implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Lista de procedimentos")
 	private java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos;
 
-	@org.kie.api.definition.type.Label(value = "Prestador de serviço")
+	@org.kie.api.definition.type.Label("Prestador de serviço")
 	private br.com.sulamerica.gto.model.Prestador prestador;
+
+	private br.com.sulamerica.gto.model.Empresa empresa;
 
 	public Guia() {
 	}
@@ -176,6 +178,14 @@ public class Guia implements java.io.Serializable {
 		this.prestador = prestador;
 	}
 
+	public br.com.sulamerica.gto.model.Empresa getEmpresa() {
+		return this.empresa;
+	}
+
+	public void setEmpresa(br.com.sulamerica.gto.model.Empresa empresa) {
+		this.empresa = empresa;
+	}
+
 	public Guia(
 			java.lang.String regiao,
 			java.lang.String face,
@@ -192,7 +202,8 @@ public class Guia implements java.io.Serializable {
 			java.lang.String observacao,
 			java.lang.String canal,
 			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos,
-			br.com.sulamerica.gto.model.Prestador prestador) {
+			br.com.sulamerica.gto.model.Prestador prestador,
+			br.com.sulamerica.gto.model.Empresa empresa) {
 		this.regiao = regiao;
 		this.face = face;
 		this.valorUso = valorUso;
@@ -209,6 +220,7 @@ public class Guia implements java.io.Serializable {
 		this.canal = canal;
 		this.procedimentos = procedimentos;
 		this.prestador = prestador;
+		this.empresa = empresa;
 	}
 
 }
