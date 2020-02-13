@@ -37,8 +37,11 @@ public class Guia implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Canal de entrada")
 	private java.lang.String canal;
 
-	@org.kie.api.definition.type.Label(value = "Lista de procedimentos")
+	@org.kie.api.definition.type.Label("Lista de procedimentos")
 	private java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos;
+
+	@org.kie.api.definition.type.Label(value = "Prestador de serviço")
+	private br.com.sulamerica.gto.model.Prestador prestador;
 
 	public Guia() {
 	}
@@ -165,6 +168,14 @@ public class Guia implements java.io.Serializable {
 		this.procedimentos = procedimentos;
 	}
 
+	public br.com.sulamerica.gto.model.Prestador getPrestador() {
+		return this.prestador;
+	}
+
+	public void setPrestador(br.com.sulamerica.gto.model.Prestador prestador) {
+		this.prestador = prestador;
+	}
+
 	public Guia(
 			java.lang.String regiao,
 			java.lang.String face,
@@ -180,7 +191,8 @@ public class Guia implements java.io.Serializable {
 			double imagem,
 			java.lang.String observacao,
 			java.lang.String canal,
-			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos) {
+			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos,
+			br.com.sulamerica.gto.model.Prestador prestador) {
 		this.regiao = regiao;
 		this.face = face;
 		this.valorUso = valorUso;
@@ -196,6 +208,7 @@ public class Guia implements java.io.Serializable {
 		this.observacao = observacao;
 		this.canal = canal;
 		this.procedimentos = procedimentos;
+		this.prestador = prestador;
 	}
 
 }
