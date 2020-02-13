@@ -8,46 +8,49 @@ public class Procedimento implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Código do procedimento")
+	@org.kie.api.definition.type.Label("Código do procedimento")
 	private java.lang.String codigoProcedimento;
-	@org.kie.api.definition.type.Label(value = "Especialidade do procedimento")
+	@org.kie.api.definition.type.Label("Especialidade do procedimento")
 	private java.lang.String especialidade;
-	@org.kie.api.definition.type.Label(value = "Valor em reais")
+	@org.kie.api.definition.type.Label("Valor em reais")
 	private double valor;
-	@org.kie.api.definition.type.Label(value = "Pacote do qual o procedimento faz parte")
+	@org.kie.api.definition.type.Label("Pacote do qual o procedimento faz parte")
 	private java.lang.String pacote;
-	@org.kie.api.definition.type.Label(value = "Prazo para repetição")
+	@org.kie.api.definition.type.Label("Prazo para repetição")
 	private int prazoRepeticao;
-	@org.kie.api.definition.type.Label(value = "Idade minima de atendimento para a faixa etaria")
+	@org.kie.api.definition.type.Label("Idade minima de atendimento para a faixa etaria")
 	private int idadeMinima;
-	@org.kie.api.definition.type.Label(value = "Idade máxima da atendimento para a faixa etaria")
+	@org.kie.api.definition.type.Label("Idade máxima da atendimento para a faixa etaria")
 	private int idadeMaxima;
-	@org.kie.api.definition.type.Label(value = "Exige Raio X previo")
+	@org.kie.api.definition.type.Label("Exige Raio X previo")
 	private boolean rxPrevio;
-	@org.kie.api.definition.type.Label(value = "Exige raio x inicial")
+	@org.kie.api.definition.type.Label("Exige raio x inicial")
 	private boolean raioxInicial;
-	@org.kie.api.definition.type.Label(value = "Exige raio x final")
+	@org.kie.api.definition.type.Label("Exige raio x final")
 	private boolean raioxFinal;
-	@org.kie.api.definition.type.Label(value = "Auditoria administrativa")
+	@org.kie.api.definition.type.Label("Auditoria administrativa")
 	private boolean auditoriaAdministrativa;
-	@org.kie.api.definition.type.Label(value = "Auditoria Clinica")
+	@org.kie.api.definition.type.Label("Auditoria Clinica")
 	private boolean auditoriaClinica;
-	@org.kie.api.definition.type.Label(value = "Necessita laudo")
+	@org.kie.api.definition.type.Label("Necessita laudo")
 	private boolean necessitaLaudo;
-	@org.kie.api.definition.type.Label(value = "Obrigatorio digitar dent,e")
+	@org.kie.api.definition.type.Label("Obrigatorio digitar dent,e")
 	private boolean denteObrigatorio;
-	@org.kie.api.definition.type.Label(value = "Obrigatorio digitar face")
+	@org.kie.api.definition.type.Label("Obrigatorio digitar face")
 	private boolean faceObrigatoria;
-	@org.kie.api.definition.type.Label(value = "Dente permanente")
+	@org.kie.api.definition.type.Label("Dente permanente")
 	private boolean dentePermanente;
-	@org.kie.api.definition.type.Label(value = "Dente recíduo")
+	@org.kie.api.definition.type.Label("Dente recíduo")
 	private boolean denteReciduo;
-	@org.kie.api.definition.type.Label(value = "Região da boca")
+	@org.kie.api.definition.type.Label("Região da boca")
 	private java.lang.String regiao;
-	@org.kie.api.definition.type.Label(value = "Quantidade mínima face")
+	@org.kie.api.definition.type.Label("Quantidade mínima face")
 	private int qtdMinimaFace;
-	@org.kie.api.definition.type.Label(value = "Quanditade máxima face")
+	@org.kie.api.definition.type.Label("Quanditade máxima face")
 	private int qtdMaximaFace;
+
+	@org.kie.api.definition.type.Label(value = "Status do procedimento")
+	private java.lang.String status;
 
 	public Procedimento() {
 	}
@@ -212,6 +215,14 @@ public class Procedimento implements java.io.Serializable {
 		this.qtdMaximaFace = qtdMaximaFace;
 	}
 
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
 	public Procedimento(java.lang.String codigoProcedimento,
 			java.lang.String especialidade, double valor,
 			java.lang.String pacote, int prazoRepeticao, int idadeMinima,
@@ -220,7 +231,8 @@ public class Procedimento implements java.io.Serializable {
 			boolean auditoriaClinica, boolean necessitaLaudo,
 			boolean denteObrigatorio, boolean faceObrigatoria,
 			boolean dentePermanente, boolean denteReciduo,
-			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace) {
+			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace,
+			java.lang.String status) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
@@ -241,6 +253,7 @@ public class Procedimento implements java.io.Serializable {
 		this.regiao = regiao;
 		this.qtdMinimaFace = qtdMinimaFace;
 		this.qtdMaximaFace = qtdMaximaFace;
+		this.status = status;
 	}
 
 }
