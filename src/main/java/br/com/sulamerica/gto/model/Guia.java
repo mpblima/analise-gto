@@ -8,34 +8,37 @@ public class Guia implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Dente ou região")
+	@org.kie.api.definition.type.Label("Dente ou região")
 	private java.lang.String regiao;
-	@org.kie.api.definition.type.Label(value = "Face do tratamento")
+	@org.kie.api.definition.type.Label("Face do tratamento")
 	private java.lang.String face;
-	@org.kie.api.definition.type.Label(value = "Valor USO")
+	@org.kie.api.definition.type.Label("Valor USO")
 	private double valorUso;
-	@org.kie.api.definition.type.Label(value = "Valor em reais")
+	@org.kie.api.definition.type.Label("Valor em reais")
 	private double valor;
-	@org.kie.api.definition.type.Label(value = "Data em que ocorreu a auditoria eletrônica")
+	@org.kie.api.definition.type.Label("Data em que ocorreu a auditoria eletrônica")
 	private java.time.LocalDate dataAuditoriaEletronica;
-	@org.kie.api.definition.type.Label(value = "Data até quando a gui estará válida")
+	@org.kie.api.definition.type.Label("Data até quando a gui estará válida")
 	private java.time.LocalDate dataValidade;
-	@org.kie.api.definition.type.Label(value = "Data de término / realização")
+	@org.kie.api.definition.type.Label("Data de término / realização")
 	private java.time.LocalDate dataRealizacao;
-	@org.kie.api.definition.type.Label(value = "Código da carteirnha")
+	@org.kie.api.definition.type.Label("Código da carteirnha")
 	private java.lang.String codigoCarteirinha;
-	@org.kie.api.definition.type.Label(value = "Código do prestador")
+	@org.kie.api.definition.type.Label("Código do prestador")
 	private java.lang.String codigoPrestador;
-	@org.kie.api.definition.type.Label(value = "Flag habilitando ou não o pagamento")
+	@org.kie.api.definition.type.Label("Flag habilitando ou não o pagamento")
 	private boolean pagamento;
-	@org.kie.api.definition.type.Label(value = "Motivo no pagamento ou não")
+	@org.kie.api.definition.type.Label("Motivo no pagamento ou não")
 	private java.lang.String motivo;
-	@org.kie.api.definition.type.Label(value = "Campo contendo imagens")
+	@org.kie.api.definition.type.Label("Campo contendo imagens")
 	private double imagem;
-	@org.kie.api.definition.type.Label(value = "Observação ou justificativa")
+	@org.kie.api.definition.type.Label("Observação ou justificativa")
 	private java.lang.String observacao;
-	@org.kie.api.definition.type.Label(value = "Canal de entrada")
+	@org.kie.api.definition.type.Label("Canal de entrada")
 	private java.lang.String canal;
+
+	@org.kie.api.definition.type.Label(value = "Lista de procedimentos")
+	private java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos;
 
 	public Guia() {
 	}
@@ -153,15 +156,31 @@ public class Guia implements java.io.Serializable {
 		this.canal = canal;
 	}
 
-	public Guia(java.lang.String regiao, java.lang.String face,
-			double valorUso, double valor,
+	public java.util.List<br.com.sulamerica.gto.model.Procedimento> getProcedimentos() {
+		return this.procedimentos;
+	}
+
+	public void setProcedimentos(
+			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos) {
+		this.procedimentos = procedimentos;
+	}
+
+	public Guia(
+			java.lang.String regiao,
+			java.lang.String face,
+			double valorUso,
+			double valor,
 			java.time.LocalDate dataAuditoriaEletronica,
 			java.time.LocalDate dataValidade,
 			java.time.LocalDate dataRealizacao,
 			java.lang.String codigoCarteirinha,
-			java.lang.String codigoPrestador, boolean pagamento,
-			java.lang.String motivo, double imagem,
-			java.lang.String observacao, java.lang.String canal) {
+			java.lang.String codigoPrestador,
+			boolean pagamento,
+			java.lang.String motivo,
+			double imagem,
+			java.lang.String observacao,
+			java.lang.String canal,
+			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos) {
 		this.regiao = regiao;
 		this.face = face;
 		this.valorUso = valorUso;
@@ -176,6 +195,7 @@ public class Guia implements java.io.Serializable {
 		this.imagem = imagem;
 		this.observacao = observacao;
 		this.canal = canal;
+		this.procedimentos = procedimentos;
 	}
 
 }
