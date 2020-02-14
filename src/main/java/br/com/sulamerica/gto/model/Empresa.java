@@ -8,23 +8,16 @@ public class Empresa implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label("Contrato da empresa")
-	private java.lang.String contrato;
 	@org.kie.api.definition.type.Label("Código do grupo")
 	private int codGrupo;
 
-	@org.kie.api.definition.type.Label(value = "Produto do contratante")
+	@org.kie.api.definition.type.Label("Produto do contratante")
 	private int codProduto;
 
+	@org.kie.api.definition.type.Label(value = "Código do contrato")
+	private int codContrato;
+
 	public Empresa() {
-	}
-
-	public java.lang.String getContrato() {
-		return this.contrato;
-	}
-
-	public void setContrato(java.lang.String contrato) {
-		this.contrato = contrato;
 	}
 
 	public int getCodGrupo() {
@@ -43,10 +36,18 @@ public class Empresa implements java.io.Serializable {
 		this.codProduto = codProduto;
 	}
 
-	public Empresa(java.lang.String contrato, int codGrupo, int codProduto) {
-		this.contrato = contrato;
+	public int getCodContrato() {
+		return this.codContrato;
+	}
+
+	public void setCodContrato(int codContrato) {
+		this.codContrato = codContrato;
+	}
+
+	public Empresa(int codGrupo, int codProduto, int codContrato) {
 		this.codGrupo = codGrupo;
 		this.codProduto = codProduto;
+		this.codContrato = codContrato;
 	}
 
 }
