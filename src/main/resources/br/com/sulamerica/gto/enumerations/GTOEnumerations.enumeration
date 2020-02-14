@@ -1,2 +1,2 @@
 'Guia.canal' : ['site','pwa','outro']
-'AnaliseEletronica.statusPagamento' : ['Autorizado','Não autorizado','Em análise']
+'AnaliseEletronica.statusPagamento' : ['Sim','Não','Em análise']
