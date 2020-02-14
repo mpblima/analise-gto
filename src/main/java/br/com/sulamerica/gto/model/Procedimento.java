@@ -16,8 +16,6 @@ public class Procedimento implements java.io.Serializable {
 	private double valor;
 	@org.kie.api.definition.type.Label("Pacote do qual o procedimento faz parte")
 	private java.lang.String pacote;
-	@org.kie.api.definition.type.Label("Prazo para repetição")
-	private int prazoRepeticao;
 	@org.kie.api.definition.type.Label("Idade minima de atendimento para a faixa etaria")
 	private int idadeMinima;
 	@org.kie.api.definition.type.Label("Idade máxima da atendimento para a faixa etaria")
@@ -42,15 +40,25 @@ public class Procedimento implements java.io.Serializable {
 	private boolean dentePermanente;
 	@org.kie.api.definition.type.Label("Dente recíduo")
 	private boolean denteReciduo;
-	@org.kie.api.definition.type.Label("Região da boca")
-	private java.lang.String regiao;
 	@org.kie.api.definition.type.Label("Quantidade mínima face")
 	private int qtdMinimaFace;
 	@org.kie.api.definition.type.Label("Quanditade máxima face")
 	private int qtdMaximaFace;
 
-	@org.kie.api.definition.type.Label(value = "Marca se o procedimento foi analisado eletronicamente ou não")
+	@org.kie.api.definition.type.Label("Marca se o procedimento foi analisado eletronicamente ou não")
 	private boolean analisadoEletronicamente;
+
+	@org.kie.api.definition.type.Label(value = "Prazo máximo para reprovação do procedimento")
+	private int prazoRepeticaoMeses;
+
+	@org.kie.api.definition.type.Label(value = "regiao da boca")
+	private java.util.List<java.lang.String> regiao;
+
+	@org.kie.api.definition.type.Label(value = "faces do dente")
+	private java.util.List<java.lang.String> listaDeFaces;
+
+	@org.kie.api.definition.type.Label(value = "lista de dentes")
+	private java.util.List<java.lang.Integer> listaDentes;
 
 	public Procedimento() {
 	}
@@ -85,14 +93,6 @@ public class Procedimento implements java.io.Serializable {
 
 	public void setPacote(java.lang.String pacote) {
 		this.pacote = pacote;
-	}
-
-	public int getPrazoRepeticao() {
-		return this.prazoRepeticao;
-	}
-
-	public void setPrazoRepeticao(int prazoRepeticao) {
-		this.prazoRepeticao = prazoRepeticao;
 	}
 
 	public int getIdadeMinima() {
@@ -191,14 +191,6 @@ public class Procedimento implements java.io.Serializable {
 		this.denteReciduo = denteReciduo;
 	}
 
-	public java.lang.String getRegiao() {
-		return this.regiao;
-	}
-
-	public void setRegiao(java.lang.String regiao) {
-		this.regiao = regiao;
-	}
-
 	public int getQtdMinimaFace() {
 		return this.qtdMinimaFace;
 	}
@@ -223,21 +215,54 @@ public class Procedimento implements java.io.Serializable {
 		this.analisadoEletronicamente = analisadoEletronicamente;
 	}
 
+	public int getPrazoRepeticaoMeses() {
+		return this.prazoRepeticaoMeses;
+	}
+
+	public void setPrazoRepeticaoMeses(int prazoRepeticaoMeses) {
+		this.prazoRepeticaoMeses = prazoRepeticaoMeses;
+	}
+
+	public java.util.List<java.lang.String> getRegiao() {
+		return this.regiao;
+	}
+
+	public void setRegiao(java.util.List<java.lang.String> regiao) {
+		this.regiao = regiao;
+	}
+
+	public java.util.List<java.lang.String> getListaDeFaces() {
+		return this.listaDeFaces;
+	}
+
+	public void setListaDeFaces(java.util.List<java.lang.String> listaDeFaces) {
+		this.listaDeFaces = listaDeFaces;
+	}
+
+	public java.util.List<java.lang.Integer> getListaDentes() {
+		return this.listaDentes;
+	}
+
+	public void setListaDentes(java.util.List<java.lang.Integer> listaDentes) {
+		this.listaDentes = listaDentes;
+	}
+
 	public Procedimento(java.lang.String codigoProcedimento,
 			java.lang.String especialidade, double valor,
-			java.lang.String pacote, int prazoRepeticao, int idadeMinima,
-			int idadeMaxima, boolean rxPrevio, boolean raioxInicial,
-			boolean raioxFinal, boolean auditoriaAdministrativa,
-			boolean auditoriaClinica, boolean necessitaLaudo,
-			boolean denteObrigatorio, boolean faceObrigatoria,
-			boolean dentePermanente, boolean denteReciduo,
-			java.lang.String regiao, int qtdMinimaFace, int qtdMaximaFace,
-			boolean analisadoEletronicamente) {
+			java.lang.String pacote, int idadeMinima, int idadeMaxima,
+			boolean rxPrevio, boolean raioxInicial, boolean raioxFinal,
+			boolean auditoriaAdministrativa, boolean auditoriaClinica,
+			boolean necessitaLaudo, boolean denteObrigatorio,
+			boolean faceObrigatoria, boolean dentePermanente,
+			boolean denteReciduo, int qtdMinimaFace, int qtdMaximaFace,
+			boolean analisadoEletronicamente, int prazoRepeticaoMeses,
+			java.util.List<java.lang.String> regiao,
+			java.util.List<java.lang.String> listaDeFaces,
+			java.util.List<java.lang.Integer> listaDentes) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
 		this.pacote = pacote;
-		this.prazoRepeticao = prazoRepeticao;
 		this.idadeMinima = idadeMinima;
 		this.idadeMaxima = idadeMaxima;
 		this.rxPrevio = rxPrevio;
@@ -250,10 +275,13 @@ public class Procedimento implements java.io.Serializable {
 		this.faceObrigatoria = faceObrigatoria;
 		this.dentePermanente = dentePermanente;
 		this.denteReciduo = denteReciduo;
-		this.regiao = regiao;
 		this.qtdMinimaFace = qtdMinimaFace;
 		this.qtdMaximaFace = qtdMaximaFace;
 		this.analisadoEletronicamente = analisadoEletronicamente;
+		this.prazoRepeticaoMeses = prazoRepeticaoMeses;
+		this.regiao = regiao;
+		this.listaDeFaces = listaDeFaces;
+		this.listaDentes = listaDentes;
 	}
 
 }
