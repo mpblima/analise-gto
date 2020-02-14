@@ -30,8 +30,6 @@ public class Guia implements java.io.Serializable {
 	private boolean pagamento;
 	@org.kie.api.definition.type.Label("Motivo no pagamento ou não")
 	private java.lang.String motivo;
-	@org.kie.api.definition.type.Label("Campo contendo imagens")
-	private double imagem;
 	@org.kie.api.definition.type.Label("Observação ou justificativa")
 	private java.lang.String observacao;
 	@org.kie.api.definition.type.Label("Canal de entrada")
@@ -45,7 +43,7 @@ public class Guia implements java.io.Serializable {
 
 	private br.com.sulamerica.gto.model.Empresa empresa;
 
-	@org.kie.api.definition.type.Label(value = "Informações do segurado")
+	@org.kie.api.definition.type.Label("Informações do segurado")
 	private br.com.sulamerica.gto.model.Segurado segurado;
 
 	public Guia() {
@@ -140,14 +138,6 @@ public class Guia implements java.io.Serializable {
 		this.motivo = motivo;
 	}
 
-	public double getImagem() {
-		return this.imagem;
-	}
-
-	public void setImagem(double imagem) {
-		this.imagem = imagem;
-	}
-
 	public java.lang.String getObservacao() {
 		return this.observacao;
 	}
@@ -209,7 +199,6 @@ public class Guia implements java.io.Serializable {
 			java.lang.String codigoPrestador,
 			boolean pagamento,
 			java.lang.String motivo,
-			double imagem,
 			java.lang.String observacao,
 			java.lang.String canal,
 			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos,
@@ -227,7 +216,6 @@ public class Guia implements java.io.Serializable {
 		this.codigoPrestador = codigoPrestador;
 		this.pagamento = pagamento;
 		this.motivo = motivo;
-		this.imagem = imagem;
 		this.observacao = observacao;
 		this.canal = canal;
 		this.procedimentos = procedimentos;
