@@ -10,7 +10,65 @@
   </descriptionCol>
   <metadataCols/>
   <attributeCols/>
-  <conditionPatterns/>
+  <conditionPatterns>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Teste</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <factType>Guia</factType>
+          <boundName>guia</boundName>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
+        <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+          <factPattern>
+            <factType>Procedimento</factType>
+            <isNegated>false</isNegated>
+            <window>
+              <parameters/>
+            </window>
+          </factPattern>
+          <expression>
+            <binding>proc</binding>
+            <parts>
+              <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                <next class="org.drools.workbench.models.datamodel.rule.ExpressionCollection">
+                  <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                  <name>procedimentos</name>
+                  <classType>java.util.List</classType>
+                  <genericType>Collection</genericType>
+                  <parametricType>Procedimento</parametricType>
+                </next>
+                <name>guia</name>
+                <classType>Guia</classType>
+                <genericType>Guia</genericType>
+                <factType>Guia</factType>
+              </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+              <org.drools.workbench.models.datamodel.rule.ExpressionCollection reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+            </parts>
+            <index>2147483647</index>
+          </expression>
+        </org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Teste</header>
+          <constraintValueType>1</constraintValueType>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+  </conditionPatterns>
   <actionCols/>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
@@ -68,6 +126,12 @@
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
     </list>
     <list>
       <value>
@@ -79,6 +143,12 @@
       <value>
         <valueString>Verifica se a data de atendimento está na vigência</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
     </list>
