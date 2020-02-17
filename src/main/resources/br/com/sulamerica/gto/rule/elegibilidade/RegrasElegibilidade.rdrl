@@ -10,5 +10,6 @@ rule "RegrasElegibilidade"
 	when
 		guia : Guia( )
 		Segurado( eval( dataExclusao > dataFimVigencia )) from guia.segurado
+		seg : Segurado( ) from guia.segurado
 	then
 end
