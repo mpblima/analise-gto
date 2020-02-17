@@ -22,10 +22,6 @@ public class Guia implements java.io.Serializable {
 	private java.time.LocalDate dataValidade;
 	@org.kie.api.definition.type.Label("Data de término / realização")
 	private java.time.LocalDate dataRealizacao;
-	@org.kie.api.definition.type.Label("Código da carteirnha")
-	private java.lang.String codigoCarteirinha;
-	@org.kie.api.definition.type.Label("Código do prestador")
-	private java.lang.String codigoPrestador;
 	@org.kie.api.definition.type.Label("Flag habilitando ou não o pagamento")
 	private boolean pagamento;
 	@org.kie.api.definition.type.Label("Motivo no pagamento ou não")
@@ -106,22 +102,6 @@ public class Guia implements java.io.Serializable {
 		this.dataRealizacao = dataRealizacao;
 	}
 
-	public java.lang.String getCodigoCarteirinha() {
-		return this.codigoCarteirinha;
-	}
-
-	public void setCodigoCarteirinha(java.lang.String codigoCarteirinha) {
-		this.codigoCarteirinha = codigoCarteirinha;
-	}
-
-	public java.lang.String getCodigoPrestador() {
-		return this.codigoPrestador;
-	}
-
-	public void setCodigoPrestador(java.lang.String codigoPrestador) {
-		this.codigoPrestador = codigoPrestador;
-	}
-
 	public boolean isPagamento() {
 		return this.pagamento;
 	}
@@ -195,8 +175,6 @@ public class Guia implements java.io.Serializable {
 			java.time.LocalDate dataAuditoriaEletronica,
 			java.time.LocalDate dataValidade,
 			java.time.LocalDate dataRealizacao,
-			java.lang.String codigoCarteirinha,
-			java.lang.String codigoPrestador,
 			boolean pagamento,
 			java.lang.String motivo,
 			java.lang.String observacao,
@@ -212,8 +190,6 @@ public class Guia implements java.io.Serializable {
 		this.dataAuditoriaEletronica = dataAuditoriaEletronica;
 		this.dataValidade = dataValidade;
 		this.dataRealizacao = dataRealizacao;
-		this.codigoCarteirinha = codigoCarteirinha;
-		this.codigoPrestador = codigoPrestador;
 		this.pagamento = pagamento;
 		this.motivo = motivo;
 		this.observacao = observacao;
