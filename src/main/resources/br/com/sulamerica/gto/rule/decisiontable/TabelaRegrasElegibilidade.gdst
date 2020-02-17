@@ -40,7 +40,17 @@
     <entries/>
   </auditLog>
   <imports>
-    <imports/>
+    <imports>
+      <org.kie.soup.project.datamodel.imports.Import>
+        <type>br.com.sulamerica.gto.model.Guia</type>
+      </org.kie.soup.project.datamodel.imports.Import>
+      <org.kie.soup.project.datamodel.imports.Import>
+        <type>br.com.sulamerica.gto.model.Segurado</type>
+      </org.kie.soup.project.datamodel.imports.Import>
+      <org.kie.soup.project.datamodel.imports.Import>
+        <type>br.com.sulamerica.gto.model.Procedimento</type>
+      </org.kie.soup.project.datamodel.imports.Import>
+    </imports>
   </imports>
   <packageName>br.com.sulamerica.gto.rule.decisiontable</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
