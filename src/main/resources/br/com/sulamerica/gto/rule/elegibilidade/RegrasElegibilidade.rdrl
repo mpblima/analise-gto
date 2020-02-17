@@ -1,0 +1,9 @@
+package br.com.sulamerica.gto.rule.elegibilidade;
+
+import java.lang.Number;
+
+rule "RegrasElegibilidade"
+	dialect "mvel"
+	when
+	then
+end
