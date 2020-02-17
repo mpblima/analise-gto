@@ -66,13 +66,6 @@
           </window>
         </org.drools.workbench.models.datamodel.rule.FactPattern>
         <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
-          <factPattern>
-            <factType>Guia</factType>
-            <isNegated>false</isNegated>
-            <window>
-              <parameters/>
-            </window>
-          </factPattern>
           <expression>
             <parts>
               <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
