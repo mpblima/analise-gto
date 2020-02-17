@@ -32,7 +32,7 @@ public class Procedimento implements java.io.Serializable {
 	private boolean auditoriaClinica;
 	@org.kie.api.definition.type.Label("Necessita laudo")
 	private boolean necessitaLaudo;
-	@org.kie.api.definition.type.Label("Obrigatorio digitar dent,e")
+	@org.kie.api.definition.type.Label("Obrigatorio digitar dente")
 	private boolean denteObrigatorio;
 	@org.kie.api.definition.type.Label("Obrigatorio digitar face")
 	private boolean faceObrigatoria;
@@ -48,17 +48,20 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Marca se o procedimento foi analisado eletronicamente ou não")
 	private boolean analisadoEletronicamente;
 
-	@org.kie.api.definition.type.Label(value = "Prazo máximo para reprovação do procedimento")
+	@org.kie.api.definition.type.Label("Prazo máximo para reprovação do procedimento")
 	private int prazoRepeticaoMeses;
 
-	@org.kie.api.definition.type.Label(value = "regiao da boca")
+	@org.kie.api.definition.type.Label("regiao da boca")
 	private java.util.List<java.lang.String> regiao;
 
-	@org.kie.api.definition.type.Label(value = "faces do dente")
+	@org.kie.api.definition.type.Label("faces do dente")
 	private java.util.List<java.lang.String> listaDeFaces;
 
-	@org.kie.api.definition.type.Label(value = "lista de dentes")
+	@org.kie.api.definition.type.Label("lista de dentes")
 	private java.util.List<java.lang.Integer> listaDentes;
+
+	@org.kie.api.definition.type.Label(value = "Lista de todos os registros de analise eletrônica")
+	private java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica;
 
 	public Procedimento() {
 	}
@@ -247,18 +250,40 @@ public class Procedimento implements java.io.Serializable {
 		this.listaDentes = listaDentes;
 	}
 
-	public Procedimento(java.lang.String codigoProcedimento,
-			java.lang.String especialidade, double valor,
-			java.lang.String pacote, int idadeMinima, int idadeMaxima,
-			boolean rxPrevio, boolean raioxInicial, boolean raioxFinal,
-			boolean auditoriaAdministrativa, boolean auditoriaClinica,
-			boolean necessitaLaudo, boolean denteObrigatorio,
-			boolean faceObrigatoria, boolean dentePermanente,
-			boolean denteReciduo, int qtdMinimaFace, int qtdMaximaFace,
-			boolean analisadoEletronicamente, int prazoRepeticaoMeses,
+	public java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> getRegistrosAnaliseEletronica() {
+		return this.registrosAnaliseEletronica;
+	}
+
+	public void setRegistrosAnaliseEletronica(
+			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica) {
+		this.registrosAnaliseEletronica = registrosAnaliseEletronica;
+	}
+
+	public Procedimento(
+			java.lang.String codigoProcedimento,
+			java.lang.String especialidade,
+			double valor,
+			java.lang.String pacote,
+			int idadeMinima,
+			int idadeMaxima,
+			boolean rxPrevio,
+			boolean raioxInicial,
+			boolean raioxFinal,
+			boolean auditoriaAdministrativa,
+			boolean auditoriaClinica,
+			boolean necessitaLaudo,
+			boolean denteObrigatorio,
+			boolean faceObrigatoria,
+			boolean dentePermanente,
+			boolean denteReciduo,
+			int qtdMinimaFace,
+			int qtdMaximaFace,
+			boolean analisadoEletronicamente,
+			int prazoRepeticaoMeses,
 			java.util.List<java.lang.String> regiao,
 			java.util.List<java.lang.String> listaDeFaces,
-			java.util.List<java.lang.Integer> listaDentes) {
+			java.util.List<java.lang.Integer> listaDentes,
+			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
@@ -282,6 +307,7 @@ public class Procedimento implements java.io.Serializable {
 		this.regiao = regiao;
 		this.listaDeFaces = listaDeFaces;
 		this.listaDentes = listaDentes;
+		this.registrosAnaliseEletronica = registrosAnaliseEletronica;
 	}
 
 }
