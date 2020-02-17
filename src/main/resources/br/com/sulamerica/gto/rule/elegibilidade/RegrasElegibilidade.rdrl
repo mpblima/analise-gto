@@ -1,9 +1,14 @@
 package br.com.sulamerica.gto.rule.elegibilidade;
 
 import java.lang.Number;
+import br.com.sulamerica.gto.model.Guia;
+import br.com.sulamerica.gto.model.Segurado;
+import br.com.sulamerica.gto.model.Procedimento;
 
 rule "RegrasElegibilidade"
 	dialect "mvel"
 	when
+		guia : Guia( )
+		Segurado( eval( dataExclusao > dataFimVigencia )) from guia.segurado
 	then
 end
