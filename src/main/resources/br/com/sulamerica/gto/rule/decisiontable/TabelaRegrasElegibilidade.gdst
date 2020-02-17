@@ -26,35 +26,45 @@
             <parameters/>
           </window>
         </org.drools.workbench.models.datamodel.rule.FactPattern>
-        <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
-          <factPattern>
-            <factType>Procedimento</factType>
-            <isNegated>false</isNegated>
-            <window>
-              <parameters/>
-            </window>
-          </factPattern>
-          <expression>
-            <binding>proc</binding>
-            <parts>
-              <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
-                <next class="org.drools.workbench.models.datamodel.rule.ExpressionCollection">
-                  <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
-                  <name>procedimentos</name>
-                  <classType>java.util.List</classType>
-                  <genericType>Collection</genericType>
-                  <parametricType>Procedimento</parametricType>
-                </next>
-                <name>guia</name>
-                <classType>Guia</classType>
-                <genericType>Guia</genericType>
-                <factType>Guia</factType>
-              </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
-              <org.drools.workbench.models.datamodel.rule.ExpressionCollection reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
-            </parts>
-            <index>2147483647</index>
-          </expression>
-        </org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                <operator>&gt;</operator>
+                <constraintValueType>6</constraintValueType>
+                <expression>
+                  <binding>dte</binding>
+                  <parts>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                        <name>dataFimVigencia</name>
+                        <classType>java.time.LocalDate</classType>
+                        <genericType>LocalDate</genericType>
+                      </next>
+                      <name>seg</name>
+                      <classType>Segurado</classType>
+                      <genericType>Segurado</genericType>
+                      <factType>Segurado</factType>
+                    </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+                  </parts>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Segurado</factType>
+                <fieldName>dataExclusao</fieldName>
+                <fieldType>LocalDate</fieldType>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+            </constraints>
+          </constraintList>
+          <factType>Segurado</factType>
+          <boundName>seg</boundName>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
