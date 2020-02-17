@@ -65,6 +65,33 @@
             <parameters/>
           </window>
         </org.drools.workbench.models.datamodel.rule.FactPattern>
+        <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+          <factPattern>
+            <factType>Guia</factType>
+            <isNegated>false</isNegated>
+            <window>
+              <parameters/>
+            </window>
+          </factPattern>
+          <expression>
+            <parts>
+              <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                  <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                  <name>segurado</name>
+                  <classType>Segurado</classType>
+                  <genericType>Segurado</genericType>
+                </next>
+                <name>guia</name>
+                <classType>Guia</classType>
+                <genericType>Guia</genericType>
+                <factType>Guia</factType>
+              </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+              <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+            </parts>
+            <index>2147483647</index>
+          </expression>
+        </org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
