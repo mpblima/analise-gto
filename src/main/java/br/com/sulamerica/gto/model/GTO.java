@@ -8,26 +8,10 @@ public class GTO implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label("Dente ou região")
-	private java.lang.String regiao;
-	@org.kie.api.definition.type.Label("Face do tratamento")
-	private java.lang.String face;
-	@org.kie.api.definition.type.Label("Valor USO")
-	private double valorUso;
-	@org.kie.api.definition.type.Label("Valor em reais")
-	private double valor;
 	@org.kie.api.definition.type.Label("Data em que ocorreu a auditoria eletrônica")
 	private java.time.LocalDate dataAuditoriaEletronica;
 	@org.kie.api.definition.type.Label("Data até quando a gui estará válida")
 	private java.time.LocalDate dataValidade;
-	@org.kie.api.definition.type.Label("Data de término / realização")
-	private java.time.LocalDate dataRealizacao;
-	@org.kie.api.definition.type.Label("Flag habilitando ou não o pagamento")
-	private boolean pagamento;
-	@org.kie.api.definition.type.Label("Motivo no pagamento ou não")
-	private java.lang.String motivo;
-	@org.kie.api.definition.type.Label("Observação ou justificativa")
-	private java.lang.String observacao;
 	@org.kie.api.definition.type.Label("Canal de entrada")
 	private java.lang.String canal;
 
@@ -45,38 +29,6 @@ public class GTO implements java.io.Serializable {
 	public GTO() {
 	}
 
-	public java.lang.String getRegiao() {
-		return this.regiao;
-	}
-
-	public void setRegiao(java.lang.String regiao) {
-		this.regiao = regiao;
-	}
-
-	public java.lang.String getFace() {
-		return this.face;
-	}
-
-	public void setFace(java.lang.String face) {
-		this.face = face;
-	}
-
-	public double getValorUso() {
-		return this.valorUso;
-	}
-
-	public void setValorUso(double valorUso) {
-		this.valorUso = valorUso;
-	}
-
-	public double getValor() {
-		return this.valor;
-	}
-
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
-
 	public java.time.LocalDate getDataAuditoriaEletronica() {
 		return this.dataAuditoriaEletronica;
 	}
@@ -92,38 +44,6 @@ public class GTO implements java.io.Serializable {
 
 	public void setDataValidade(java.time.LocalDate dataValidade) {
 		this.dataValidade = dataValidade;
-	}
-
-	public java.time.LocalDate getDataRealizacao() {
-		return this.dataRealizacao;
-	}
-
-	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
-		this.dataRealizacao = dataRealizacao;
-	}
-
-	public boolean isPagamento() {
-		return this.pagamento;
-	}
-
-	public void setPagamento(boolean pagamento) {
-		this.pagamento = pagamento;
-	}
-
-	public java.lang.String getMotivo() {
-		return this.motivo;
-	}
-
-	public void setMotivo(java.lang.String motivo) {
-		this.motivo = motivo;
-	}
-
-	public java.lang.String getObservacao() {
-		return this.observacao;
-	}
-
-	public void setObservacao(java.lang.String observacao) {
-		this.observacao = observacao;
 	}
 
 	public java.lang.String getCanal() {
@@ -168,31 +88,15 @@ public class GTO implements java.io.Serializable {
 	}
 
 	public GTO(
-			java.lang.String regiao,
-			java.lang.String face,
-			double valorUso,
-			double valor,
 			java.time.LocalDate dataAuditoriaEletronica,
 			java.time.LocalDate dataValidade,
-			java.time.LocalDate dataRealizacao,
-			boolean pagamento,
-			java.lang.String motivo,
-			java.lang.String observacao,
 			java.lang.String canal,
 			java.util.List<br.com.sulamerica.gto.model.Procedimento> procedimentos,
 			br.com.sulamerica.gto.model.Prestador prestador,
 			br.com.sulamerica.gto.model.Empresa empresa,
 			br.com.sulamerica.gto.model.Segurado segurado) {
-		this.regiao = regiao;
-		this.face = face;
-		this.valorUso = valorUso;
-		this.valor = valor;
 		this.dataAuditoriaEletronica = dataAuditoriaEletronica;
 		this.dataValidade = dataValidade;
-		this.dataRealizacao = dataRealizacao;
-		this.pagamento = pagamento;
-		this.motivo = motivo;
-		this.observacao = observacao;
 		this.canal = canal;
 		this.procedimentos = procedimentos;
 		this.prestador = prestador;
