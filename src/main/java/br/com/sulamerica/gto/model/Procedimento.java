@@ -12,8 +12,6 @@ public class Procedimento implements java.io.Serializable {
 	private java.lang.String codigoProcedimento;
 	@org.kie.api.definition.type.Label("Especialidade do procedimento")
 	private java.lang.String especialidade;
-	@org.kie.api.definition.type.Label("Valor em reais")
-	private double valor;
 	@org.kie.api.definition.type.Label("Pacote do qual o procedimento faz parte")
 	private java.lang.String pacote;
 	@org.kie.api.definition.type.Label("Idade minima de atendimento para a faixa etaria")
@@ -63,20 +61,33 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Lista de todos os registros de analise eletrônica")
 	private java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica;
 
-	@org.kie.api.definition.type.Label(value = "Dente/região do procedimento realizado")
+	@org.kie.api.definition.type.Label("Dente/região do procedimento realizado")
 	private java.lang.String denteRegiao;
 
-	@org.kie.api.definition.type.Label(value = "Face do dente do procedimento realizado")
+	@org.kie.api.definition.type.Label("Face do dente do procedimento realizado")
 	private java.lang.String face;
 
-	@org.kie.api.definition.type.Label(value = "Valor do procedimento realizado")
+	@org.kie.api.definition.type.Label("Valor do procedimento realizado")
 	private double valorReais;
 
-	@org.kie.api.definition.type.Label(value = "Data em que o procedimento foi realizado")
+	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
 	private java.util.Date dataRealização;
 
-	@org.kie.api.definition.type.Label(value = "Se contem imagem no procedimento realizado")
+	@org.kie.api.definition.type.Label("Se contem imagem no procedimento realizado")
 	private boolean contemImagem;
+
+	@org.kie.api.definition.type.Description(value = "valor do procedimento em unidade de serviço do cadastro do procedimento")
+	@org.kie.api.definition.type.Label(value = "Valor em USO")
+	private double valorUso;
+
+	@org.kie.api.definition.type.Label(value = "Status do pagamento oriundo da auditoria eletronica.")
+	private java.lang.String statusPagamento;
+
+	@org.kie.api.definition.type.Label(value = "Motivo do pagamento ou da glosa da auditoria eletrônica.")
+	private int motivo;
+
+	@org.kie.api.definition.type.Label(value = "Campo 49 da GTO. Campo de texto preenchido pelo prestador")
+	private java.lang.String observacaoJustificativa;
 
 	public Procedimento() {
 	}
@@ -95,14 +106,6 @@ public class Procedimento implements java.io.Serializable {
 
 	public void setEspecialidade(java.lang.String especialidade) {
 		this.especialidade = especialidade;
-	}
-
-	public double getValor() {
-		return this.valor;
-	}
-
-	public void setValor(double valor) {
-		this.valor = valor;
 	}
 
 	public java.lang.String getPacote() {
@@ -314,10 +317,42 @@ public class Procedimento implements java.io.Serializable {
 		this.contemImagem = contemImagem;
 	}
 
+	public double getValorUso() {
+		return this.valorUso;
+	}
+
+	public void setValorUso(double valorUso) {
+		this.valorUso = valorUso;
+	}
+
+	public java.lang.String getStatusPagamento() {
+		return this.statusPagamento;
+	}
+
+	public void setStatusPagamento(java.lang.String statusPagamento) {
+		this.statusPagamento = statusPagamento;
+	}
+
+	public int getMotivo() {
+		return this.motivo;
+	}
+
+	public void setMotivo(int motivo) {
+		this.motivo = motivo;
+	}
+
+	public java.lang.String getObservacaoJustificativa() {
+		return this.observacaoJustificativa;
+	}
+
+	public void setObservacaoJustificativa(
+			java.lang.String observacaoJustificativa) {
+		this.observacaoJustificativa = observacaoJustificativa;
+	}
+
 	public Procedimento(
 			java.lang.String codigoProcedimento,
 			java.lang.String especialidade,
-			double valor,
 			java.lang.String pacote,
 			int idadeMinima,
 			int idadeMaxima,
@@ -341,10 +376,11 @@ public class Procedimento implements java.io.Serializable {
 			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica,
 			java.lang.String denteRegiao, java.lang.String face,
 			double valorReais, java.util.Date dataRealização,
-			boolean contemImagem) {
+			boolean contemImagem, double valorUso,
+			java.lang.String statusPagamento, int motivo,
+			java.lang.String observacaoJustificativa) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
-		this.valor = valor;
 		this.pacote = pacote;
 		this.idadeMinima = idadeMinima;
 		this.idadeMaxima = idadeMaxima;
@@ -371,6 +407,10 @@ public class Procedimento implements java.io.Serializable {
 		this.valorReais = valorReais;
 		this.dataRealização = dataRealização;
 		this.contemImagem = contemImagem;
+		this.valorUso = valorUso;
+		this.statusPagamento = statusPagamento;
+		this.motivo = motivo;
+		this.observacaoJustificativa = observacaoJustificativa;
 	}
 
 }
