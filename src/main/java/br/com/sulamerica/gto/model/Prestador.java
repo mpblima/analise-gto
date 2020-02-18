@@ -8,17 +8,20 @@ public class Prestador implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Codigo do prestador")
+	@org.kie.api.definition.type.Label("Codigo do prestador")
 	private java.lang.String codigoPrestador;
-	@org.kie.api.definition.type.Label(value = "UF do prestador")
+	@org.kie.api.definition.type.Label("UF do prestador")
 	private java.lang.String uf;
 	private java.util.List<java.lang.String> especialidades;
-	@org.kie.api.definition.type.Label(value = "Titulos de especialidade")
+	@org.kie.api.definition.type.Label("Titulos de especialidade")
 	private java.util.List<java.lang.String> tituloEspecialidade;
-	@org.kie.api.definition.type.Label(value = "Categoria do prestador")
+	@org.kie.api.definition.type.Label("Categoria do prestador")
 	private java.lang.String categoria;
-	@org.kie.api.definition.type.Label(value = "Prestador PJ ou PF")
+	@org.kie.api.definition.type.Label("Prestador PJ ou PF")
 	private boolean pj;
+
+	@org.kie.api.definition.type.Label(value = "Cidade de cadastro do Prestador")
+	private java.lang.String cidade;
 
 	public Prestador() {
 	}
@@ -73,16 +76,25 @@ public class Prestador implements java.io.Serializable {
 		this.pj = pj;
 	}
 
+	public java.lang.String getCidade() {
+		return this.cidade;
+	}
+
+	public void setCidade(java.lang.String cidade) {
+		this.cidade = cidade;
+	}
+
 	public Prestador(java.lang.String codigoPrestador, java.lang.String uf,
 			java.util.List<java.lang.String> especialidades,
 			java.util.List<java.lang.String> tituloEspecialidade,
-			java.lang.String categoria, boolean pj) {
+			java.lang.String categoria, boolean pj, java.lang.String cidade) {
 		this.codigoPrestador = codigoPrestador;
 		this.uf = uf;
 		this.especialidades = especialidades;
 		this.tituloEspecialidade = tituloEspecialidade;
 		this.categoria = categoria;
 		this.pj = pj;
+		this.cidade = cidade;
 	}
 
 }
