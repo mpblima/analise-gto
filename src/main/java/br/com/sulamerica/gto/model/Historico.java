@@ -19,8 +19,11 @@ public class Historico implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Valor contratual de franquia (pago pelo beneficiário ao prestador) ou coparticipação (descontado do beneficiário)")
 	private double valorFranquiaCoparticipacao;
 
-	@org.kie.api.definition.type.Label(value = "Código do segurado")
+	@org.kie.api.definition.type.Label("Código do segurado")
 	private br.com.sulamerica.gto.model.Segurado segurado;
+
+	@org.kie.api.definition.type.Label(value = "Código do contrato")
+	private br.com.sulamerica.gto.model.Empresa empresa;
 
 	public Historico() {
 	}
@@ -91,13 +94,22 @@ public class Historico implements java.io.Serializable {
 		this.segurado = segurado;
 	}
 
+	public br.com.sulamerica.gto.model.Empresa getEmpresa() {
+		return this.empresa;
+	}
+
+	public void setEmpresa(br.com.sulamerica.gto.model.Empresa empresa) {
+		this.empresa = empresa;
+	}
+
 	public Historico(br.com.sulamerica.gto.model.Procedimento procedimento,
 			java.time.LocalDate dataAuditoria,
 			java.time.LocalDate dataPagamento,
 			java.time.LocalDate ultimaAlteracao,
 			br.com.sulamerica.gto.model.Prestador prestador, int gto,
 			double valorFranquiaCoparticipacao,
-			br.com.sulamerica.gto.model.Segurado segurado) {
+			br.com.sulamerica.gto.model.Segurado segurado,
+			br.com.sulamerica.gto.model.Empresa empresa) {
 		this.procedimento = procedimento;
 		this.dataAuditoria = dataAuditoria;
 		this.dataPagamento = dataPagamento;
@@ -106,6 +118,7 @@ public class Historico implements java.io.Serializable {
 		this.gto = gto;
 		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
 		this.segurado = segurado;
+		this.empresa = empresa;
 	}
 
 }
