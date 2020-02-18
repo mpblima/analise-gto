@@ -9,7 +9,6 @@ public class Historico implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	private br.com.sulamerica.gto.model.Procedimento procedimento;
-	private double coParticipacao;
 	private java.time.LocalDate dataAuditoria;
 	private java.time.LocalDate dataPagamento;
 	private java.time.LocalDate ultimaAlteracao;
@@ -17,8 +16,11 @@ public class Historico implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("número da GTO")
 	private int gto;
 
-	@org.kie.api.definition.type.Label(value = "Data de recepção da conta.")
+	@org.kie.api.definition.type.Label("Data de recepção da conta.")
 	private java.time.LocalDate dataAviso;
+
+	@org.kie.api.definition.type.Label(value = "Valor contratual de franquia (pago pelo beneficiário ao prestador) ou coparticipação (descontado do beneficiário)")
+	private double valorFranquiaCoparticipacao;
 
 	public Historico() {
 	}
@@ -30,14 +32,6 @@ public class Historico implements java.io.Serializable {
 	public void setProcedimento(
 			br.com.sulamerica.gto.model.Procedimento procedimento) {
 		this.procedimento = procedimento;
-	}
-
-	public double getCoParticipacao() {
-		return this.coParticipacao;
-	}
-
-	public void setCoParticipacao(double coParticipacao) {
-		this.coParticipacao = coParticipacao;
 	}
 
 	public java.time.LocalDate getDataAuditoria() {
@@ -88,20 +82,29 @@ public class Historico implements java.io.Serializable {
 		this.dataAviso = dataAviso;
 	}
 
+	public double getValorFranquiaCoparticipacao() {
+		return this.valorFranquiaCoparticipacao;
+	}
+
+	public void setValorFranquiaCoparticipacao(
+			double valorFranquiaCoparticipacao) {
+		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
+	}
+
 	public Historico(br.com.sulamerica.gto.model.Procedimento procedimento,
-			double coParticipacao, java.time.LocalDate dataAuditoria,
+			java.time.LocalDate dataAuditoria,
 			java.time.LocalDate dataPagamento,
 			java.time.LocalDate ultimaAlteracao,
 			br.com.sulamerica.gto.model.Prestador prestador, int gto,
-			java.time.LocalDate dataAviso) {
+			java.time.LocalDate dataAviso, double valorFranquiaCoparticipacao) {
 		this.procedimento = procedimento;
-		this.coParticipacao = coParticipacao;
 		this.dataAuditoria = dataAuditoria;
 		this.dataPagamento = dataPagamento;
 		this.ultimaAlteracao = ultimaAlteracao;
 		this.prestador = prestador;
 		this.gto = gto;
 		this.dataAviso = dataAviso;
+		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
 	}
 
 }
