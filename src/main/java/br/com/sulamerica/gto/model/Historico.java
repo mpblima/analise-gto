@@ -16,11 +16,11 @@ public class Historico implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("número da GTO")
 	private int gto;
 
-	@org.kie.api.definition.type.Label("Data de recepção da conta.")
-	private java.time.LocalDate dataAviso;
-
-	@org.kie.api.definition.type.Label(value = "Valor contratual de franquia (pago pelo beneficiário ao prestador) ou coparticipação (descontado do beneficiário)")
+	@org.kie.api.definition.type.Label("Valor contratual de franquia (pago pelo beneficiário ao prestador) ou coparticipação (descontado do beneficiário)")
 	private double valorFranquiaCoparticipacao;
+
+	@org.kie.api.definition.type.Label(value = "Código do segurado")
+	private br.com.sulamerica.gto.model.Segurado segurado;
 
 	public Historico() {
 	}
@@ -74,14 +74,6 @@ public class Historico implements java.io.Serializable {
 		this.gto = gto;
 	}
 
-	public java.time.LocalDate getDataAviso() {
-		return this.dataAviso;
-	}
-
-	public void setDataAviso(java.time.LocalDate dataAviso) {
-		this.dataAviso = dataAviso;
-	}
-
 	public double getValorFranquiaCoparticipacao() {
 		return this.valorFranquiaCoparticipacao;
 	}
@@ -91,20 +83,29 @@ public class Historico implements java.io.Serializable {
 		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
 	}
 
+	public br.com.sulamerica.gto.model.Segurado getSegurado() {
+		return this.segurado;
+	}
+
+	public void setSegurado(br.com.sulamerica.gto.model.Segurado segurado) {
+		this.segurado = segurado;
+	}
+
 	public Historico(br.com.sulamerica.gto.model.Procedimento procedimento,
 			java.time.LocalDate dataAuditoria,
 			java.time.LocalDate dataPagamento,
 			java.time.LocalDate ultimaAlteracao,
 			br.com.sulamerica.gto.model.Prestador prestador, int gto,
-			java.time.LocalDate dataAviso, double valorFranquiaCoparticipacao) {
+			double valorFranquiaCoparticipacao,
+			br.com.sulamerica.gto.model.Segurado segurado) {
 		this.procedimento = procedimento;
 		this.dataAuditoria = dataAuditoria;
 		this.dataPagamento = dataPagamento;
 		this.ultimaAlteracao = ultimaAlteracao;
 		this.prestador = prestador;
 		this.gto = gto;
-		this.dataAviso = dataAviso;
 		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
+		this.segurado = segurado;
 	}
 
 }
