@@ -60,8 +60,23 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("lista de dentes")
 	private java.util.List<java.lang.Integer> listaDentes;
 
-	@org.kie.api.definition.type.Label(value = "Lista de todos os registros de analise eletrônica")
+	@org.kie.api.definition.type.Label("Lista de todos os registros de analise eletrônica")
 	private java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica;
+
+	@org.kie.api.definition.type.Label(value = "Dente/região do procedimento realizado")
+	private java.lang.String denteRegiao;
+
+	@org.kie.api.definition.type.Label(value = "Face do dente do procedimento realizado")
+	private java.lang.String face;
+
+	@org.kie.api.definition.type.Label(value = "Valor do procedimento realizado")
+	private double valorReais;
+
+	@org.kie.api.definition.type.Label(value = "Data em que o procedimento foi realizado")
+	private java.util.Date dataRealização;
+
+	@org.kie.api.definition.type.Label(value = "Se contem imagem no procedimento realizado")
+	private boolean contemImagem;
 
 	public Procedimento() {
 	}
@@ -259,6 +274,46 @@ public class Procedimento implements java.io.Serializable {
 		this.registrosAnaliseEletronica = registrosAnaliseEletronica;
 	}
 
+	public java.lang.String getDenteRegiao() {
+		return this.denteRegiao;
+	}
+
+	public void setDenteRegiao(java.lang.String denteRegiao) {
+		this.denteRegiao = denteRegiao;
+	}
+
+	public java.lang.String getFace() {
+		return this.face;
+	}
+
+	public void setFace(java.lang.String face) {
+		this.face = face;
+	}
+
+	public double getValorReais() {
+		return this.valorReais;
+	}
+
+	public void setValorReais(double valorReais) {
+		this.valorReais = valorReais;
+	}
+
+	public java.util.Date getDataRealização() {
+		return this.dataRealização;
+	}
+
+	public void setDataRealização(java.util.Date dataRealização) {
+		this.dataRealização = dataRealização;
+	}
+
+	public boolean isContemImagem() {
+		return this.contemImagem;
+	}
+
+	public void setContemImagem(boolean contemImagem) {
+		this.contemImagem = contemImagem;
+	}
+
 	public Procedimento(
 			java.lang.String codigoProcedimento,
 			java.lang.String especialidade,
@@ -283,7 +338,10 @@ public class Procedimento implements java.io.Serializable {
 			java.util.List<java.lang.String> regiao,
 			java.util.List<java.lang.String> listaDeFaces,
 			java.util.List<java.lang.Integer> listaDentes,
-			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica) {
+			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica,
+			java.lang.String denteRegiao, java.lang.String face,
+			double valorReais, java.util.Date dataRealização,
+			boolean contemImagem) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.valor = valor;
@@ -308,6 +366,11 @@ public class Procedimento implements java.io.Serializable {
 		this.listaDeFaces = listaDeFaces;
 		this.listaDentes = listaDentes;
 		this.registrosAnaliseEletronica = registrosAnaliseEletronica;
+		this.denteRegiao = denteRegiao;
+		this.face = face;
+		this.valorReais = valorReais;
+		this.dataRealização = dataRealização;
+		this.contemImagem = contemImagem;
 	}
 
 }
