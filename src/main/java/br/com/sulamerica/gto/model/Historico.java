@@ -8,7 +8,6 @@ public class Historico implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	private boolean liberacao;
 	private java.lang.String denteRegiao;
 	private java.lang.String face;
 	private br.com.sulamerica.gto.model.Procedimento procedimento;
@@ -25,15 +24,10 @@ public class Historico implements java.io.Serializable {
 	private int motivo;
 	private java.lang.String hitorico;
 
+	@org.kie.api.definition.type.Label(value = "número da GTO")
+	private int gto;
+
 	public Historico() {
-	}
-
-	public boolean isLiberacao() {
-		return this.liberacao;
-	}
-
-	public void setLiberacao(boolean liberacao) {
-		this.liberacao = liberacao;
 	}
 
 	public java.lang.String getDenteRegiao() {
@@ -157,8 +151,15 @@ public class Historico implements java.io.Serializable {
 		this.hitorico = hitorico;
 	}
 
-	public Historico(boolean liberacao, java.lang.String denteRegiao,
-			java.lang.String face,
+	public int getGto() {
+		return this.gto;
+	}
+
+	public void setGto(int gto) {
+		this.gto = gto;
+	}
+
+	public Historico(java.lang.String denteRegiao, java.lang.String face,
 			br.com.sulamerica.gto.model.Procedimento procedimento,
 			double valorUso, double valorReal, double coParticipacao,
 			boolean reconhecimento, java.time.LocalDate dataRealizacao,
@@ -166,8 +167,7 @@ public class Historico implements java.io.Serializable {
 			java.time.LocalDate dataPagamento,
 			java.time.LocalDate ultimaAlteracao,
 			br.com.sulamerica.gto.model.Prestador prestador, boolean pagamento,
-			int motivo, java.lang.String hitorico) {
-		this.liberacao = liberacao;
+			int motivo, java.lang.String hitorico, int gto) {
 		this.denteRegiao = denteRegiao;
 		this.face = face;
 		this.procedimento = procedimento;
@@ -183,6 +183,7 @@ public class Historico implements java.io.Serializable {
 		this.pagamento = pagamento;
 		this.motivo = motivo;
 		this.hitorico = hitorico;
+		this.gto = gto;
 	}
 
 }
