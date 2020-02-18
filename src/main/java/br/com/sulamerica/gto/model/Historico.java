@@ -8,42 +8,19 @@ public class Historico implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	private java.lang.String denteRegiao;
-	private java.lang.String face;
 	private br.com.sulamerica.gto.model.Procedimento procedimento;
-	private double valorUso;
-	private double valorReal;
 	private double coParticipacao;
-	private boolean reconhecimento;
-	private java.time.LocalDate dataRealizacao;
 	private java.time.LocalDate dataAuditoria;
 	private java.time.LocalDate dataPagamento;
 	private java.time.LocalDate ultimaAlteracao;
 	private br.com.sulamerica.gto.model.Prestador prestador;
-	private boolean pagamento;
-	private int motivo;
-	private java.lang.String hitorico;
-
-	@org.kie.api.definition.type.Label(value = "número da GTO")
+	@org.kie.api.definition.type.Label("número da GTO")
 	private int gto;
 
+	@org.kie.api.definition.type.Label(value = "Data de recepção da conta.")
+	private java.time.LocalDate dataAviso;
+
 	public Historico() {
-	}
-
-	public java.lang.String getDenteRegiao() {
-		return this.denteRegiao;
-	}
-
-	public void setDenteRegiao(java.lang.String denteRegiao) {
-		this.denteRegiao = denteRegiao;
-	}
-
-	public java.lang.String getFace() {
-		return this.face;
-	}
-
-	public void setFace(java.lang.String face) {
-		this.face = face;
 	}
 
 	public br.com.sulamerica.gto.model.Procedimento getProcedimento() {
@@ -55,44 +32,12 @@ public class Historico implements java.io.Serializable {
 		this.procedimento = procedimento;
 	}
 
-	public double getValorUso() {
-		return this.valorUso;
-	}
-
-	public void setValorUso(double valorUso) {
-		this.valorUso = valorUso;
-	}
-
-	public double getValorReal() {
-		return this.valorReal;
-	}
-
-	public void setValorReal(double valorReal) {
-		this.valorReal = valorReal;
-	}
-
 	public double getCoParticipacao() {
 		return this.coParticipacao;
 	}
 
 	public void setCoParticipacao(double coParticipacao) {
 		this.coParticipacao = coParticipacao;
-	}
-
-	public boolean isReconhecimento() {
-		return this.reconhecimento;
-	}
-
-	public void setReconhecimento(boolean reconhecimento) {
-		this.reconhecimento = reconhecimento;
-	}
-
-	public java.time.LocalDate getDataRealizacao() {
-		return this.dataRealizacao;
-	}
-
-	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
-		this.dataRealizacao = dataRealizacao;
 	}
 
 	public java.time.LocalDate getDataAuditoria() {
@@ -127,30 +72,6 @@ public class Historico implements java.io.Serializable {
 		this.prestador = prestador;
 	}
 
-	public boolean isPagamento() {
-		return this.pagamento;
-	}
-
-	public void setPagamento(boolean pagamento) {
-		this.pagamento = pagamento;
-	}
-
-	public int getMotivo() {
-		return this.motivo;
-	}
-
-	public void setMotivo(int motivo) {
-		this.motivo = motivo;
-	}
-
-	public java.lang.String getHitorico() {
-		return this.hitorico;
-	}
-
-	public void setHitorico(java.lang.String hitorico) {
-		this.hitorico = hitorico;
-	}
-
 	public int getGto() {
 		return this.gto;
 	}
@@ -159,31 +80,28 @@ public class Historico implements java.io.Serializable {
 		this.gto = gto;
 	}
 
-	public Historico(java.lang.String denteRegiao, java.lang.String face,
-			br.com.sulamerica.gto.model.Procedimento procedimento,
-			double valorUso, double valorReal, double coParticipacao,
-			boolean reconhecimento, java.time.LocalDate dataRealizacao,
-			java.time.LocalDate dataAuditoria,
+	public java.time.LocalDate getDataAviso() {
+		return this.dataAviso;
+	}
+
+	public void setDataAviso(java.time.LocalDate dataAviso) {
+		this.dataAviso = dataAviso;
+	}
+
+	public Historico(br.com.sulamerica.gto.model.Procedimento procedimento,
+			double coParticipacao, java.time.LocalDate dataAuditoria,
 			java.time.LocalDate dataPagamento,
 			java.time.LocalDate ultimaAlteracao,
-			br.com.sulamerica.gto.model.Prestador prestador, boolean pagamento,
-			int motivo, java.lang.String hitorico, int gto) {
-		this.denteRegiao = denteRegiao;
-		this.face = face;
+			br.com.sulamerica.gto.model.Prestador prestador, int gto,
+			java.time.LocalDate dataAviso) {
 		this.procedimento = procedimento;
-		this.valorUso = valorUso;
-		this.valorReal = valorReal;
 		this.coParticipacao = coParticipacao;
-		this.reconhecimento = reconhecimento;
-		this.dataRealizacao = dataRealizacao;
 		this.dataAuditoria = dataAuditoria;
 		this.dataPagamento = dataPagamento;
 		this.ultimaAlteracao = ultimaAlteracao;
 		this.prestador = prestador;
-		this.pagamento = pagamento;
-		this.motivo = motivo;
-		this.hitorico = hitorico;
 		this.gto = gto;
+		this.dataAviso = dataAviso;
 	}
 
 }
