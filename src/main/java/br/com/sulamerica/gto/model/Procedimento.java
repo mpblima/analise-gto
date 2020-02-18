@@ -76,18 +76,21 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Se contem imagem no procedimento realizado")
 	private boolean contemImagem;
 
-	@org.kie.api.definition.type.Description(value = "valor do procedimento em unidade de serviço do cadastro do procedimento")
-	@org.kie.api.definition.type.Label(value = "Valor em USO")
+	@org.kie.api.definition.type.Label("Valor em USO")
+	@org.kie.api.definition.type.Description("valor do procedimento em unidade de serviço do cadastro do procedimento")
 	private double valorUso;
 
-	@org.kie.api.definition.type.Label(value = "Status do pagamento oriundo da auditoria eletronica.")
+	@org.kie.api.definition.type.Label("Status do pagamento oriundo da auditoria eletronica.")
 	private java.lang.String statusPagamento;
 
-	@org.kie.api.definition.type.Label(value = "Motivo do pagamento ou da glosa da auditoria eletrônica.")
+	@org.kie.api.definition.type.Label("Motivo do pagamento ou da glosa da auditoria eletrônica.")
 	private int motivo;
 
-	@org.kie.api.definition.type.Label(value = "Campo 49 da GTO. Campo de texto preenchido pelo prestador")
+	@org.kie.api.definition.type.Label("Campo 49 da GTO. Campo de texto preenchido pelo prestador")
 	private java.lang.String observacaoJustificativa;
+
+	@org.kie.api.definition.type.Label(value = "Data de recepção da conta")
+	private java.time.LocalDate dataAviso;
 
 	public Procedimento() {
 	}
@@ -350,6 +353,14 @@ public class Procedimento implements java.io.Serializable {
 		this.observacaoJustificativa = observacaoJustificativa;
 	}
 
+	public java.time.LocalDate getDataAviso() {
+		return this.dataAviso;
+	}
+
+	public void setDataAviso(java.time.LocalDate dataAviso) {
+		this.dataAviso = dataAviso;
+	}
+
 	public Procedimento(
 			java.lang.String codigoProcedimento,
 			java.lang.String especialidade,
@@ -378,7 +389,8 @@ public class Procedimento implements java.io.Serializable {
 			double valorReais, java.util.Date dataRealização,
 			boolean contemImagem, double valorUso,
 			java.lang.String statusPagamento, int motivo,
-			java.lang.String observacaoJustificativa) {
+			java.lang.String observacaoJustificativa,
+			java.time.LocalDate dataAviso) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -411,6 +423,7 @@ public class Procedimento implements java.io.Serializable {
 		this.statusPagamento = statusPagamento;
 		this.motivo = motivo;
 		this.observacaoJustificativa = observacaoJustificativa;
+		this.dataAviso = dataAviso;
 	}
 
 }
