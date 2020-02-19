@@ -72,12 +72,13 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>270</width>
       <header>Status de pagamento</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
       <factField>statusPagamento</factField>
       <type>String</type>
+      <valueList>Sim,Não,Análise</valueList>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
     <insert-fact-column52>
@@ -87,7 +88,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>173</width>
       <header>Motivo</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
@@ -102,7 +103,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>568</width>
       <header>Mensagem amigável</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
