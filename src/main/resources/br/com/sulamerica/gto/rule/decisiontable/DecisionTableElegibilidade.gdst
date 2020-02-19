@@ -210,7 +210,7 @@
       <header>Interromper execução</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>Drools.stop();</text>
+          <text>drools.stop();</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
