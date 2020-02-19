@@ -53,7 +53,7 @@
           <factAlias>Procedimento</factAlias>
           <expressionAlias>dataRealizacao</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>213.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -76,7 +76,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataExclusao</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>213.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -99,7 +99,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataFimVigencia</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>213.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -122,7 +122,7 @@
           <factAlias>AnaliseEletronica</factAlias>
           <expressionAlias>statusPagamento</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>213.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -145,7 +145,30 @@
           <factAlias>AnaliseEletronica</factAlias>
           <expressionAlias>motivo</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>213.0</columnWidth>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>AnaliseEletronica</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>mensagem</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1582136739400</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1|2</name>
+            <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+          </factIdentifier>
+          <className>java.lang.String</className>
+          <factAlias>AnaliseEletronica</factAlias>
+          <expressionAlias>mensagem</expressionAlias>
+          <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
+          <columnWidth>213.0</columnWidth>
         </FactMapping>
       </factMappings>
     </scesimModelDescriptor>
@@ -226,6 +249,18 @@
               <name>1582125873324</name>
               <type>EXPECT</type>
             </expressionIdentifier>
+            <rawValue class="string">0</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1|2</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582136739400</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
+            <rawValue class="string">Enviado para análise devido a exclusão retroativa</rawValue>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
@@ -302,6 +337,16 @@
               <type>OTHER</type>
             </expressionIdentifier>
             <rawValue class="string">2</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1|2</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582136739400</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
@@ -381,6 +426,16 @@
             </expressionIdentifier>
             <rawValue class="string">3</rawValue>
           </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1|2</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582136739400</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
+          </FactMappingValue>
         </factMappingValues>
       </Scenario>
       <Scenario>
@@ -458,6 +513,16 @@
               <type>OTHER</type>
             </expressionIdentifier>
             <rawValue class="string">4</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1|2</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582136739400</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
