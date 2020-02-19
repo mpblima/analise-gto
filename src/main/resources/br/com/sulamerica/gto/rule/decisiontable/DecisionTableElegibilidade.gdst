@@ -196,7 +196,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>433</width>
+      <width>371</width>
       <header>Mensagem amigável</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
@@ -216,7 +216,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>162</width>
           <header>Interromper execução</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
