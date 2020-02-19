@@ -250,7 +250,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;Enviado para análise devido a exclusão retroativa&quot;</valueString>
+        <valueString>&quot;Enviar para análise devido a exclusão retroativa&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
