@@ -72,20 +72,32 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                <value>dataExclusao &gt; dataFimVigencia</value>
+                <constraintValueType>5</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <fieldType></fieldType>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+            </constraints>
+          </constraintList>
           <factType>Segurado</factType>
+          <boundName>seg</boundName>
           <isNegated>false</isNegated>
           <window>
             <parameters/>
           </window>
         </org.drools.workbench.models.datamodel.rule.FactPattern>
-        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>dataExclusao &gt; dataFimVigencia</text>
-        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>274</width>
+          <width>268</width>
           <header>Exclusão retroativa</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
