@@ -53,7 +53,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataExclusao</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>225.0</columnWidth>
+          <columnWidth>190.38461538461542</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -76,7 +76,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataFimVigencia</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>255.0</columnWidth>
+          <columnWidth>215.76923076923077</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -99,7 +99,7 @@
           <factAlias>AnaliseEletronica</factAlias>
           <expressionAlias>statusPagamento</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>165.0</columnWidth>
+          <columnWidth>139.6153846153846</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -122,7 +122,7 @@
           <factAlias>AnaliseEletronica</factAlias>
           <expressionAlias>motivo</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>165.0</columnWidth>
+          <columnWidth>139.6153846153846</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -145,7 +145,7 @@
           <factAlias>AnaliseEletronica</factAlias>
           <expressionAlias>mensagem</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>165.0</columnWidth>
+          <columnWidth>139.6153846153846</columnWidth>
         </FactMapping>
       </factMappings>
     </scesimModelDescriptor>
@@ -205,7 +205,7 @@
               <name>1582136952230</name>
               <type>EXPECT</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;Análise&quot;</rawValue>
+            <rawValue class="string">Análise</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -227,7 +227,7 @@
               <name>1582137069759</name>
               <type>EXPECT</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;Enviar para análise devido a exclusão retroativa&quot;</rawValue>
+            <rawValue class="string">Enviar para análise devido a exclusão retroativa</rawValue>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
