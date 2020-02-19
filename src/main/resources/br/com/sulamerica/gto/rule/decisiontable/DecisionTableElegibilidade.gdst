@@ -114,10 +114,18 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <factType>Segurado</factType>
+          <boundName>segurado</boundName>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
           <constraintList>
             <constraints>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
-                <value>dataRealizacao &gt; seg.dataFimVigencia || dataRealizacao &lt; seg.dataFimVigencia</value>
+                <value>dataRealizacao &gt; segurado.dataFimVigencia || dataRealizacao &lt; segurado.dataFimVigencia</value>
                 <constraintValueType>5</constraintValueType>
                 <expression>
                   <parts/>
@@ -139,7 +147,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>289</width>
+          <width>100</width>
           <header>Data realização fora de vigência</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
