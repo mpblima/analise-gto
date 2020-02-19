@@ -183,7 +183,7 @@
               <name>1582136949206</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;2020-02-25&quot;</rawValue>
+            <rawValue class="string">2020-02-25</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -194,7 +194,7 @@
               <name>1582137046851</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;2020-02-01&quot;</rawValue>
+            <rawValue class="string">2020-02-01</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
