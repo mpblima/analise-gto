@@ -33,36 +33,119 @@
           <columnWidth>300.0</columnWidth>
         </FactMapping>
         <FactMapping>
-          <expressionElements/>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Segurado</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>dataExclusao</step>
+            </ExpressionElement>
+          </expressionElements>
           <expressionIdentifier>
             <name>1582136949206</name>
             <type>GIVEN</type>
           </expressionIdentifier>
           <factIdentifier>
-            <name>Empty</name>
-            <className>java.lang.Void</className>
+            <name>1582136949206</name>
+            <className>br.com.sulamerica.gto.model.Segurado</className>
           </factIdentifier>
-          <className>java.lang.Void</className>
-          <factAlias>INSTANCE 7</factAlias>
-          <expressionAlias>PROPERTY 7</expressionAlias>
+          <className>java.time.LocalDate</className>
+          <factAlias>Segurado</factAlias>
+          <expressionAlias>dataExclusao</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>639.0</columnWidth>
+          <columnWidth>165.0</columnWidth>
         </FactMapping>
         <FactMapping>
-          <expressionElements/>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Segurado</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>dataFimVigencia</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1582137046851</name>
+            <type>GIVEN</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1582136949206</name>
+            <className>br.com.sulamerica.gto.model.Segurado</className>
+          </factIdentifier>
+          <className>java.time.LocalDate</className>
+          <factAlias>Segurado</factAlias>
+          <expressionAlias>dataFimVigencia</expressionAlias>
+          <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
+          <columnWidth>165.0</columnWidth>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>AnaliseEletronica</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>statusPagamento</step>
+            </ExpressionElement>
+          </expressionElements>
           <expressionIdentifier>
             <name>1582136952230</name>
             <type>EXPECT</type>
           </expressionIdentifier>
           <factIdentifier>
-            <name>Empty</name>
-            <className>java.lang.Void</className>
+            <name>1582136952230</name>
+            <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
           </factIdentifier>
-          <className>java.lang.Void</className>
-          <factAlias>INSTANCE 8</factAlias>
-          <expressionAlias>PROPERTY 8</expressionAlias>
+          <className>java.lang.String</className>
+          <factAlias>AnaliseEletronica</factAlias>
+          <expressionAlias>statusPagamento</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>639.0</columnWidth>
+          <columnWidth>165.0</columnWidth>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>AnaliseEletronica</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>motivo</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1582137066330</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1582136952230</name>
+            <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+          </factIdentifier>
+          <className>int</className>
+          <factAlias>AnaliseEletronica</factAlias>
+          <expressionAlias>motivo</expressionAlias>
+          <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
+          <columnWidth>165.0</columnWidth>
+        </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>AnaliseEletronica</step>
+            </ExpressionElement>
+            <ExpressionElement>
+              <step>mensagem</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1582137069759</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>1582136952230</name>
+            <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+          </factIdentifier>
+          <className>java.lang.String</className>
+          <factAlias>AnaliseEletronica</factAlias>
+          <expressionAlias>mensagem</expressionAlias>
+          <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
+          <columnWidth>165.0</columnWidth>
         </FactMapping>
       </factMappings>
     </scesimModelDescriptor>
@@ -92,8 +175,8 @@
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
-              <name>Empty</name>
-              <className>java.lang.Void</className>
+              <name>1582136949206</name>
+              <className>br.com.sulamerica.gto.model.Segurado</className>
             </factIdentifier>
             <expressionIdentifier>
               <name>1582136949206</name>
@@ -102,11 +185,41 @@
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
-              <name>Empty</name>
-              <className>java.lang.Void</className>
+              <name>1582136949206</name>
+              <className>br.com.sulamerica.gto.model.Segurado</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582137046851</name>
+              <type>GIVEN</type>
+            </expressionIdentifier>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1582136952230</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
             </factIdentifier>
             <expressionIdentifier>
               <name>1582136952230</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1582136952230</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582137066330</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>1582136952230</name>
+              <className>br.com.sulamerica.gto.model.AnaliseEletronica</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>1582137069759</name>
               <type>EXPECT</type>
             </expressionIdentifier>
           </FactMappingValue>
