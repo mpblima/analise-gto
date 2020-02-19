@@ -125,7 +125,7 @@
           <constraintList>
             <constraints>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
-                <value>dataRealizacao &gt; segurado.dataFimVigencia || dataRealizacao &lt; segurado.dataFimVigencia</value>
+                <value>dataRealizacao &gt; segurado.dataFimVigencia || dataRealizacao &lt; segurado.dataInicioVigencia</value>
                 <constraintValueType>5</constraintValueType>
                 <expression>
                   <parts/>
