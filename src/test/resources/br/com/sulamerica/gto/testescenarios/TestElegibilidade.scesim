@@ -183,6 +183,7 @@
               <name>1582136949206</name>
               <type>GIVEN</type>
             </expressionIdentifier>
+            <rawValue class="string">&quot;2020-02-25&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -193,6 +194,7 @@
               <name>1582137046851</name>
               <type>GIVEN</type>
             </expressionIdentifier>
+            <rawValue class="string">&quot;2020-02-01&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -203,6 +205,7 @@
               <name>1582136952230</name>
               <type>EXPECT</type>
             </expressionIdentifier>
+            <rawValue class="string">&quot;Análise&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -213,6 +216,7 @@
               <name>1582137066330</name>
               <type>EXPECT</type>
             </expressionIdentifier>
+            <rawValue class="string">0</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -223,6 +227,7 @@
               <name>1582137069759</name>
               <type>EXPECT</type>
             </expressionIdentifier>
+            <rawValue class="string">&quot;Enviar para análise devido a exclusão retroativa&quot;</rawValue>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
