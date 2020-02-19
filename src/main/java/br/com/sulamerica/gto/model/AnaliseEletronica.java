@@ -8,22 +8,14 @@ public class AnaliseEletronica implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Mensagens mais amigáveis da análise eletrônica")
-	private java.util.List<java.lang.String> mensagem;
-	@org.kie.api.definition.type.Label(value = "Status do pagamento")
+	@org.kie.api.definition.type.Label("Mensagens mais amigáveis da análise eletrônica")
+	private String mensagem;
+	@org.kie.api.definition.type.Label("Status do pagamento")
 	private java.lang.String statusPagamento;
-	@org.kie.api.definition.type.Label(value = "Código do motivo")
+	@org.kie.api.definition.type.Label("Código do motivo")
 	private int motivo;
 
 	public AnaliseEletronica() {
-	}
-
-	public java.util.List<java.lang.String> getMensagem() {
-		return this.mensagem;
-	}
-
-	public void setMensagem(java.util.List<java.lang.String> mensagem) {
-		this.mensagem = mensagem;
 	}
 
 	public java.lang.String getStatusPagamento() {
@@ -42,7 +34,15 @@ public class AnaliseEletronica implements java.io.Serializable {
 		this.motivo = motivo;
 	}
 
-	public AnaliseEletronica(java.util.List<java.lang.String> mensagem,
+	public java.lang.String getMensagem() {
+		return this.mensagem;
+	}
+
+	public void setMensagem(java.lang.String mensagem) {
+		this.mensagem = mensagem;
+	}
+
+	public AnaliseEletronica(java.lang.String mensagem,
 			java.lang.String statusPagamento, int motivo) {
 		this.mensagem = mensagem;
 		this.statusPagamento = statusPagamento;
