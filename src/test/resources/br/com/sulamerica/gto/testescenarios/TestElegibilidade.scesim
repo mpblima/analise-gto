@@ -272,9 +272,10 @@
     </scesimData>
   </background>
   <settings>
+    <dmoSession>gto-session</dmoSession>
     <type>RULE</type>
     <skipFromBuild>false</skipFromBuild>
-    <stateless>false</stateless>
+    <stateless>true</stateless>
   </settings>
   <imports>
     <imports>
