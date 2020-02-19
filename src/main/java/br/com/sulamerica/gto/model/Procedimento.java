@@ -70,9 +70,6 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Valor do procedimento realizado")
 	private double valorReais;
 
-	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
-	private java.util.Date dataRealização;
-
 	@org.kie.api.definition.type.Label("Se contem imagem no procedimento realizado")
 	private boolean contemImagem;
 
@@ -89,8 +86,11 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Campo 49 da GTO. Campo de texto preenchido pelo prestador")
 	private java.lang.String observacaoJustificativa;
 
-	@org.kie.api.definition.type.Label(value = "Data de recepção da conta")
+	@org.kie.api.definition.type.Label("Data de recepção da conta")
 	private java.time.LocalDate dataAviso;
+
+	@org.kie.api.definition.type.Label(value = "Data em que o procedimento foi realizado")
+	private java.util.Date dataRealizacao;
 
 	public Procedimento() {
 	}
@@ -304,14 +304,6 @@ public class Procedimento implements java.io.Serializable {
 		this.valorReais = valorReais;
 	}
 
-	public java.util.Date getDataRealização() {
-		return this.dataRealização;
-	}
-
-	public void setDataRealização(java.util.Date dataRealização) {
-		this.dataRealização = dataRealização;
-	}
-
 	public boolean isContemImagem() {
 		return this.contemImagem;
 	}
@@ -361,6 +353,14 @@ public class Procedimento implements java.io.Serializable {
 		this.dataAviso = dataAviso;
 	}
 
+	public java.util.Date getDataRealizacao() {
+		return this.dataRealizacao;
+	}
+
+	public void setDataRealizacao(java.util.Date dataRealizacao) {
+		this.dataRealizacao = dataRealizacao;
+	}
+
 	public Procedimento(
 			java.lang.String codigoProcedimento,
 			java.lang.String especialidade,
@@ -386,11 +386,10 @@ public class Procedimento implements java.io.Serializable {
 			java.util.List<java.lang.Integer> listaDentes,
 			java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica> registrosAnaliseEletronica,
 			java.lang.String denteRegiao, java.lang.String face,
-			double valorReais, java.util.Date dataRealização,
-			boolean contemImagem, double valorUso,
+			double valorReais, boolean contemImagem, double valorUso,
 			java.lang.String statusPagamento, int motivo,
 			java.lang.String observacaoJustificativa,
-			java.time.LocalDate dataAviso) {
+			java.time.LocalDate dataAviso, java.util.Date dataRealizacao) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -417,13 +416,13 @@ public class Procedimento implements java.io.Serializable {
 		this.denteRegiao = denteRegiao;
 		this.face = face;
 		this.valorReais = valorReais;
-		this.dataRealização = dataRealização;
 		this.contemImagem = contemImagem;
 		this.valorUso = valorUso;
 		this.statusPagamento = statusPagamento;
 		this.motivo = motivo;
 		this.observacaoJustificativa = observacaoJustificativa;
 		this.dataAviso = dataAviso;
+		this.dataRealizacao = dataRealizacao;
 	}
 
 }
