@@ -53,7 +53,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataExclusao</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>165.0</columnWidth>
+          <columnWidth>225.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -76,7 +76,7 @@
           <factAlias>Segurado</factAlias>
           <expressionAlias>dataFimVigencia</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>165.0</columnWidth>
+          <columnWidth>255.0</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -161,6 +161,7 @@
               <name>Description</name>
               <type>OTHER</type>
             </expressionIdentifier>
+            <rawValue class="string">Regra correta de exclusão retroativa</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
