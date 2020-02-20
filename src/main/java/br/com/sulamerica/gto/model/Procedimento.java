@@ -426,5 +426,12 @@ public class Procedimento implements java.io.Serializable {
 		this.dataAviso = dataAviso;
 		this.dataRealizacao = dataRealizacao;
 	}
+	
+	public void adicionarAnaliseEletronica(<br.com.sulamerica.gto.model.AnaliseEletronica analise){
+	    if(registrosAnaliseEletronica == null){
+	        registrosAnaliseEletronica = new java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica>();
+	    }
+	    registrosAnaliseEletronica.add(analise);
+	}
 
 }
