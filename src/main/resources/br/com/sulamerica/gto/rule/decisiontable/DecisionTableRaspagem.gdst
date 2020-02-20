@@ -367,7 +367,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Pagamento &quot;Não&quot; com justificativa</valueString>
+        <valueString>&quot;Pagamento &apos;Não&apos; com justificativa&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -438,7 +438,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Pagamento &quot;Não&quot; com imagem</valueString>
+        <valueString>&quot;Pagamento &apos;Não&apos; com imagem&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -509,7 +509,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Pagamento &quot;Não&quot; com justificativa e imagem</valueString>
+        <valueString>&quot;Pagamento &apos;Não&apos; com justificativa e imagem&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
