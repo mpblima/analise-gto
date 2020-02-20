@@ -429,7 +429,7 @@ public class Procedimento implements java.io.Serializable {
 	
 	public void adicionarAnaliseEletronica(<br.com.sulamerica.gto.model.AnaliseEletronica analise){
 	    if(registrosAnaliseEletronica == null){
-	        registrosAnaliseEletronica = new java.util.List<br.com.sulamerica.gto.model.AnaliseEletronica>();
+	        registrosAnaliseEletronica = new java.util.ArrayList<>();
 	    }
 	    registrosAnaliseEletronica.add(analise);
 	}
