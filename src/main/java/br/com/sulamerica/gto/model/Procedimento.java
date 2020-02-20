@@ -364,6 +364,9 @@ public class Procedimento implements java.io.Serializable {
 	}
 	
 	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise){
+	    if(){
+	        
+	    }
 	    
 	}
 
