@@ -198,7 +198,7 @@
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>modify(proc){
-    addAnalise(ane}
+    addAnalise(ane)
 }</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
