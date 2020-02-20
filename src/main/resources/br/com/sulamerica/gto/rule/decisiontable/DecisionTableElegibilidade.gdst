@@ -134,7 +134,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>242</width>
           <header>Data realização fora de vigência</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
