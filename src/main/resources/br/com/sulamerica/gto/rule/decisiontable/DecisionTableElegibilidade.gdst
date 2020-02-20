@@ -210,8 +210,8 @@
       <header>Teste</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>proc.addAnalise(ane)
-update(proc)</text>
+          <text>proc.addAnalise(ane);
+update(proc);</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
