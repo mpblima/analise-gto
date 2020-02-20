@@ -178,7 +178,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>163</width>
+      <width>338</width>
       <header>Mensagem Amigável</header>
       <factType>AnaliseEletronica</factType>
       <boundName>elet</boundName>
