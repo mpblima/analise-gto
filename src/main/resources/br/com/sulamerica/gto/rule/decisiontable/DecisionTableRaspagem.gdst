@@ -95,7 +95,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>207</width>
           <header>Status Pagamento</header>
           <constraintValueType>1</constraintValueType>
           <factField>statusPagamento</factField>
@@ -107,7 +107,7 @@
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>216</width>
           <header>Justificativa Preenchida</header>
           <constraintValueType>1</constraintValueType>
           <factField>observacaoJustificativa</factField>
@@ -123,7 +123,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>190</width>
           <header>Contém Imagem</header>
           <constraintValueType>1</constraintValueType>
           <factField>contemImagem</factField>
@@ -178,7 +178,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>163</width>
       <header>Mensagem Amigável</header>
       <factType>AnaliseEletronica</factType>
       <boundName>elet</boundName>
