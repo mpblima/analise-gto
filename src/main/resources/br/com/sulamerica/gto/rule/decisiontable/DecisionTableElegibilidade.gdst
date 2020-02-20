@@ -207,7 +207,7 @@
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Teste</header>
+      <header>Adicionar análise eletônica</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>proc.addAnalise(ane);
@@ -218,7 +218,7 @@ update(proc);</text>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Teste</header>
+          <header>Adicionar análise eletônica</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
