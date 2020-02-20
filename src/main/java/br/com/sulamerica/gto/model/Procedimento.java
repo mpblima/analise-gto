@@ -362,6 +362,10 @@ public class Procedimento implements java.io.Serializable {
 	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
 		this.dataRealizacao = dataRealizacao;
 	}
+	
+	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise){
+	    
+	}
 
 	public Procedimento(
 			java.lang.String codigoProcedimento,
