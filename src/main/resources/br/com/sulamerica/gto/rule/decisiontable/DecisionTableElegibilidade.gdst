@@ -192,30 +192,21 @@
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>true</hideColumn>
+      <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Adicionar analise eletronica</header>
+      <header>Adicionar analise ao procedimento</header>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.ActionCallMethod>
-          <fieldValues>
-            <org.drools.workbench.models.datamodel.rule.ActionFieldFunction>
-              <field>addAnalise</field>
-              <value>ane</value>
-              <nature>3</nature>
-              <type>br.com.sulamerica.gto.model.AnaliseEletronica</type>
-              <method></method>
-            </org.drools.workbench.models.datamodel.rule.ActionFieldFunction>
-          </fieldValues>
-          <variable>proc</variable>
-          <state>1</state>
-          <methodName>addAnalise</methodName>
-        </org.drools.workbench.models.datamodel.rule.ActionCallMethod>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>modify(proc){
+    addAnalise(ane}
+}</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>true</hideColumn>
+          <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Adicionar analise eletronica</header>
+          <header>Adicionar analise ao procedimento</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
@@ -385,7 +376,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
