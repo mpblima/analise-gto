@@ -212,8 +212,6 @@
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>proc.addAnalise(ane);
 proc.setAnalisadoEletronicamente(true);
-proc.setAnalisadoEletronicamente(true);
-proc.set
 update(proc);</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
