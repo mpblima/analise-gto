@@ -6,7 +6,7 @@
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>150</width>
+    <width>289</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols>
@@ -147,7 +147,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>161</width>
       <header>Status Pagamento</header>
       <factType>AnaliseEletronica</factType>
       <boundName>elet</boundName>
