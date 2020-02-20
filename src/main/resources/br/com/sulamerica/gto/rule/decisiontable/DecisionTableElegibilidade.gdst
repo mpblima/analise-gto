@@ -211,41 +211,17 @@
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>proc.addAnalise(ane);
+proc.setAnalisadoEletronicamente(true);
+proc.setAnalisadoEletronicamente(true);
+proc.set
 update(proc);</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>250</width>
-          <header>Adicionar análise eletônica</header>
-          <varName></varName>
-          <fieldType>Boolean</fieldType>
-        </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-      </childColumns>
-    </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-    <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>false</hideColumn>
-      <width>-1</width>
-      <header>Analisado eletronicamente</header>
-      <definition>
-        <org.drools.workbench.models.datamodel.rule.ActionSetField>
-          <fieldValues>
-            <org.drools.workbench.models.datamodel.rule.ActionFieldValue>
-              <field>analisadoEletronicamente</field>
-              <value>true</value>
-              <nature>1</nature>
-              <type>Boolean</type>
-            </org.drools.workbench.models.datamodel.rule.ActionFieldValue>
-          </fieldValues>
-          <variable>proc</variable>
-        </org.drools.workbench.models.datamodel.rule.ActionSetField>
-      </definition>
-      <childColumns>
-        <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Analisado eletronicamente</header>
+          <header>Adicionar análise eletônica</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
@@ -363,12 +339,6 @@ update(proc);</text>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
-      <value>
-        <valueBoolean>false</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
     </list>
     <list>
       <value>
@@ -434,12 +404,6 @@ update(proc);</text>
       </value>
       <value>
         <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
