@@ -94,6 +94,10 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
 	private LocalDate dataRealizacao;
 
+	@org.kie.api.definition.type.Description(value = "Resultado do procedimento após passar por todas as regras eletrônicas, e calculada a regra soberana")
+	@org.kie.api.definition.type.Label(value = "Resultado do procedimento após passar por todas as regras eletrônicas, e calculada a regra soberana")
+	private java.lang.String resultadoPosAnaliseEletronica;
+
 	public Procedimento() {
 	}
 
@@ -362,12 +366,21 @@ public class Procedimento implements java.io.Serializable {
 	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
 		this.dataRealizacao = dataRealizacao;
 	}
-	
-	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise){
-	    if(registrosAnaliseEletronica == null){
-	        registrosAnaliseEletronica = new java.util.ArrayList();
-	    }
-	    registrosAnaliseEletronica.add(analise);
+
+	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise) {
+		if (registrosAnaliseEletronica == null) {
+			registrosAnaliseEletronica = new java.util.ArrayList();
+		}
+		registrosAnaliseEletronica.add(analise);
+	}
+
+	public java.lang.String getResultadoPosAnaliseEletronica() {
+		return this.resultadoPosAnaliseEletronica;
+	}
+
+	public void setResultadoPosAnaliseEletronica(
+			java.lang.String resultadoPosAnaliseEletronica) {
+		this.resultadoPosAnaliseEletronica = resultadoPosAnaliseEletronica;
 	}
 
 	public Procedimento(
@@ -398,7 +411,8 @@ public class Procedimento implements java.io.Serializable {
 			double valorReais, boolean contemImagem, double valorUso,
 			java.lang.String statusPagamento, int motivo,
 			java.lang.String observacaoJustificativa,
-			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao) {
+			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao,
+			java.lang.String resultadoPosAnaliseEletronica) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -432,6 +446,7 @@ public class Procedimento implements java.io.Serializable {
 		this.observacaoJustificativa = observacaoJustificativa;
 		this.dataAviso = dataAviso;
 		this.dataRealizacao = dataRealizacao;
+		this.resultadoPosAnaliseEletronica = resultadoPosAnaliseEletronica;
 	}
 
 }
