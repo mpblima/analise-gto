@@ -279,7 +279,7 @@ update(proc);</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>221</width>
           <header>Atualizar segurado</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
