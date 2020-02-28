@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.sulamerica</groupId>
   <artifactId>analise-gto</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>kjar</packaging>
   <name>analise-gto</name>
   <description>Projeto de analise automatizada de guia de tratamento odontologico</description>
