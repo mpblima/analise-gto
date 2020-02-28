@@ -27,8 +27,6 @@ public class Segurado implements java.io.Serializable {
 
 	private java.util.List<br.com.sulamerica.gto.model.Historico> historico;
 
-	private br.com.sulamerica.gto.model.AnaliseEletronica analiseEletrônica;
-
 	public Segurado() {
 	}
 
@@ -113,23 +111,13 @@ public class Segurado implements java.io.Serializable {
 		this.historico = historico;
 	}
 
-	public br.com.sulamerica.gto.model.AnaliseEletronica getAnaliseEletrônica() {
-		return this.analiseEletrônica;
-	}
-
-	public void setAnaliseEletrônica(
-			br.com.sulamerica.gto.model.AnaliseEletronica analiseEletrônica) {
-		this.analiseEletrônica = analiseEletrônica;
-	}
-
 	public Segurado(java.lang.String codCarteirinha,
 			java.time.LocalDate dataNascimento, java.lang.String plano,
 			java.time.LocalDate dataInicioVigencia,
 			java.time.LocalDate dataExclusao,
 			java.time.LocalDate dataFimVigencia, boolean suspenso,
 			boolean reInclusao, java.lang.String ufCadastro,
-			java.util.List<br.com.sulamerica.gto.model.Historico> historico,
-			br.com.sulamerica.gto.model.AnaliseEletronica analiseEletrônica) {
+			java.util.List<br.com.sulamerica.gto.model.Historico> historico) {
 		this.codCarteirinha = codCarteirinha;
 		this.dataNascimento = dataNascimento;
 		this.plano = plano;
@@ -140,7 +128,6 @@ public class Segurado implements java.io.Serializable {
 		this.reInclusao = reInclusao;
 		this.ufCadastro = ufCadastro;
 		this.historico = historico;
-		this.analiseEletrônica = analiseEletrônica;
 	}
 
 }
