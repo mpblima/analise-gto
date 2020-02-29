@@ -25,9 +25,6 @@
       <import>
         <type>java.util.ArrayList</type>
       </import>
-      <import>
-        <type>br.com.sulamerica.gto.java.helper.QueryRol</type>
-      </import>
     </imports>
   </imports>
   <version>1.0</version>
