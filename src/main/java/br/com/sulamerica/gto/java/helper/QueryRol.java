@@ -1,4 +1,4 @@
-package br.com.sulamerica.odonto.gto;
+package br.com.sulamerica.gto.java.helper;
 
 import java.io.BufferedReader;
 import java.io.File;
