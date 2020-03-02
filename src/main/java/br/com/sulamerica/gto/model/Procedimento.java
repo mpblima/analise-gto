@@ -395,7 +395,7 @@ public class Procedimento implements java.io.Serializable {
 	
 	private void loadRol() {
 		rol = new HashMap();
-		File listaRol = new File(getClass().getContextClassLoader().getResource("ROL.csv").getFile());
+		File listaRol = new File(getClass().getClassLoader().getResource("ROL.csv").getFile());
 		try {
 			FileReader reader = new FileReader(listaRol);
 			BufferedReader bfr = new BufferedReader(reader);
