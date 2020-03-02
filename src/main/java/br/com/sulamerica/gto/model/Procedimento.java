@@ -384,7 +384,7 @@ public class Procedimento implements java.io.Serializable {
 	}
 	
 	public boolean constaNoRol(){
-	    QueryRol.contains(codigoProcedimento);
+	    return QueryRol.contains(codigoProcedimento);
 	}
 
 	public Procedimento(
