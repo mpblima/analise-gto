@@ -384,6 +384,8 @@ public class Procedimento implements java.io.Serializable {
 	}
 	
 	public boolean constaNoRol(){
+	    System.out.println("Código do procedimento: "+codigoProcedimento+"\n");
+	    System.out.println("Resultado da consulta do ROL: "+QueryRol.contains(codigoProcedimento));
 	    return QueryRol.contains(codigoProcedimento);
 	}
 
