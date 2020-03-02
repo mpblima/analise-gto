@@ -3,17 +3,17 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>/home/mpblima/.m2/repository</url>
-        <source>LOCAL</source>
+        <id>jboss-enterprise-maven-repository</id>
+        <url>https://maven.repository.redhat.com/ga/</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>jboss-enterprise-maven-repository</id>
-        <url>https://maven.repository.redhat.com/ga/</url>
-        <source>SETTINGS</source>
+        <id>local</id>
+        <url>/home/mpblima/.m2/repository</url>
+        <source>LOCAL</source>
       </metadata>
     </repository>
     <repository>
