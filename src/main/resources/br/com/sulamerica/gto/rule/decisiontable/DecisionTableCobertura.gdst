@@ -111,60 +111,19 @@
     <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Consta no Rol</header>
+      <header>Não consta no Rol</header>
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.FactPattern>
-          <constraintList>
-            <constraints>
-              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                <value>81000014, 81000030, 81000049, 81000057, 81000065, 81000073, 81000111, 81000138, 81000154, 81000170, 81000189, 81000197, 81000200, 81000219, 81000235, 81000243, 81000260, 81000294, 81000375, 81000383, 81000405, 81000421, 81000545, 81000570, 82000026, 82000034, 82000050, 82000069, 82000077, 82000085, 82000158, 82000166, 82000174, 82000182, 82000190, 82000212, 82000239, 82000247, 82000255, 82000263, 82000271, 82000280, 82000298, 82000301, 82000336, 82000352, 82000360, 82000387, 82000395, 82000417, 82000441, 82000468, 82000484, 82000506, 82000557, 82000662, 82000689, 82000700, 82000743, 82000778, 82000786, 82000794, 82000808, 82000816, 82000832, 82000859, 82000875, 82000883, 82000891, 82000905, 82000913, 82000921, 82000948, 82001022, 82001030, 82001073, 82001103, 82001154, 82001170, 82001189, 82001197, 82001251, 82001286, 82001294, 82001308, 82001316, 82001367, 82001499, 82001510, 82001529, 82001545, 82001553, 82001588, 82001596, 82001618, 82001634, 82001642, 82001650, 82001685, 82001707, 82001715, 82001731, 82001740, 82001758, 82001766, 83000020, 83000046, 83000062, 83000089, 83000127, 83000135, 83000151, 84000031, 84000058, 84000074, 84000090, 84000112, 84000139, 84000163, 84000171, 84000198, 84000201, 84000244, 84000252, 85000787, 85100013, 85100048, 85100056, 85100064, 85100080, 85100099, 85100102, 85100110, 85100129, 85100137, 85100145, 85100153, 85100161, 85100196, 85100200, 85100218, 85100226, 85100242, 85100269, 85200026, 85200034, 85200042, 85200050, 85200069, 85200077, 85200085, 85200093, 85200107, 85200115, 85200123, 85200131, 85200140, 85200158, 85200166, 85200174, 85200182, 85300012, 85300020, 85300039, 85300047, 85300055, 85300063, 85300071, 85300080, 85300098, 85400017, 85400025, 85400076, 85400084, 85400092, 85400114, 85400149, 85400211, 85400220, 85400262, 85400459, 85400467, 85400475, 85400505, 85400556, 85400599, 87000016, 87000024, 87000032, 87000040, 87000059, 87000067, 87000148, 98301144, 98301152, 98302140, 98302159, 98303147, 98303155, 98304143, 98304151, 98265156, 98113119, 100013, 100039, 100047, 100065, 100090</value>
-                <operator>in</operator>
-                <constraintValueType>1</constraintValueType>
-                <expression>
-                  <parts/>
-                  <index>2147483647</index>
-                </expression>
-                <parameters/>
-                <fieldBinding>proce</fieldBinding>
-                <factType>Procedimento</factType>
-                <fieldName>codigoProcedimento</fieldName>
-                <fieldType>java.lang.String</fieldType>
-                <expLeftSide>
-                  <binding>proce</binding>
-                  <parts>
-                    <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
-                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
-                        <name>codigoProcedimento</name>
-                        <classType>java.lang.String</classType>
-                        <genericType>String</genericType>
-                      </next>
-                      <name>Procedimento</name>
-                      <classType>Procedimento</classType>
-                      <genericType>Procedimento</genericType>
-                      <factType>Procedimento</factType>
-                    </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
-                  </parts>
-                  <index>2147483647</index>
-                </expLeftSide>
-              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-            </constraints>
-          </constraintList>
-          <factType>Procedimento</factType>
-          <isNegated>false</isNegated>
-          <window>
-            <parameters/>
-          </window>
-        </org.drools.workbench.models.datamodel.rule.FactPattern>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>eval (proc.codigoProcedimento not in (&quot;81000014&quot;, &quot;81000030&quot;, &quot;81000049&quot;, &quot;81000057&quot;, &quot;81000065&quot;, &quot;81000073&quot;, &quot;81000111&quot;, &quot;81000138&quot;, &quot;81000154&quot;, &quot;81000170&quot;, &quot;81000189&quot;, &quot;81000197&quot;, &quot;81000200&quot;, &quot;81000219&quot;, &quot;81000235&quot;, &quot;81000243&quot;, &quot;81000260&quot;, &quot;81000294&quot;, &quot;81000375&quot;, &quot;81000383&quot;, &quot;81000405&quot;, &quot;81000421&quot;, &quot;81000545&quot;, &quot;81000570&quot;, &quot;82000026&quot;, &quot;82000034&quot;, &quot;82000050&quot;, &quot;82000069&quot;, &quot;82000077&quot;, &quot;82000085&quot;, &quot;82000158&quot;, &quot;82000166&quot;, &quot;82000174&quot;, &quot;82000182&quot;, &quot;82000190&quot;, &quot;82000212&quot;, &quot;82000239&quot;, &quot;82000247&quot;, &quot;82000255&quot;, &quot;82000263&quot;, &quot;82000271&quot;, &quot;82000280&quot;, &quot;82000298&quot;, &quot;82000301&quot;, &quot;82000336&quot;, &quot;82000352&quot;, &quot;82000360&quot;, &quot;82000387&quot;, &quot;82000395&quot;, &quot;82000417&quot;, &quot;82000441&quot;, &quot;82000468&quot;, &quot;82000484&quot;, &quot;82000506&quot;, &quot;82000557&quot;, &quot;82000662&quot;, &quot;82000689&quot;, &quot;82000700&quot;, &quot;82000743&quot;, &quot;82000778&quot;, &quot;82000786&quot;, &quot;82000794&quot;, &quot;82000808&quot;, &quot;82000816&quot;, &quot;82000832&quot;, &quot;82000859&quot;, &quot;82000875&quot;, &quot;82000883&quot;, &quot;82000891&quot;, &quot;82000905&quot;, &quot;82000913&quot;, &quot;82000921&quot;, &quot;82000948&quot;, &quot;82001022&quot;, &quot;82001030&quot;, &quot;82001073&quot;, &quot;82001103&quot;, &quot;82001154&quot;, &quot;82001170&quot;, &quot;82001189&quot;, &quot;82001197&quot;, &quot;82001251&quot;, &quot;82001286&quot;, &quot;82001294&quot;, &quot;82001308&quot;, &quot;82001316&quot;, &quot;82001367&quot;, &quot;82001499&quot;, &quot;82001510&quot;, &quot;82001529&quot;, &quot;82001545&quot;, &quot;82001553&quot;, &quot;82001588&quot;, &quot;82001596&quot;, &quot;82001618&quot;, &quot;82001634&quot;, &quot;82001642&quot;, &quot;82001650&quot;, &quot;82001685&quot;, &quot;82001707&quot;, &quot;82001715&quot;, &quot;82001731&quot;, &quot;82001740&quot;, &quot;82001758&quot;, &quot;82001766&quot;, &quot;83000020&quot;, &quot;83000046&quot;, &quot;83000062&quot;, &quot;83000089&quot;, &quot;83000127&quot;, &quot;83000135&quot;, &quot;83000151&quot;, &quot;84000031&quot;, &quot;84000058&quot;, &quot;84000074&quot;, &quot;84000090&quot;, &quot;84000112&quot;, &quot;84000139&quot;, &quot;84000163&quot;, &quot;84000171&quot;, &quot;84000198&quot;, &quot;84000201&quot;, &quot;84000244&quot;, &quot;84000252&quot;, &quot;85000787&quot;, &quot;85100013&quot;, &quot;85100048&quot;, &quot;85100056&quot;, &quot;85100064&quot;, &quot;85100080&quot;, &quot;85100099&quot;, &quot;85100102&quot;, &quot;85100110&quot;, &quot;85100129&quot;, &quot;85100137&quot;, &quot;85100145&quot;, &quot;85100153&quot;, &quot;85100161&quot;, &quot;85100196&quot;, &quot;85100200&quot;, &quot;85100218&quot;, &quot;85100226&quot;, &quot;85100242&quot;, &quot;85100269&quot;, &quot;85200026&quot;, &quot;85200034&quot;, &quot;85200042&quot;, &quot;85200050&quot;, &quot;85200069&quot;, &quot;85200077&quot;, &quot;85200085&quot;, &quot;85200093&quot;, &quot;85200107&quot;, &quot;85200115&quot;, &quot;85200123&quot;, &quot;85200131&quot;, &quot;85200140&quot;, &quot;85200158&quot;, &quot;85200166&quot;, &quot;85200174&quot;, &quot;85200182&quot;, &quot;85300012&quot;, &quot;85300020&quot;, &quot;85300039&quot;, &quot;85300047&quot;, &quot;85300055&quot;, &quot;85300063&quot;, &quot;85300071&quot;, &quot;85300080&quot;, &quot;85300098&quot;, &quot;85400017&quot;, &quot;85400025&quot;, &quot;85400076&quot;, &quot;85400084&quot;, &quot;85400092&quot;, &quot;85400114&quot;, &quot;85400149&quot;, &quot;85400211&quot;, &quot;85400220&quot;, &quot;85400262&quot;, &quot;85400459&quot;, &quot;85400467&quot;, &quot;85400475&quot;, &quot;85400505&quot;, &quot;85400556&quot;, &quot;85400599&quot;, &quot;87000016&quot;, &quot;87000024&quot;, &quot;87000032&quot;, &quot;87000040&quot;, &quot;87000059&quot;, &quot;87000067&quot;, &quot;87000148&quot;, &quot;98301144&quot;, &quot;98301152&quot;, &quot;98302140&quot;, &quot;98302159&quot;, &quot;98303147&quot;, &quot;98303155&quot;, &quot;98304143&quot;, &quot;98304151&quot;, &quot;98265156&quot;, &quot;98113119&quot;, &quot;100013&quot;, &quot;100039&quot;, &quot;100047&quot;, &quot;100065&quot;, &quot;100090&quot;) )</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Consta no Rol</header>
+          <header>Não consta no Rol</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
           <parameters/>
@@ -175,37 +134,19 @@
     <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Não consta no Rol</header>
+      <header>Consta no Rol</header>
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.FactPattern>
-          <constraintList>
-            <constraints>
-              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
-                <value>codigoProcedimento not in (&quot;81000014&quot;, &quot;81000030&quot;, &quot;81000049&quot;, &quot;81000057&quot;, &quot;81000065&quot;, &quot;81000073&quot;, &quot;81000111&quot;, &quot;81000138&quot;, &quot;81000154&quot;, &quot;81000170&quot;, &quot;81000189&quot;, &quot;81000197&quot;, &quot;81000200&quot;, &quot;81000219&quot;, &quot;81000235&quot;, &quot;81000243&quot;, &quot;81000260&quot;, &quot;81000294&quot;, &quot;81000375&quot;, &quot;81000383&quot;, &quot;81000405&quot;, &quot;81000421&quot;, &quot;81000545&quot;, &quot;81000570&quot;, &quot;82000026&quot;, &quot;82000034&quot;, &quot;82000050&quot;, &quot;82000069&quot;, &quot;82000077&quot;, &quot;82000085&quot;, &quot;82000158&quot;, &quot;82000166&quot;, &quot;82000174&quot;, &quot;82000182&quot;, &quot;82000190&quot;, &quot;82000212&quot;, &quot;82000239&quot;, &quot;82000247&quot;, &quot;82000255&quot;, &quot;82000263&quot;, &quot;82000271&quot;, &quot;82000280&quot;, &quot;82000298&quot;, &quot;82000301&quot;, &quot;82000336&quot;, &quot;82000352&quot;, &quot;82000360&quot;, &quot;82000387&quot;, &quot;82000395&quot;, &quot;82000417&quot;, &quot;82000441&quot;, &quot;82000468&quot;, &quot;82000484&quot;, &quot;82000506&quot;, &quot;82000557&quot;, &quot;82000662&quot;, &quot;82000689&quot;, &quot;82000700&quot;, &quot;82000743&quot;, &quot;82000778&quot;, &quot;82000786&quot;, &quot;82000794&quot;, &quot;82000808&quot;, &quot;82000816&quot;, &quot;82000832&quot;, &quot;82000859&quot;, &quot;82000875&quot;, &quot;82000883&quot;, &quot;82000891&quot;, &quot;82000905&quot;, &quot;82000913&quot;, &quot;82000921&quot;, &quot;82000948&quot;, &quot;82001022&quot;, &quot;82001030&quot;, &quot;82001073&quot;, &quot;82001103&quot;, &quot;82001154&quot;, &quot;82001170&quot;, &quot;82001189&quot;, &quot;82001197&quot;, &quot;82001251&quot;, &quot;82001286&quot;, &quot;82001294&quot;, &quot;82001308&quot;, &quot;82001316&quot;, &quot;82001367&quot;, &quot;82001499&quot;, &quot;82001510&quot;, &quot;82001529&quot;, &quot;82001545&quot;, &quot;82001553&quot;, &quot;82001588&quot;, &quot;82001596&quot;, &quot;82001618&quot;, &quot;82001634&quot;, &quot;82001642&quot;, &quot;82001650&quot;, &quot;82001685&quot;, &quot;82001707&quot;, &quot;82001715&quot;, &quot;82001731&quot;, &quot;82001740&quot;, &quot;82001758&quot;, &quot;82001766&quot;, &quot;83000020&quot;, &quot;83000046&quot;, &quot;83000062&quot;, &quot;83000089&quot;, &quot;83000127&quot;, &quot;83000135&quot;, &quot;83000151&quot;, &quot;84000031&quot;, &quot;84000058&quot;, &quot;84000074&quot;, &quot;84000090&quot;, &quot;84000112&quot;, &quot;84000139&quot;, &quot;84000163&quot;, &quot;84000171&quot;, &quot;84000198&quot;, &quot;84000201&quot;, &quot;84000244&quot;, &quot;84000252&quot;, &quot;85000787&quot;, &quot;85100013&quot;, &quot;85100048&quot;, &quot;85100056&quot;, &quot;85100064&quot;, &quot;85100080&quot;, &quot;85100099&quot;, &quot;85100102&quot;, &quot;85100110&quot;, &quot;85100129&quot;, &quot;85100137&quot;, &quot;85100145&quot;, &quot;85100153&quot;, &quot;85100161&quot;, &quot;85100196&quot;, &quot;85100200&quot;, &quot;85100218&quot;, &quot;85100226&quot;, &quot;85100242&quot;, &quot;85100269&quot;, &quot;85200026&quot;, &quot;85200034&quot;, &quot;85200042&quot;, &quot;85200050&quot;, &quot;85200069&quot;, &quot;85200077&quot;, &quot;85200085&quot;, &quot;85200093&quot;, &quot;85200107&quot;, &quot;85200115&quot;, &quot;85200123&quot;, &quot;85200131&quot;, &quot;85200140&quot;, &quot;85200158&quot;, &quot;85200166&quot;, &quot;85200174&quot;, &quot;85200182&quot;, &quot;85300012&quot;, &quot;85300020&quot;, &quot;85300039&quot;, &quot;85300047&quot;, &quot;85300055&quot;, &quot;85300063&quot;, &quot;85300071&quot;, &quot;85300080&quot;, &quot;85300098&quot;, &quot;85400017&quot;, &quot;85400025&quot;, &quot;85400076&quot;, &quot;85400084&quot;, &quot;85400092&quot;, &quot;85400114&quot;, &quot;85400149&quot;, &quot;85400211&quot;, &quot;85400220&quot;, &quot;85400262&quot;, &quot;85400459&quot;, &quot;85400467&quot;, &quot;85400475&quot;, &quot;85400505&quot;, &quot;85400556&quot;, &quot;85400599&quot;, &quot;87000016&quot;, &quot;87000024&quot;, &quot;87000032&quot;, &quot;87000040&quot;, &quot;87000059&quot;, &quot;87000067&quot;, &quot;87000148&quot;, &quot;98301144&quot;, &quot;98301152&quot;, &quot;98302140&quot;, &quot;98302159&quot;, &quot;98303147&quot;, &quot;98303155&quot;, &quot;98304143&quot;, &quot;98304151&quot;, &quot;98265156&quot;, &quot;98113119&quot;, &quot;100013&quot;, &quot;100039&quot;, &quot;100047&quot;, &quot;100065&quot;, &quot;10009&quot;)</value>
-                <constraintValueType>5</constraintValueType>
-                <expression>
-                  <parts/>
-                  <index>2147483647</index>
-                </expression>
-                <parameters/>
-                <fieldType></fieldType>
-              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
-            </constraints>
-          </constraintList>
-          <factType>Procedimento</factType>
-          <isNegated>false</isNegated>
-          <window>
-            <parameters/>
-          </window>
-        </org.drools.workbench.models.datamodel.rule.FactPattern>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>eval (proc.codigoProcedimento in (&quot;81000014&quot;, &quot;81000030&quot;, &quot;81000049&quot;, &quot;81000057&quot;, &quot;81000065&quot;, &quot;81000073&quot;, &quot;81000111&quot;, &quot;81000138&quot;, &quot;81000154&quot;, &quot;81000170&quot;, &quot;81000189&quot;, &quot;81000197&quot;, &quot;81000200&quot;, &quot;81000219&quot;, &quot;81000235&quot;, &quot;81000243&quot;, &quot;81000260&quot;, &quot;81000294&quot;, &quot;81000375&quot;, &quot;81000383&quot;, &quot;81000405&quot;, &quot;81000421&quot;, &quot;81000545&quot;, &quot;81000570&quot;, &quot;82000026&quot;, &quot;82000034&quot;, &quot;82000050&quot;, &quot;82000069&quot;, &quot;82000077&quot;, &quot;82000085&quot;, &quot;82000158&quot;, &quot;82000166&quot;, &quot;82000174&quot;, &quot;82000182&quot;, &quot;82000190&quot;, &quot;82000212&quot;, &quot;82000239&quot;, &quot;82000247&quot;, &quot;82000255&quot;, &quot;82000263&quot;, &quot;82000271&quot;, &quot;82000280&quot;, &quot;82000298&quot;, &quot;82000301&quot;, &quot;82000336&quot;, &quot;82000352&quot;, &quot;82000360&quot;, &quot;82000387&quot;, &quot;82000395&quot;, &quot;82000417&quot;, &quot;82000441&quot;, &quot;82000468&quot;, &quot;82000484&quot;, &quot;82000506&quot;, &quot;82000557&quot;, &quot;82000662&quot;, &quot;82000689&quot;, &quot;82000700&quot;, &quot;82000743&quot;, &quot;82000778&quot;, &quot;82000786&quot;, &quot;82000794&quot;, &quot;82000808&quot;, &quot;82000816&quot;, &quot;82000832&quot;, &quot;82000859&quot;, &quot;82000875&quot;, &quot;82000883&quot;, &quot;82000891&quot;, &quot;82000905&quot;, &quot;82000913&quot;, &quot;82000921&quot;, &quot;82000948&quot;, &quot;82001022&quot;, &quot;82001030&quot;, &quot;82001073&quot;, &quot;82001103&quot;, &quot;82001154&quot;, &quot;82001170&quot;, &quot;82001189&quot;, &quot;82001197&quot;, &quot;82001251&quot;, &quot;82001286&quot;, &quot;82001294&quot;, &quot;82001308&quot;, &quot;82001316&quot;, &quot;82001367&quot;, &quot;82001499&quot;, &quot;82001510&quot;, &quot;82001529&quot;, &quot;82001545&quot;, &quot;82001553&quot;, &quot;82001588&quot;, &quot;82001596&quot;, &quot;82001618&quot;, &quot;82001634&quot;, &quot;82001642&quot;, &quot;82001650&quot;, &quot;82001685&quot;, &quot;82001707&quot;, &quot;82001715&quot;, &quot;82001731&quot;, &quot;82001740&quot;, &quot;82001758&quot;, &quot;82001766&quot;, &quot;83000020&quot;, &quot;83000046&quot;, &quot;83000062&quot;, &quot;83000089&quot;, &quot;83000127&quot;, &quot;83000135&quot;, &quot;83000151&quot;, &quot;84000031&quot;, &quot;84000058&quot;, &quot;84000074&quot;, &quot;84000090&quot;, &quot;84000112&quot;, &quot;84000139&quot;, &quot;84000163&quot;, &quot;84000171&quot;, &quot;84000198&quot;, &quot;84000201&quot;, &quot;84000244&quot;, &quot;84000252&quot;, &quot;85000787&quot;, &quot;85100013&quot;, &quot;85100048&quot;, &quot;85100056&quot;, &quot;85100064&quot;, &quot;85100080&quot;, &quot;85100099&quot;, &quot;85100102&quot;, &quot;85100110&quot;, &quot;85100129&quot;, &quot;85100137&quot;, &quot;85100145&quot;, &quot;85100153&quot;, &quot;85100161&quot;, &quot;85100196&quot;, &quot;85100200&quot;, &quot;85100218&quot;, &quot;85100226&quot;, &quot;85100242&quot;, &quot;85100269&quot;, &quot;85200026&quot;, &quot;85200034&quot;, &quot;85200042&quot;, &quot;85200050&quot;, &quot;85200069&quot;, &quot;85200077&quot;, &quot;85200085&quot;, &quot;85200093&quot;, &quot;85200107&quot;, &quot;85200115&quot;, &quot;85200123&quot;, &quot;85200131&quot;, &quot;85200140&quot;, &quot;85200158&quot;, &quot;85200166&quot;, &quot;85200174&quot;, &quot;85200182&quot;, &quot;85300012&quot;, &quot;85300020&quot;, &quot;85300039&quot;, &quot;85300047&quot;, &quot;85300055&quot;, &quot;85300063&quot;, &quot;85300071&quot;, &quot;85300080&quot;, &quot;85300098&quot;, &quot;85400017&quot;, &quot;85400025&quot;, &quot;85400076&quot;, &quot;85400084&quot;, &quot;85400092&quot;, &quot;85400114&quot;, &quot;85400149&quot;, &quot;85400211&quot;, &quot;85400220&quot;, &quot;85400262&quot;, &quot;85400459&quot;, &quot;85400467&quot;, &quot;85400475&quot;, &quot;85400505&quot;, &quot;85400556&quot;, &quot;85400599&quot;, &quot;87000016&quot;, &quot;87000024&quot;, &quot;87000032&quot;, &quot;87000040&quot;, &quot;87000059&quot;, &quot;87000067&quot;, &quot;87000148&quot;, &quot;98301144&quot;, &quot;98301152&quot;, &quot;98302140&quot;, &quot;98302159&quot;, &quot;98303147&quot;, &quot;98303155&quot;, &quot;98304143&quot;, &quot;98304151&quot;, &quot;98265156&quot;, &quot;98113119&quot;, &quot;100013&quot;, &quot;100039&quot;, &quot;100047&quot;, &quot;100065&quot;, &quot;100090&quot;) )</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Não consta no Rol</header>
+          <header>Consta no Rol</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
           <parameters/>
@@ -386,13 +327,13 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -469,7 +410,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
