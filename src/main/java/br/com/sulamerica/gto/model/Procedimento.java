@@ -390,7 +390,8 @@ public class Procedimento implements java.io.Serializable {
 	}
 	
 	public boolean constaNoRol(){
-	    return rol.get(codigoProcedimento)==null?false:true;
+	    System.out.println("ROL: "+rol.entrySet();
+	    return rol.containsKey(codigoProcedimento);
 	}
 	
 	private void loadRol() {
