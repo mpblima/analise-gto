@@ -116,7 +116,7 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>eval(br.com.sulamerica.odonto.gto.QueryRol.contains(proc.codProcedimento) == true)</text>
+          <text>eval(QueryRol.contains(proc.codProcedimento) == true)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -139,13 +139,13 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>eval(br.com.sulamerica.odonto.gto.QueryRol.contains(proce.codProcedimento) == false)</text>
+          <text>eval(QueryRol.contains(proce.codProcedimento) == false)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>242</width>
+          <width>100</width>
           <header>Não consta no ROL</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -252,6 +252,9 @@
       </org.kie.soup.project.datamodel.imports.Import>
       <org.kie.soup.project.datamodel.imports.Import>
         <type>br.com.sulamerica.gto.model.AnaliseEletronica</type>
+      </org.kie.soup.project.datamodel.imports.Import>
+      <org.kie.soup.project.datamodel.imports.Import>
+        <type>br.com.sulamerica.odonto.gto.QueryRol</type>
       </org.kie.soup.project.datamodel.imports.Import>
     </imports>
   </imports>
