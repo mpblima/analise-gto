@@ -87,11 +87,6 @@
       <version>7.30.0.Final-redhat-00003</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>br.com.sulamerica</groupId>
-      <artifactId>queryRol</artifactId>
-      <version>1.0</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
