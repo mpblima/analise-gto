@@ -80,7 +80,6 @@
           <header>Pagamento</header>
           <constraintValueType>1</constraintValueType>
           <factField>statusPagamento</factField>
-          <fieldType>String</fieldType>
           <operator>==</operator>
           <valueList>Sim,Não</valueList>
           <parameters/>
@@ -97,7 +96,6 @@
           <header>Motivo</header>
           <constraintValueType>1</constraintValueType>
           <factField>motivo</factField>
-          <fieldType>Integer</fieldType>
           <operator>==</operator>
           <parameters/>
           <binding></binding>
@@ -231,7 +229,7 @@ update(proc);</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>208</width>
           <header>Atualizar procedimento</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
@@ -320,9 +318,8 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">3</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <valueString>3</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -358,7 +355,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -404,9 +401,8 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">3</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <valueString>3</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -443,7 +439,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
