@@ -94,9 +94,6 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
 	private LocalDate dataRealizacao;
 
-	@org.kie.api.definition.type.Description(value = "Status do pagamento após a execução de todas as regras eletrônicas e calculada a situação pela regra soberana.")
-	private java.lang.String statusAnaliseEletronica;
-
 	public Procedimento() {
 	}
 
@@ -365,21 +362,12 @@ public class Procedimento implements java.io.Serializable {
 	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
 		this.dataRealizacao = dataRealizacao;
 	}
-
-	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise) {
-		if (registrosAnaliseEletronica == null) {
-			registrosAnaliseEletronica = new java.util.ArrayList();
-		}
-		registrosAnaliseEletronica.add(analise);
-	}
-
-	public java.lang.String getStatusAnaliseEletronica() {
-		return this.statusAnaliseEletronica;
-	}
-
-	public void setStatusAnaliseEletronica(
-			java.lang.String statusAnaliseEletronica) {
-		this.statusAnaliseEletronica = statusAnaliseEletronica;
+	
+	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise){
+	    if(registrosAnaliseEletronica == null){
+	        registrosAnaliseEletronica = new java.util.ArrayList();
+	    }
+	    registrosAnaliseEletronica.add(analise);
 	}
 
 	public Procedimento(
@@ -410,8 +398,7 @@ public class Procedimento implements java.io.Serializable {
 			double valorReais, boolean contemImagem, double valorUso,
 			java.lang.String statusPagamento, int motivo,
 			java.lang.String observacaoJustificativa,
-			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao,
-			java.lang.String statusAnaliseEletronica) {
+			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -445,7 +432,6 @@ public class Procedimento implements java.io.Serializable {
 		this.observacaoJustificativa = observacaoJustificativa;
 		this.dataAviso = dataAviso;
 		this.dataRealizacao = dataRealizacao;
-		this.statusAnaliseEletronica = statusAnaliseEletronica;
 	}
 
 }
