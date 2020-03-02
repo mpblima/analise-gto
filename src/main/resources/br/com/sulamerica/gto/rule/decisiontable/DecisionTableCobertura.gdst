@@ -116,13 +116,13 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>evall(proc.constaNoRol() == true)</text>
+          <text>eval(proc.constaNoRol() == true)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>139</width>
+          <width>100</width>
           <header>Consta no Rol</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
