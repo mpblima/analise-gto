@@ -109,8 +109,11 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Justificativa do procedimento no histórico")
 	private java.lang.String justificativaHistorico;
 
-	@org.kie.api.definition.type.Label(value = "Procedimento consta no histórico")
+	@org.kie.api.definition.type.Label("Procedimento consta no histórico")
 	private boolean constaNoHistorico;
+
+	@org.kie.api.definition.type.Label(value = "Data de pagamento do Procedimento")
+	private java.time.LocalDate dataPagamentoProcedimento;
 
 	public Procedimento() {
 	}
@@ -440,6 +443,15 @@ public class Procedimento implements java.io.Serializable {
 		this.constaNoHistorico = constaNoHistorico;
 	}
 
+	public java.time.LocalDate getDataPagamentoProcedimento() {
+		return this.dataPagamentoProcedimento;
+	}
+
+	public void setDataPagamentoProcedimento(
+			java.time.LocalDate dataPagamentoProcedimento) {
+		this.dataPagamentoProcedimento = dataPagamentoProcedimento;
+	}
+
 	public Procedimento(
 			java.lang.String codigoProcedimento,
 			java.lang.String especialidade,
@@ -473,7 +485,8 @@ public class Procedimento implements java.io.Serializable {
 			java.time.LocalDate dataPagamentoHistorico,
 			boolean realizadoMenos30Dias,
 			java.lang.String dataRealizacaoHistorico,
-			java.lang.String justificativaHistorico, boolean constaNoHistorico) {
+			java.lang.String justificativaHistorico, boolean constaNoHistorico,
+			java.time.LocalDate dataPagamentoProcedimento) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -513,6 +526,7 @@ public class Procedimento implements java.io.Serializable {
 		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
 		this.justificativaHistorico = justificativaHistorico;
 		this.constaNoHistorico = constaNoHistorico;
+		this.dataPagamentoProcedimento = dataPagamentoProcedimento;
 	}
 
 }
