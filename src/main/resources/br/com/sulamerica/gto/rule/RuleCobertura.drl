@@ -1,10 +1,9 @@
 package br.com.sulamerica.gto.rule;
 
-import br.com.sulamerica.odonto.gto.QueryRol;
 import br.com.sulamerica.gto.model.Procedimento;
 
 function boolean constaNoRol(String p){
-    return QueryRol.contains(p);
+    return br.com.sulamerica.odonto.gto.QueryRol.contains(p);
 }
 
 rule "Procedimento consta no Rol"
