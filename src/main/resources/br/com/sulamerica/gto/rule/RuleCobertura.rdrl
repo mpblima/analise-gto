@@ -1,9 +1,0 @@
-package br.com.sulamerica.gto.rule;
-
-import java.lang.Number;
-
-rule "RuleCobertura"
-	dialect "mvel"
-	when
-	then
-end
