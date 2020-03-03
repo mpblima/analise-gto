@@ -89,15 +89,15 @@
         <condition-column52>
           <typedDefaultValue>
             <valueString></valueString>
-            <dataType>STRING</dataType>
+            <dataType>NUMERIC_INTEGER</dataType>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>125</width>
           <header>Motivo</header>
           <constraintValueType>1</constraintValueType>
-          <factField>listaDentes</factField>
-          <fieldType>Collection</fieldType>
+          <factField>motivo</factField>
+          <fieldType>Integer</fieldType>
           <operator>==</operator>
           <parameters/>
           <binding></binding>
@@ -163,7 +163,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>170</width>
           <header>Não consta no Rol</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -385,8 +385,9 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>3</valueString>
-        <dataType>STRING</dataType>
+        <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -468,8 +469,9 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>3</valueString>
-        <dataType>STRING</dataType>
+        <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
