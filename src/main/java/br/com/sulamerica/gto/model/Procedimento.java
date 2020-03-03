@@ -94,20 +94,23 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
 	private LocalDate dataRealizacao;
 
-	@org.kie.api.definition.type.Label(value = "Status do pagamento após análise eletrônica")
+	@org.kie.api.definition.type.Label("Status do pagamento após análise eletrônica")
 	private java.lang.String statusPagAposAnaiseEletronica;
 
-	@org.kie.api.definition.type.Label(value = "Data de pagamento no histórico")
+	@org.kie.api.definition.type.Label("Data de pagamento no histórico")
 	private java.time.LocalDate dataPagamentoHistorico;
 
-	@org.kie.api.definition.type.Label(value = "Se procedimento foi realizado em menos de 30 dias")
-	private java.lang.Boolean realizadoMenos30Dias;
+	@org.kie.api.definition.type.Label("Se procedimento foi realizado em menos de 30 dias")
+	private boolean realizadoMenos30Dias;
 
-	@org.kie.api.definition.type.Label(value = "Data de realização do procedimento no histórico")
+	@org.kie.api.definition.type.Label("Data de realização do procedimento no histórico")
 	private java.lang.String dataRealizacaoHistorico;
 
-	@org.kie.api.definition.type.Label(value = "Justificativa do procedimento no histórico")
+	@org.kie.api.definition.type.Label("Justificativa do procedimento no histórico")
 	private java.lang.String justificativaHistorico;
+
+	@org.kie.api.definition.type.Label(value = "Procedimento consta no histórico")
+	private boolean constaNoHistorico;
 
 	public Procedimento() {
 	}
@@ -403,14 +406,6 @@ public class Procedimento implements java.io.Serializable {
 		this.dataPagamentoHistorico = dataPagamentoHistorico;
 	}
 
-	public java.lang.Boolean getRealizadoMenos30Dias() {
-		return this.realizadoMenos30Dias;
-	}
-
-	public void setRealizadoMenos30Dias(java.lang.Boolean realizadoMenos30Dias) {
-		this.realizadoMenos30Dias = realizadoMenos30Dias;
-	}
-
 	public java.lang.String getDataRealizacaoHistorico() {
 		return this.dataRealizacaoHistorico;
 	}
@@ -427,6 +422,22 @@ public class Procedimento implements java.io.Serializable {
 	public void setJustificativaHistorico(
 			java.lang.String justificativaHistorico) {
 		this.justificativaHistorico = justificativaHistorico;
+	}
+
+	public boolean isRealizadoMenos30Dias() {
+		return this.realizadoMenos30Dias;
+	}
+
+	public void setRealizadoMenos30Dias(boolean realizadoMenos30Dias) {
+		this.realizadoMenos30Dias = realizadoMenos30Dias;
+	}
+
+	public boolean isConstaNoHistorico() {
+		return this.constaNoHistorico;
+	}
+
+	public void setConstaNoHistorico(boolean constaNoHistorico) {
+		this.constaNoHistorico = constaNoHistorico;
 	}
 
 	public Procedimento(
@@ -460,9 +471,9 @@ public class Procedimento implements java.io.Serializable {
 			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao,
 			java.lang.String statusPagAposAnaiseEletronica,
 			java.time.LocalDate dataPagamentoHistorico,
-			java.lang.Boolean realizadoMenos30Dias,
+			boolean realizadoMenos30Dias,
 			java.lang.String dataRealizacaoHistorico,
-			java.lang.String justificativaHistorico) {
+			java.lang.String justificativaHistorico, boolean constaNoHistorico) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -501,6 +512,7 @@ public class Procedimento implements java.io.Serializable {
 		this.realizadoMenos30Dias = realizadoMenos30Dias;
 		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
 		this.justificativaHistorico = justificativaHistorico;
+		this.constaNoHistorico = constaNoHistorico;
 	}
 
 }
