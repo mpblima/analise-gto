@@ -9,7 +9,7 @@ rule "Procedimento consta no Rol"
     dialect "mvel"
     
     when
-        proc:Procedimento( QueryRol.contains(codigoProcedimento) == true)
+        proc:Procedimento(eval(QueryRol.contains(codigoProcedimento) == true))
     then
         System.out.println("Consta no Rol")
 end
