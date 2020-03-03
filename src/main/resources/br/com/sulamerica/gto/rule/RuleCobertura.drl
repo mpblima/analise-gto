@@ -1,2 +1,19 @@
 package br.com.sulamerica.gto.rule;
 
+import br.com.sulamerica.odonto.gto.QueryRol;
+import br.com.sulamerica.gto.model.Procedimento;
+
+function boolean constaNoRol(Procedimento p){
+    return QueryRol.contains(p.getCodProcedimento);
+}
+
+rule "Procedimento consta no Rol"
+    enabled true
+    no-loop true
+    dialect "mvel"
+    
+    when
+        proc:Procedimento(eval(constaNoRol(proc))
+    then
+        System.out.println("Consta no Rol")
+end
