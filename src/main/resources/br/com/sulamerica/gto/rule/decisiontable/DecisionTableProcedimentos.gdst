@@ -125,6 +125,22 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
+          <width>241</width>
+          <header>Não consta no histórico</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>constaNoHistorico</factField>
+          <fieldType>Boolean</fieldType>
+          <operator>!=</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>BOOLEAN</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
           <width>373</width>
           <header>Realizado no mesmo Prestador, menos 30 dias</header>
           <constraintValueType>1</constraintValueType>
@@ -384,6 +400,12 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Sim</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -486,6 +508,12 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Sim</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -566,6 +594,12 @@ update(proc);</text>
       <value>
         <valueString>Não</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -681,6 +715,12 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
@@ -766,6 +806,12 @@ update(proc);</text>
       <value>
         <valueString>Não</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -866,6 +912,12 @@ update(proc);</text>
       <value>
         <valueString>Não</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -988,6 +1040,12 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Análise</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -1077,7 +1135,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -1089,11 +1147,18 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Sim</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
@@ -1104,7 +1169,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Procedimento</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -1115,7 +1180,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
