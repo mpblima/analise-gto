@@ -94,6 +94,21 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Data em que o procedimento foi realizado")
 	private LocalDate dataRealizacao;
 
+	@org.kie.api.definition.type.Label(value = "Status do pagamento após análise eletrônica")
+	private java.lang.String statusPagAposAnaiseEletronica;
+
+	@org.kie.api.definition.type.Label(value = "Data de pagamento no histórico")
+	private java.time.LocalDate dataPagamentoHistorico;
+
+	@org.kie.api.definition.type.Label(value = "Se procedimento foi realizado em menos de 30 dias")
+	private java.lang.Boolean realizadoMenos30Dias;
+
+	@org.kie.api.definition.type.Label(value = "Data de realização do procedimento no histórico")
+	private java.lang.String dataRealizacaoHistorico;
+
+	@org.kie.api.definition.type.Label(value = "Justificativa do procedimento no histórico")
+	private java.lang.String justificativaHistorico;
+
 	public Procedimento() {
 	}
 
@@ -362,12 +377,56 @@ public class Procedimento implements java.io.Serializable {
 	public void setDataRealizacao(java.time.LocalDate dataRealizacao) {
 		this.dataRealizacao = dataRealizacao;
 	}
-	
-	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise){
-	    if(registrosAnaliseEletronica == null){
-	        registrosAnaliseEletronica = new java.util.ArrayList();
-	    }
-	    registrosAnaliseEletronica.add(analise);
+
+	public void addAnalise(br.com.sulamerica.gto.model.AnaliseEletronica analise) {
+		if (registrosAnaliseEletronica == null) {
+			registrosAnaliseEletronica = new java.util.ArrayList();
+		}
+		registrosAnaliseEletronica.add(analise);
+	}
+
+	public java.lang.String getStatusPagAposAnaiseEletronica() {
+		return this.statusPagAposAnaiseEletronica;
+	}
+
+	public void setStatusPagAposAnaiseEletronica(
+			java.lang.String statusPagAposAnaiseEletronica) {
+		this.statusPagAposAnaiseEletronica = statusPagAposAnaiseEletronica;
+	}
+
+	public java.time.LocalDate getDataPagamentoHistorico() {
+		return this.dataPagamentoHistorico;
+	}
+
+	public void setDataPagamentoHistorico(
+			java.time.LocalDate dataPagamentoHistorico) {
+		this.dataPagamentoHistorico = dataPagamentoHistorico;
+	}
+
+	public java.lang.Boolean getRealizadoMenos30Dias() {
+		return this.realizadoMenos30Dias;
+	}
+
+	public void setRealizadoMenos30Dias(java.lang.Boolean realizadoMenos30Dias) {
+		this.realizadoMenos30Dias = realizadoMenos30Dias;
+	}
+
+	public java.lang.String getDataRealizacaoHistorico() {
+		return this.dataRealizacaoHistorico;
+	}
+
+	public void setDataRealizacaoHistorico(
+			java.lang.String dataRealizacaoHistorico) {
+		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
+	}
+
+	public java.lang.String getJustificativaHistorico() {
+		return this.justificativaHistorico;
+	}
+
+	public void setJustificativaHistorico(
+			java.lang.String justificativaHistorico) {
+		this.justificativaHistorico = justificativaHistorico;
 	}
 
 	public Procedimento(
@@ -398,7 +457,12 @@ public class Procedimento implements java.io.Serializable {
 			double valorReais, boolean contemImagem, double valorUso,
 			java.lang.String statusPagamento, int motivo,
 			java.lang.String observacaoJustificativa,
-			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao) {
+			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao,
+			java.lang.String statusPagAposAnaiseEletronica,
+			java.time.LocalDate dataPagamentoHistorico,
+			java.lang.Boolean realizadoMenos30Dias,
+			java.lang.String dataRealizacaoHistorico,
+			java.lang.String justificativaHistorico) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -432,6 +496,11 @@ public class Procedimento implements java.io.Serializable {
 		this.observacaoJustificativa = observacaoJustificativa;
 		this.dataAviso = dataAviso;
 		this.dataRealizacao = dataRealizacao;
+		this.statusPagAposAnaiseEletronica = statusPagAposAnaiseEletronica;
+		this.dataPagamentoHistorico = dataPagamentoHistorico;
+		this.realizadoMenos30Dias = realizadoMenos30Dias;
+		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
+		this.justificativaHistorico = justificativaHistorico;
 	}
 
 }
