@@ -13,7 +13,7 @@ rule "Procedimento consta no Rol"
     dialect "mvel"
     
     when
-        proc:Procedimento(eval(constaNoRol(codigoProcedimento))
+        proc:Procedimento(eval(constaNoRol(codigoProcedimento) == true))
     then
         System.out.println("Consta no Rol")
 end
