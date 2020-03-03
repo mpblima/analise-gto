@@ -191,14 +191,48 @@
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>proc.dataPagamentoHistorico != proc.dataPagamentoProcedimento</text>
-        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                <operator>!=</operator>
+                <constraintValueType>6</constraintValueType>
+                <expression>
+                  <parts>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                        <name>dataPagamentoHistorico</name>
+                        <classType>java.time.LocalDate</classType>
+                        <genericType>LocalDate</genericType>
+                      </next>
+                      <name>proc</name>
+                      <classType>Procedimento</classType>
+                      <genericType>Procedimento</genericType>
+                      <factType>Procedimento</factType>
+                    </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+                  </parts>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Procedimento</factType>
+                <fieldName>dataPagamentoProcedimento</fieldName>
+                <fieldType>LocalDate</fieldType>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+            </constraints>
+          </constraintList>
+          <factType>Procedimento</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>343</width>
+          <width>100</width>
           <header>Data de pagamento diferente do histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -214,14 +248,48 @@
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>proc.dataPagementoProcedimento == proc.dataPagamentoHistorico</text>
-        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                <operator>==</operator>
+                <constraintValueType>6</constraintValueType>
+                <expression>
+                  <parts>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                        <name>dataPagamentoHistorico</name>
+                        <classType>java.time.LocalDate</classType>
+                        <genericType>LocalDate</genericType>
+                      </next>
+                      <name>proc</name>
+                      <classType>Procedimento</classType>
+                      <genericType>Procedimento</genericType>
+                      <factType>Procedimento</factType>
+                    </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+                  </parts>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Procedimento</factType>
+                <fieldName>dataPagamentoProcedimento</fieldName>
+                <fieldType>LocalDate</fieldType>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+            </constraints>
+          </constraintList>
+          <factType>Procedimento</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>309</width>
+          <width>100</width>
           <header>Data de pagamento confere com histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
