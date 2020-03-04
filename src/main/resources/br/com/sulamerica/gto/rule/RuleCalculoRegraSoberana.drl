@@ -1,5 +1,7 @@
 package br.com.sulamerica.gto.rule;
 
+import br.com.sulamerica.gto.model.Procedimento;
+
 rule "Coloca procedimento em analise caso nao ative nenhuma regra"
     no-loop true
     dialect "mvel"
