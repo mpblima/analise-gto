@@ -228,7 +228,7 @@ update(proc);</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>339</width>
           <header>Adicionar analise eletronica ao procedimento</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
