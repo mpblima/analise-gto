@@ -10,11 +10,10 @@ rule "Procedimento nao ativou regra"
     salience -10
     
     when
-        proc: Procedimento()
-        forall( proc.registrosAnaliseEletronica == null )
+        $proc: Procedimento(registrosAnaliseEletronica == null)
     then
         System.out.println("Regra soberana ativada");
-        proc.setAnalisadoEletronicamente(true);
-        proc.setStatusPagAposAnaiseEletronica("Análise");
+        $proc.setAnalisadoEletronicamente(true);
+        $proc.setStatusPagAposAnaiseEletronica("Análise");
 end
 
