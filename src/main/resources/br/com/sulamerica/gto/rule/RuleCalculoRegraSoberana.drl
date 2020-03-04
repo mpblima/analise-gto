@@ -10,7 +10,7 @@ rule "Procedimento nao ativou regra"
     salience -10
     
     when
-         exists $proc: Procedimento(registrosAnaliseEletronica == null)
+         exists $proc: Procedimento(codigoProcedimento == "82000034", registrosAnaliseEletronica == null)
     then
         System.out.println("Regra soberana ativada");
         insert("Bla bla bla!");
