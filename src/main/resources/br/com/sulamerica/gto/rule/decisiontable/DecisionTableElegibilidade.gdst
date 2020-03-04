@@ -388,7 +388,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;Enviar para análise devido a exclusão retroativa&quot;</valueString>
+        <valueString>&quot;Regra de elegibilidade - Enviar para análise devido a exclusão retroativa&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -474,7 +474,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>&quot;Regra de elegibilidade - Procedimento realizado fora da vigência&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
