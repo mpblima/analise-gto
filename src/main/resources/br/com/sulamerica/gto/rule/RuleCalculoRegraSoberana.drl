@@ -13,6 +13,6 @@ rule "Procedimento nao ativou regra"
          exists $proc: Procedimento(registrosAnaliseEletronica == null)
     then
         System.out.println("Regra soberana ativada");
-        
+        insert("Bla bla bla!");
 end
 
