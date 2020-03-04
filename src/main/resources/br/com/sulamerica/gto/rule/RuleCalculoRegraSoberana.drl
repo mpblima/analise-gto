@@ -7,7 +7,6 @@ rule "Procedimento nao ativou regra"
     enabled true
     no-loop true
     agenda-group "regras-soberanas"
-    salience -10
     
     when
          exists $proc: Procedimento(codigoProcedimento == "82000034", registrosAnaliseEletronica == null)
