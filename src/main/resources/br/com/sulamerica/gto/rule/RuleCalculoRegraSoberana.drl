@@ -9,7 +9,7 @@ rule "Coloca procedimento em analise caso nao ative nenhuma regra"
     enabled true
     salience Integer.MIN_VALUE
     when
-        proc:Procedimento(registrosAnaliseEletronica == null)
+        proc:Procedimento()
     then
         System.out.println("Executei a regra soberana ======== ÊÊÊÊÊÊÊÊÊ ============ Uhuuuuu ========");
         proc.setAnalisadoEletronicamente(true);
