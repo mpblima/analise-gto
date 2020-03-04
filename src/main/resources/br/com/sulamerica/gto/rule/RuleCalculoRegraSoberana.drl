@@ -15,7 +15,6 @@ rule "Procedimento nao ativou regra"
         System.out.println("Regra soberana ativada");
         modify(proc){
             setAnalisadoEletronicamente(true);
-            setStatusPagAposAnaiseEletronica("Análise");
         }
 end
 
