@@ -1,2 +1,19 @@
 package br.com.sulamerica.gto.rule;
 
+import br.com.sulamerica.gto.model.Procedimento;
+
+rule "Procedimento nao ativou regra"
+    dialect "mvel"
+    enabled true
+    no-loop true
+    agenda-group "regras-soberanas"
+    salience -10
+    
+    when
+        proc: Procedimento (registrosAnaliseEletronica == null)
+    then
+        proc.setAnalisadoEletronicamente(true);
+        proc.setStatusPagAposAnaiseEletronica("Análise");
+        update(proc);
+end
+
