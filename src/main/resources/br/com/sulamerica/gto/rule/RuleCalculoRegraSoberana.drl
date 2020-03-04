@@ -9,7 +9,7 @@ rule "Procedimento nao ativou regra"
     agenda-group "regras-soberanas"
     
     when
-         exists $proc: Procedimento(codigoProcedimento == "82000034", registrosAnaliseEletronica == null)
+         proc: Procedimento(codigoProcedimento == "82000034")
     then
         System.out.println("Regra soberana ativada");
         insert("Bla bla bla!");
