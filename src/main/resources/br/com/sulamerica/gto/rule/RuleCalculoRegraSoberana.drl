@@ -1,2 +1,15 @@
 package br.com.sulamerica.gto.rule;
 
+rule "Coloca procedimento em analise caso nao ative nenhuma regra"
+    no-loop true
+    dialect "mvel"
+    agenda-group "regras_soberanas"
+    enabled true
+    salience Integer.MIN_VALUE
+    when
+        proc:Procedimento(registrosAnaliseEletronica.isEmpty)
+    then
+        proc.setAnalisadoEletronicamente(true);
+        proc.setStatusPagAposAnaiseEletronica("Análise");
+        update(proc);
+end
