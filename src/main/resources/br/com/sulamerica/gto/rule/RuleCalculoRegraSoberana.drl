@@ -9,7 +9,7 @@ rule "Coloca procedimento em analise caso nao ative nenhuma regra"
     enabled true
     salience Integer.MIN_VALUE
     when
-        proc:Procedimento(registrosAnaliseEletronica == null or registrosAnaliseEletronica.empty == true)
+        proc:Procedimento(registrosAnaliseEletronica == null, registrosAnaliseEletronica.empty == true)
     then
         proc.setAnalisadoEletronicamente(true);
         proc.setStatusPagAposAnaiseEletronica("Análise");
