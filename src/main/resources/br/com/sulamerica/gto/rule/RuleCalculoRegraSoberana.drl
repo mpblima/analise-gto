@@ -12,6 +12,7 @@ rule "Procedimento nao ativou regra"
     when
         proc: Procedimento (registrosAnaliseEletronica == null)
     then
+        System.out.println("Regra soberana ativada");
         proc.setAnalisadoEletronicamente(true);
         proc.setStatusPagAposAnaiseEletronica("Análise");
         update(proc);
