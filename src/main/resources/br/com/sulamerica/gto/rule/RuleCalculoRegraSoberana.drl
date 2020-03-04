@@ -11,6 +11,7 @@ rule "Coloca procedimento em analise caso nao ative nenhuma regra"
     when
         proc:Procedimento(registrosAnaliseEletronica == null)
     then
+        System.out.println("Executei a regra soberana ======== ÊÊÊÊÊÊÊÊÊ ============ Uhuuuuu ========");
         proc.setAnalisadoEletronicamente(true);
         proc.setStatusPagAposAnaiseEletronica("Análise");
         update(proc);
