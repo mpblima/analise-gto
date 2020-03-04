@@ -7,7 +7,6 @@ rule "Coloca procedimento em analise caso nao ative nenhuma regra"
     dialect "mvel"
     agenda-group "regras_soberanas"
     enabled true
-    salience Integer.MIN_VALUE
     when
         proc: Procedimento (eval( registrosAnaliseEletronica == null ) )
     then
