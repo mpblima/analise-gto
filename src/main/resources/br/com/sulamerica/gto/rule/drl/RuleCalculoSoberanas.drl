@@ -1,2 +1,17 @@
 package br.com.sulamerica.gto.rule.drl;
 
+import br.com.sulamerica.gto.model.Procedimento;
+
+rule "Procedimento nao ativou regra"
+    dialect "mvel"
+    enabled true
+    no-loop true
+    agenda-group "regras-soberanas"
+    
+    when
+         proc: Procedimento(codigoProcedimento == "82000034")
+    then
+        System.out.println("Regra soberana ativada");
+        insert("Bla bla bla!");
+end
+
