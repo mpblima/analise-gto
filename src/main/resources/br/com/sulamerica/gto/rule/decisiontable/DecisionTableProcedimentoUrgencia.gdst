@@ -83,7 +83,7 @@
       <conditions>
         <condition-column52>
           <typedDefaultValue>
-            <valueString>81000057</valueString>
+            <valueString></valueString>
             <dataType>STRING</dataType>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
@@ -94,7 +94,7 @@
           <factField>codigoProcedimento</factField>
           <fieldType>String</fieldType>
           <operator>==</operator>
-          <valueList> 81000057</valueList>
+          <valueList></valueList>
           <parameters/>
           <binding></binding>
         </condition-column52>
