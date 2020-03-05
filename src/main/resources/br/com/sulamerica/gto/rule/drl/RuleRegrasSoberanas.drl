@@ -6,7 +6,6 @@ import br.com.sulamerica.gto.model.Procedimento;
 rule "Nenhuma regra disparada"
 	enabled true
 	no-loop true
-	agenda-group "soberanas"
 	salience -300
 	dialect "mvel"
 	when
@@ -14,5 +13,6 @@ rule "Nenhuma regra disparada"
 	then
 		proc.setAnalisadoEletronicamente(true);
 		proc.setStatusPagAposAnaiseEletronica("Análise");
+		insert("blablabla!!!");
 		update(proc);
 end
