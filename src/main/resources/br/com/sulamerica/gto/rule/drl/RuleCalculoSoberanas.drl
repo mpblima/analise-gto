@@ -1,4 +1,4 @@
-package br.com.sulamerica.gto.rule.drl;
+package br.com.sulamerica.gto.drl;
 
 import br.com.sulamerica.gto.model.Procedimento;
 
