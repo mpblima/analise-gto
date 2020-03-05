@@ -6,7 +6,7 @@
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>150</width>
+    <width>291</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols>
@@ -146,7 +146,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>177</width>
       <header>Status pagamento</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
@@ -177,7 +177,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>473</width>
       <header>Mensagem</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
@@ -187,17 +187,18 @@
     </insert-fact-column52>
     <insert-fact-column52>
       <typedDefaultValue>
-        <valueString></valueString>
+        <valueString>Procedimento</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>226</width>
       <header>Objeto da análise</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
       <factField>objetoAnalise</factField>
       <type>String</type>
+      <valueList>Procedimento</valueList>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
   </actionCols>
@@ -265,7 +266,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Regra de não pagamento, motivo 11</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -302,17 +303,18 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="int">11</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Não</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Análise</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -322,12 +324,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Regra de atendimento de urgência - Pagamento enviar para análise</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Procedimento</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
