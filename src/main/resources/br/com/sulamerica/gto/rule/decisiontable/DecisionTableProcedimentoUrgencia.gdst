@@ -137,6 +137,27 @@
       </window>
       <entryPointName></entryPointName>
     </Pattern52>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Procedimento já realizado em menos de 30 dias</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine/>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Procedimento já realizado em menos de 30 dias</header>
+          <constraintValueType>1</constraintValueType>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
   </conditionPatterns>
   <actionCols>
     <insert-fact-column52>
@@ -332,6 +353,12 @@ update(proc);</text>
       <value>
         <valueString>Não</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
