@@ -5,13 +5,13 @@ import br.com.sulamerica.gto.model.Procedimento;
 rule "teste"
 	enabled true
 	no-loop true
-	agenda-group "procedimento"
 	salience -300
 	dialect "mvel"
 	when
 		proc : Procedimento( codigoProcedimento matches "00100047" )
 	then
 		proc.setAnalisadoEletronicamente(true);
+		insert("blablabla!!!");
 		update(proc);
 end
 
