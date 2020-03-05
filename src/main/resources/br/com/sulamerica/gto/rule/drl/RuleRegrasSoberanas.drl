@@ -2,6 +2,7 @@ package br.com.sulamerica.gto.rule.drl;
 
 
 import br.com.sulamerica.gto.model.Procedimento;
+import br.com.sulamerica.gto.model.AnaliseEletronica;
 
 rule "Nenhuma regra disparada"
 	enabled true
@@ -14,4 +15,49 @@ rule "Nenhuma regra disparada"
 		proc.setAnalisadoEletronicamente(true);
 		proc.setStatusPagAposAnaiseEletronica("Análise");
 		update(proc);
+end
+
+rule "Criticas para em analise"
+	enabled true
+	no-loop true
+	salience -300
+	dialect "mvel"
+	when
+		proc : Procedimento( registrosAnaliseEletronica != null )
+		ane: AnaliseEletronica( statusPagamento == "Análise" ) from proc.registrosAnaliseEletronica
+	then
+		proc.setAnalisadoEletronicamente(true);
+		proc.setStatusPagAposAnaiseEletronica("Análise");
+		update(proc);
+		drools.halt();
+end
+
+rule "Criticas para não"
+	enabled true
+	no-loop true
+	salience -310
+	dialect "mvel"
+	when
+		proc : Procedimento( registrosAnaliseEletronica != null )
+		ane: AnaliseEletronica( statusPagamento == "Não"  ) from proc.registrosAnaliseEletronica
+	then
+		proc.setAnalisadoEletronicamente(true);
+		proc.setStatusPagAposAnaiseEletronica("Não");
+		update(proc);
+		drools.halt();
+end
+
+rule "Criticas para sim"
+	enabled true
+	no-loop true
+	salience -320
+	dialect "mvel"
+	when
+		proc : Procedimento( registrosAnaliseEletronica != null )
+		ane: AnaliseEletronica( statusPagamento == "Sim") from proc.registrosAnaliseEletronica
+	then
+		proc.setAnalisadoEletronicamente(true);
+		proc.setStatusPagAposAnaiseEletronica("Sim");
+		update(proc);
+		drools.halt();
 end
