@@ -4,8 +4,7 @@ import br.com.sulamerica.gto.model.Procedimento;
 
 rule "Procedimento nao ativou regra"
     dialect "mvel"
-    enabled true
-    no-loop true
+    lock-on-active true
     agenda-group "regras-soberanas"
     salience -300
     when
