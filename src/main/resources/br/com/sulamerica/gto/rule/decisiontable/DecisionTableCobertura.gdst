@@ -289,7 +289,7 @@
       <header>Objeto</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
-      <factField>objeto</factField>
+      <factField>objetoAnalise</factField>
       <type>String</type>
       <valueList>Procedimento</valueList>
       <isInsertLogical>false</isInsertLogical>
@@ -308,7 +308,7 @@ update(proc);</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>230</width>
+          <width>100</width>
           <header>Atualizar procedimento</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
@@ -435,7 +435,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Procedimento</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -525,7 +525,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Procedimento</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
