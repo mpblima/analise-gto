@@ -34,7 +34,7 @@ end
 rule "Criticas para não"
 	enabled true
 	no-loop true
-	salience -310
+	salience -300
 	dialect "mvel"
 	when
 		proc : Procedimento( registrosAnaliseEletronica != null )
@@ -48,7 +48,7 @@ end
 rule "Criticas para sim"
 	enabled true
 	no-loop true
-	salience -320
+	salience -300
 	dialect "mvel"
 	when
 		proc : Procedimento( registrosAnaliseEletronica != null )
