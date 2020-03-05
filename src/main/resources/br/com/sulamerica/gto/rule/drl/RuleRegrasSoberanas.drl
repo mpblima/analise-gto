@@ -29,7 +29,6 @@ rule "Criticas para em analise"
 		proc.setAnalisadoEletronicamente(true);
 		proc.setStatusPagAposAnaiseEletronica("Análise");
 		update(proc);
-		drools.halt();
 end
 
 rule "Criticas para não"
@@ -44,7 +43,6 @@ rule "Criticas para não"
 		proc.setAnalisadoEletronicamente(true);
 		proc.setStatusPagAposAnaiseEletronica("Não");
 		update(proc);
-		drools.halt();
 end
 
 rule "Criticas para sim"
@@ -59,5 +57,4 @@ rule "Criticas para sim"
 		proc.setAnalisadoEletronicamente(true);
 		proc.setStatusPagAposAnaiseEletronica("Sim");
 		update(proc);
-		drools.halt();
 end
