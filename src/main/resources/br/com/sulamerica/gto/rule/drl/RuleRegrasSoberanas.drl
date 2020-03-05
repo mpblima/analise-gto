@@ -1,2 +1,18 @@
 package br.com.sulamerica.gto.rule.drl;
 
+
+import br.com.sulamerica.gto.model.Procedimento;
+
+rule "teste"
+	enabled true
+	no-loop true
+	salience -300
+	dialect "mvel"
+	when
+		proc : Procedimento( registrosAnaliseEletronica == null )
+	then
+		proc.setAnalisadoEletronicamente(true);
+		proc.setStatusPagAposAnaiseEletronica("Análise");
+		insert("blablabla!!!");
+		update(proc);
+end
