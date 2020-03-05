@@ -62,18 +62,6 @@
       <reverseOrder>false</reverseOrder>
       <useRowNumber>false</useRowNumber>
     </attribute-column52>
-    <attribute-column52>
-      <typedDefaultValue>
-        <valueString>procedimento</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </typedDefaultValue>
-      <hideColumn>false</hideColumn>
-      <width>100</width>
-      <attribute>ruleflow-group</attribute>
-      <reverseOrder>false</reverseOrder>
-      <useRowNumber>false</useRowNumber>
-    </attribute-column52>
   </attributeCols>
   <conditionPatterns>
     <Pattern52>
@@ -324,11 +312,6 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>00100047</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -416,11 +399,6 @@ update(proc);</text>
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString></valueString>
-        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -512,11 +490,6 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>00100047</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -605,11 +578,6 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>00100047</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -695,11 +663,6 @@ update(proc);</text>
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString></valueString>
-        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
