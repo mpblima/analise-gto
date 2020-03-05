@@ -240,7 +240,7 @@
       <header>Objeto da análise eletrônica</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
-      <factField>objeto</factField>
+      <factField>objetoAnalise</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
@@ -429,7 +429,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Segurado</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -526,7 +526,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Procedimento</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
