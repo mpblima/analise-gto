@@ -3,7 +3,7 @@ package br.com.sulamerica.gto.rule.drl;
 
 import br.com.sulamerica.gto.model.Procedimento;
 
-rule "teste"
+rule "Nenhuma regra disparada"
 	enabled true
 	no-loop true
 	salience -300
