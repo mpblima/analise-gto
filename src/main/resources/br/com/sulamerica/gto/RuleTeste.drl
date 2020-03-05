@@ -8,7 +8,7 @@ rule "teste"
 	salience -300
 	dialect "mvel"
 	when
-		proc : Procedimento( codigoProcedimento matches "00100047" )
+		proc : Procedimento( codigoProcedimento == "00100047" )
 	then
 		proc.setAnalisadoEletronicamente(true);
 		insert("blablabla!!!");
