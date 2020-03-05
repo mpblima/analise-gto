@@ -5,7 +5,7 @@ import br.com.sulamerica.gto.model.Procedimento;
 import br.com.sulamerica.gto.model.AnaliseEletronica;
 
 rule "Nenhuma regra disparada"
-	enabled true
+	enabled false
 	no-loop true
 	salience -300
 	dialect "mvel"
@@ -18,7 +18,7 @@ rule "Nenhuma regra disparada"
 end
 
 rule "Criticas para em analise"
-	enabled true
+	enabled false
 	no-loop true
 	salience -300
 	dialect "mvel"
@@ -32,7 +32,7 @@ rule "Criticas para em analise"
 end
 
 rule "Criticas para não"
-	enabled true
+	enabled false
 	no-loop true
 	salience -310
 	dialect "mvel"
