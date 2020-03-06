@@ -210,7 +210,7 @@
       <header>Objeto da análise eletrônica</header>
       <factType>AnaliseEletronica</factType>
       <boundName>elet</boundName>
-      <factField>objetoAnalise</factField>
+      <factField>objeto</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
