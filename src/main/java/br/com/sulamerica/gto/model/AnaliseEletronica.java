@@ -16,7 +16,7 @@ public class AnaliseEletronica implements java.io.Serializable {
 	private int motivo;
 
 	@org.kie.api.definition.type.Label(value = "Objeto da análise eletrônica")
-	private java.lang.String objetoAnalise;
+	private java.lang.String objeto;
 
 	public AnaliseEletronica() {
 	}
@@ -45,21 +45,21 @@ public class AnaliseEletronica implements java.io.Serializable {
 		this.mensagem = mensagem;
 	}
 
-	public java.lang.String getObjetoAnalise() {
-		return this.objetoAnalise;
+	public java.lang.String getObjeto() {
+		return this.objeto;
 	}
 
-	public void setObjetoAnalise(java.lang.String objetoAnalise) {
-		this.objetoAnalise = objetoAnalise;
+	public void setObjeto(java.lang.String objeto) {
+		this.objeto = objeto;
 	}
 
 	public AnaliseEletronica(java.lang.String mensagem,
 			java.lang.String statusPagamento, int motivo,
-			java.lang.String objetoAnalise) {
+			java.lang.String objeto) {
 		this.mensagem = mensagem;
 		this.statusPagamento = statusPagamento;
 		this.motivo = motivo;
-		this.objetoAnalise = objetoAnalise;
+		this.objeto = objeto;
 	}
 
 }
