@@ -260,7 +260,7 @@
               <name>1583434752098</name>
               <type>EXPECT</type>
             </expressionIdentifier>
-            <rawValue class="string">Procedimento não coberto e consta no ROL</rawValue>
+            <rawValue class="string">Regra de cobertura - Procedimento enviado para análise</rawValue>
           </FactMappingValue>
         </factMappingValues>
       </Scenario>
