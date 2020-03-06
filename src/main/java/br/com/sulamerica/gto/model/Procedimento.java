@@ -97,23 +97,16 @@ public class Procedimento implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Status do pagamento após análise eletrônica")
 	private java.lang.String statusPagAposAnaiseEletronica;
 
-	@org.kie.api.definition.type.Label("Data de pagamento no histórico")
-	private java.time.LocalDate dataPagamentoHistorico;
-
 	@org.kie.api.definition.type.Label("Se procedimento foi realizado em menos de 30 dias")
 	private boolean realizadoMenos30Dias;
-
-	@org.kie.api.definition.type.Label("Data de realização do procedimento no histórico")
-	private java.lang.String dataRealizacaoHistorico;
 
 	@org.kie.api.definition.type.Label("Justificativa do procedimento no histórico")
 	private java.lang.String justificativaHistorico;
 
-	@org.kie.api.definition.type.Label("Procedimento consta no histórico")
-	private boolean constaNoHistorico;
-
-	@org.kie.api.definition.type.Label(value = "Data de pagamento do Procedimento")
+	@org.kie.api.definition.type.Label("Data de pagamento do Procedimento")
 	private java.time.LocalDate dataPagamentoProcedimento;
+
+	private br.com.sulamerica.gto.model.Prestador prestador;
 
 	public Procedimento() {
 	}
@@ -400,24 +393,6 @@ public class Procedimento implements java.io.Serializable {
 		this.statusPagAposAnaiseEletronica = statusPagAposAnaiseEletronica;
 	}
 
-	public java.time.LocalDate getDataPagamentoHistorico() {
-		return this.dataPagamentoHistorico;
-	}
-
-	public void setDataPagamentoHistorico(
-			java.time.LocalDate dataPagamentoHistorico) {
-		this.dataPagamentoHistorico = dataPagamentoHistorico;
-	}
-
-	public java.lang.String getDataRealizacaoHistorico() {
-		return this.dataRealizacaoHistorico;
-	}
-
-	public void setDataRealizacaoHistorico(
-			java.lang.String dataRealizacaoHistorico) {
-		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
-	}
-
 	public java.lang.String getJustificativaHistorico() {
 		return this.justificativaHistorico;
 	}
@@ -435,14 +410,6 @@ public class Procedimento implements java.io.Serializable {
 		this.realizadoMenos30Dias = realizadoMenos30Dias;
 	}
 
-	public boolean isConstaNoHistorico() {
-		return this.constaNoHistorico;
-	}
-
-	public void setConstaNoHistorico(boolean constaNoHistorico) {
-		this.constaNoHistorico = constaNoHistorico;
-	}
-
 	public java.time.LocalDate getDataPagamentoProcedimento() {
 		return this.dataPagamentoProcedimento;
 	}
@@ -450,6 +417,14 @@ public class Procedimento implements java.io.Serializable {
 	public void setDataPagamentoProcedimento(
 			java.time.LocalDate dataPagamentoProcedimento) {
 		this.dataPagamentoProcedimento = dataPagamentoProcedimento;
+	}
+
+	public br.com.sulamerica.gto.model.Prestador getPrestador() {
+		return this.prestador;
+	}
+
+	public void setPrestador(br.com.sulamerica.gto.model.Prestador prestador) {
+		this.prestador = prestador;
 	}
 
 	public Procedimento(
@@ -482,11 +457,10 @@ public class Procedimento implements java.io.Serializable {
 			java.lang.String observacaoJustificativa,
 			java.time.LocalDate dataAviso, java.time.LocalDate dataRealizacao,
 			java.lang.String statusPagAposAnaiseEletronica,
-			java.time.LocalDate dataPagamentoHistorico,
 			boolean realizadoMenos30Dias,
-			java.lang.String dataRealizacaoHistorico,
-			java.lang.String justificativaHistorico, boolean constaNoHistorico,
-			java.time.LocalDate dataPagamentoProcedimento) {
+			java.lang.String justificativaHistorico,
+			java.time.LocalDate dataPagamentoProcedimento,
+			br.com.sulamerica.gto.model.Prestador prestador) {
 		this.codigoProcedimento = codigoProcedimento;
 		this.especialidade = especialidade;
 		this.pacote = pacote;
@@ -521,12 +495,10 @@ public class Procedimento implements java.io.Serializable {
 		this.dataAviso = dataAviso;
 		this.dataRealizacao = dataRealizacao;
 		this.statusPagAposAnaiseEletronica = statusPagAposAnaiseEletronica;
-		this.dataPagamentoHistorico = dataPagamentoHistorico;
 		this.realizadoMenos30Dias = realizadoMenos30Dias;
-		this.dataRealizacaoHistorico = dataRealizacaoHistorico;
 		this.justificativaHistorico = justificativaHistorico;
-		this.constaNoHistorico = constaNoHistorico;
 		this.dataPagamentoProcedimento = dataPagamentoProcedimento;
+		this.prestador = prestador;
 	}
 
 }
