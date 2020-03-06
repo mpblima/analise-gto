@@ -142,7 +142,7 @@ pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>343</width>
           <header>Procedimento já realizado em menos de 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -168,7 +168,7 @@ pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador)</text
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>357</width>
           <header>Procedimento não realizado em 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -192,7 +192,7 @@ pr: Procedimento( dataPagamentoProcedimento == proc.dataPagamentoProcedimento) f
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>277</width>
           <header>Data do pagamento igual ao histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -216,8 +216,56 @@ pr: Procedimento( dataPagamentoProcedimento != proc.dataPagamentoProcedimento) f
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>295</width>
           <header>Data do pagamento diferente do histórico</header>
+          <constraintValueType>1</constraintValueType>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Pagamento Sim no histórico</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>h: Historico()
+pr: Procedimento( statusPagamento == &quot;Sim&quot;) from h.procedimento</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>269</width>
+          <header>Pagamento Sim no histórico</header>
+          <constraintValueType>1</constraintValueType>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Pagamento Não no histórico</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>h: Historico()
+pr: Procedimento( statusPagamento == &quot;Não&quot;) from h.procedimento</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>286</width>
+          <header>Pagamento Não no histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
           <parameters/>
@@ -433,6 +481,18 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Análise</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -467,7 +527,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Regra pagamento sim motivo 29 - Não está no histórico</valueString>
+        <valueString>Regra pagamento sim motivo 29 - está no histórico</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -510,7 +570,19 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -612,7 +684,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -625,6 +697,18 @@ update(proc);</text>
       </value>
       <value>
         <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -738,6 +822,18 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString>Não</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -817,6 +913,18 @@ update(proc);</text>
       </value>
       <value>
         <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
