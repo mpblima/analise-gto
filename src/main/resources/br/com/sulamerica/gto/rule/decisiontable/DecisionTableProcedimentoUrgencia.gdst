@@ -136,7 +136,7 @@
           <text>h:Historico()
 pr:Prestador() from proc.prestador
 prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
-pr2:Prestador(codigoPrestador = pr.codigoPrestador) from prs.prestador</text>
+pr2:Prestador(codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -162,13 +162,13 @@ pr2:Prestador(codigoPrestador = pr.codigoPrestador) from prs.prestador</text>
           <text>not(h:Historico()
 pr:Prestador() from proc.prestador
 prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
-pr2:Prestador(codigoPrestador = pr.codigoPrestador) from prs.prestador))</text>
+pr2:Prestador(codigoPrestador == pr.codigoPrestador) from prs.prestador))</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>294</width>
+          <width>413</width>
           <header>Procedimento não realizado em 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -192,7 +192,7 @@ pr:Procedimento(dataRealizacao == proc.dataRealizacao) from h</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>320</width>
+          <width>411</width>
           <header>Data do pagamento igual ao histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -216,7 +216,7 @@ pr:Procedimento(dataRealizacao == proc.dataRealizacao) from h)</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>350</width>
+          <width>402</width>
           <header>Data do pagamento diferente do histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
