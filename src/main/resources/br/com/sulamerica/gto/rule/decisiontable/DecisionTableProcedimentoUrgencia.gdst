@@ -142,7 +142,7 @@ pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>346</width>
+          <width>100</width>
           <header>Procedimento já realizado em menos de 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
