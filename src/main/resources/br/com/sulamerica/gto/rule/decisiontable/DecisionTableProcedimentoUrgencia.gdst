@@ -133,10 +133,10 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>h:Historico()
-pr:Prestador() from proc.prestador
-prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
-pr2:Prestador(codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
+          <text>h: Historico()
+pr: Prestador() from proc.prestador
+prs: Procedimento( java.time.temporal.ChronoUnit.DAYS.between( proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
+pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -159,16 +159,16 @@ pr2:Prestador(codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>not(h:Historico()
-pr:Prestador() from proc.prestador
-prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
-pr2:Prestador(codigoPrestador == pr.codigoPrestador) from prs.prestador))</text>
+          <text>not(h: Historico()
+pr: Prestador() from proc.prestador
+prs: Procedimento( java.time.temporal.ChronoUnit.DAYS.between( proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
+pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>413</width>
+          <width>100</width>
           <header>Procedimento não realizado em 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -352,15 +352,6 @@ update(proc);</text>
       <org.kie.soup.project.datamodel.imports.Import>
         <type>br.com.sulamerica.gto.model.Prestador</type>
       </org.kie.soup.project.datamodel.imports.Import>
-      <org.kie.soup.project.datamodel.imports.Import>
-        <type>br.com.sulamerica.gto.model.GTO</type>
-      </org.kie.soup.project.datamodel.imports.Import>
-      <org.kie.soup.project.datamodel.imports.Import>
-        <type>br.com.sulamerica.gto.model.Segurado</type>
-      </org.kie.soup.project.datamodel.imports.Import>
-      <org.kie.soup.project.datamodel.imports.Import>
-        <type>br.com.sulamerica.gto.model.Empresa</type>
-      </org.kie.soup.project.datamodel.imports.Import>
     </imports>
   </imports>
   <packageName>br.com.sulamerica.gto.rule.decisiontable</packageName>
@@ -525,7 +516,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
