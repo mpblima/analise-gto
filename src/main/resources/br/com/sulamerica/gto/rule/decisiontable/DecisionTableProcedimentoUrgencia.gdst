@@ -161,8 +161,8 @@ pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>h: Historico()
 		pr: Prestador() from proc.prestador
-		prs: Procedimento( not(java.time.Period.between( proc.dataRealizacao, this.dataRealizacao).getDays() &lt; 30) ) from h.procedimento
-		pr2: Prestador( not(codigoPrestador == pr.codigoPrestador)) from prs.prestador</text>
+		not(prs: Procedimento( not(java.time.Period.between( proc.dataRealizacao, this.dataRealizacao).getDays() &lt; 30) ) from h.procedimento)
+		not(pr2: Prestador( not(codigoPrestador == pr.codigoPrestador)) from prs.prestador)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
