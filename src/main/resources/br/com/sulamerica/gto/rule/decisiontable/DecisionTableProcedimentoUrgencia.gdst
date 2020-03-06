@@ -133,10 +133,10 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>p:Procedimento()
-h:Historico()
-prs:Procedimento( DAYS.between(p.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h
-pr2:Prestador(codigoPrestador = p.codigoPrestador) from prs</text>
+          <text>h:Historico()
+pr:Prestador() from proc.prestador
+prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
+pr2:Prestador(codigoPrestador = pr.codigoPrestador) from prs.prestador</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -159,13 +159,16 @@ pr2:Prestador(codigoPrestador = p.codigoPrestador) from prs</text>
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>an:AnaliseEletronica()</text>
+          <text>not(h:Historico()
+pr:Prestador() from proc.prestador
+prs:Procedimento( java.time.temporal.ChronoUnit.DAYS.between(proc.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h.procedimento
+pr2:Prestador(codigoPrestador = pr.codigoPrestador) from prs.prestador))</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>380</width>
+          <width>294</width>
           <header>Procedimento não realizado em 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -182,13 +185,14 @@ pr2:Prestador(codigoPrestador = p.codigoPrestador) from prs</text>
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>hist:Historico()</text>
+          <text>h:Historico()
+pr:Procedimento(dataRealizacao == proc.dataRealizacao) from h</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>365</width>
+          <width>320</width>
           <header>Data do pagamento igual ao histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -205,13 +209,14 @@ pr2:Prestador(codigoPrestador = p.codigoPrestador) from prs</text>
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>prt:Prestador()</text>
+          <text>not(h:Historico()
+pr:Procedimento(dataRealizacao == proc.dataRealizacao) from h)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>335</width>
+          <width>350</width>
           <header>Data do pagamento diferente do histórico</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
@@ -514,7 +519,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
