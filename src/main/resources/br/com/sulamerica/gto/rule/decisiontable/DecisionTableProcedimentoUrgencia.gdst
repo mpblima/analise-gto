@@ -186,7 +186,7 @@ not(pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador)</
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>hist: Historico()
-pr: Procedimento( dataPagamentoProcedimento == proc.dataPagamentoProcedimento) from hist.procedimento</text>
+prpag: Procedimento( dataPagamentoProcedimento == proc.dataPagamentoProcedimento) from hist.procedimento</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -210,7 +210,7 @@ pr: Procedimento( dataPagamentoProcedimento == proc.dataPagamentoProcedimento) f
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
           <text>hist: Historico()
-pr: Procedimento( dataPagamentoProcedimento != proc.dataPagamentoProcedimento) from hist.procedimento</text>
+prpag: Procedimento( dataPagamentoProcedimento != proc.dataPagamentoProcedimento) from hist.procedimento</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
