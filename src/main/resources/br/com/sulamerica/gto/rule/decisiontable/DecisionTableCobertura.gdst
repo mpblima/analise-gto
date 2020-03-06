@@ -277,7 +277,7 @@
       <header>Objeto</header>
       <factType>AnaliseEletronica</factType>
       <boundName>ane</boundName>
-      <factField>objetoAnalise</factField>
+      <factField>objeto</factField>
       <type>String</type>
       <valueList>Procedimento</valueList>
       <isInsertLogical>false</isInsertLogical>
@@ -418,7 +418,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Procedimento</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -503,7 +503,7 @@ update(proc);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Procedimento</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
