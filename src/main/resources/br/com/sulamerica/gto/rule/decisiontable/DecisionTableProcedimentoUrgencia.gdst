@@ -159,11 +159,11 @@ pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador</text>
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>eval(
-h: Historico()
-pr: Prestador() from proc.prestador
-prs: Procedimento( java.time.Period.between( proc.dataRealizacao, this.dataRealizacao).getDays() &lt; 30 ) from h.procedimento
-pr2: Prestador( codigoPrestador == pr.codigoPrestador) from prs.prestador) == false</text>
+          <text>not(
+h: Historico() and
+pr: Prestador() from proc.prestador and
+prs: Procedimento( java.time.Period.between( proc.dataRealizacao, this.dataRealizacao).getDays() &gt; 30 ) from h.procedimento and
+pr2: Prestador( codigoPrestador != pr.codigoPrestador) from prs.prestador)</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
