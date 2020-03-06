@@ -133,13 +133,16 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>p:Procedimento()</text>
+          <text>p:Procedimento()
+h:Historico()
+prs:Procedimento( DAYS.between(p.dataRealizacao, this.dataRealizacao) &lt; 30 ) from h
+pr2:Prestador(codigoPrestador = p.codigoPrestador) from prs</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>406</width>
+          <width>100</width>
           <header>Procedimento já realizado em menos de 30 dias</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
