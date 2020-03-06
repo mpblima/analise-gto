@@ -12,7 +12,6 @@ public class Historico implements java.io.Serializable {
 	private java.time.LocalDate dataAuditoria;
 	private java.time.LocalDate dataPagamento;
 	private java.time.LocalDate ultimaAlteracao;
-	private br.com.sulamerica.gto.model.Prestador prestador;
 	@org.kie.api.definition.type.Label("número da GTO")
 	private int gto;
 
@@ -22,7 +21,7 @@ public class Historico implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Código do segurado")
 	private br.com.sulamerica.gto.model.Segurado segurado;
 
-	@org.kie.api.definition.type.Label(value = "Código do contrato")
+	@org.kie.api.definition.type.Label("Código do contrato")
 	private br.com.sulamerica.gto.model.Empresa empresa;
 
 	public Historico() {
@@ -61,14 +60,6 @@ public class Historico implements java.io.Serializable {
 		this.ultimaAlteracao = ultimaAlteracao;
 	}
 
-	public br.com.sulamerica.gto.model.Prestador getPrestador() {
-		return this.prestador;
-	}
-
-	public void setPrestador(br.com.sulamerica.gto.model.Prestador prestador) {
-		this.prestador = prestador;
-	}
-
 	public int getGto() {
 		return this.gto;
 	}
@@ -105,8 +96,7 @@ public class Historico implements java.io.Serializable {
 	public Historico(br.com.sulamerica.gto.model.Procedimento procedimento,
 			java.time.LocalDate dataAuditoria,
 			java.time.LocalDate dataPagamento,
-			java.time.LocalDate ultimaAlteracao,
-			br.com.sulamerica.gto.model.Prestador prestador, int gto,
+			java.time.LocalDate ultimaAlteracao, int gto,
 			double valorFranquiaCoparticipacao,
 			br.com.sulamerica.gto.model.Segurado segurado,
 			br.com.sulamerica.gto.model.Empresa empresa) {
@@ -114,7 +104,6 @@ public class Historico implements java.io.Serializable {
 		this.dataAuditoria = dataAuditoria;
 		this.dataPagamento = dataPagamento;
 		this.ultimaAlteracao = ultimaAlteracao;
-		this.prestador = prestador;
 		this.gto = gto;
 		this.valorFranquiaCoparticipacao = valorFranquiaCoparticipacao;
 		this.segurado = segurado;
